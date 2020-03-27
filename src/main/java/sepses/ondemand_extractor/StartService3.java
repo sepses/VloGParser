@@ -138,19 +138,19 @@ public class StartService3
     			 Date dt1 = sdfl.parse(dt0);
     			 
     			 if(dt1.after(startt) && dt1.before(endt)) {
- //   				 System.out.println(line);
-//    				 System.exit(0);
-    				 //System.out.print(line);
     				 jsondataTemp = gh.parseGrok(line);
-    				 
-    				 //System.out.println(gh.parseGrok(line));
-//    				 System.exit(0);
-    				 
-//    				 //check if any filter (currently only 1 filter)
-    			    // System.out.println("Filter regex="+filterRegex.size());
+
     				 if(filterRegex.size()!=0) {
-    					 Boolean c = checkFilterJsonWithVariableRegex(jsondataTemp,filterRegex.get(0).variable,filterRegex.get(0).regex);
-    					 if(c) {
+						 Boolean c=true;
+						 for (int k=0;k<filterRegex.size();k++){
+    					 	  Boolean  cf = checkFilterJsonWithVariableRegex(jsondataTemp,filterRegex.get(0).variable,filterRegex.get(0).regex);
+							if(!cf){
+								c=cf;
+								break;
+							}
+							
+						}
+						 if(c) {
  							jsondata=jsondataTemp;
  							
  						 }else {
@@ -201,10 +201,14 @@ public class StartService3
 	public boolean checkFilterJsonWithVariableRegex(String jsondata, String variable, String regex) throws org.json.simple.parser.ParseException {
 		JSONParser parser = new JSONParser(); 
 		JSONObject json = (JSONObject) parser.parse(jsondata);
-		if(checkRegexExist(json.get(variable).toString(),regex)){
+		if(json.get(variable)==null){
 			return true;
-		}else {
-			return false;
+		}else{
+			if(checkRegexExist(json.get(variable).toString(),regex)){
+				return true;
+			}else {
+				return false;
+			}
 		}
 	}
 	
