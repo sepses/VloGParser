@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.2.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>rest-service</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>rest-service</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+	  <groupId>org.java-websocket</groupId>
+	  <artifactId>Java-WebSocket</artifactId>
+	  <version>1.4.0</version>
+	</dependency>
+	 <dependency>
+            <groupId>org.apache.jena</groupId>
+            <artifactId>apache-jena</artifactId>
+            <version>3.9.0</version>
+            <type>pom</type>
+        </dependency>
+       <dependency>
+    		<groupId>org.json</groupId>
+    		<artifactId>json</artifactId>
+    		<version>20190722</version>
+		</dependency>
+  		<dependency>
+    		<groupId>com.googlecode.json-simple</groupId>
+    		<artifactId>json-simple</artifactId>
+    		<version>1.1</version>
+			</dependency>
+		<dependency>
+   			 <groupId>com.jayway.jsonpath</groupId>
+    		 <artifactId>json-path</artifactId>
+    		 <version>2.4.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.taxonic.carml</groupId>
+		    <artifactId>carml-engine</artifactId>
+		    <version>0.2.3</version>
+		</dependency>
+		
+		<!-- Choose the resolvers to suit your need -->
+		<dependency>
+		  <groupId>com.taxonic.carml</groupId>
+		  <artifactId>carml-logical-source-resolver-jsonpath</artifactId>
+		  <version>0.2.3</version>
+		</dependency>
+		<dependency>
+		  <groupId>com.nflabs</groupId>
+		  <artifactId>grok</artifactId>
+		  <version>0.0.6</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

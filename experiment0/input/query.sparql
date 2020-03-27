@@ -1,0 +1,10 @@
+PREFIX cl: <https://w3id.org/sepses/vocab/log/coreLog#>
+PREFIX auth: <https://w3id.org/sepses/vocab/log/authLog#>
+
+SELECT ?s ?timestamp ?message  WHERE {
+ ?s   cl:message   ?message.
+ ?s   cl:timestamp   ?timestamp.
+ 
+}
+
+LIMIT 10

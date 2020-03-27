@@ -1,0 +1,259 @@
+<http://w3id.org/sepses/resource/snortAlertlog#LogEntry-8eedd3a7-c805-4d95-b077-3f77871cc2d2>
+        a       <https://w3id.org/sepses/vocab/log/snort-alert#IDSSnortAlertLogEntry> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
+                <http://dbpedia.org/resource/snort> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#message>
+                "ET TROJAN ZeroAccess Outbound udp traffic detected [**]" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
+                "10/29-16:39:02.769012" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#classification>
+                "A Network Trojan was Detected" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#destinationIp>
+                "190.213.108.244" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#destinationPort>
+                "16471" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#generatorId>
+                "1" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#priority>
+                1 ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#protocol>
+                "UDP" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureId>
+                <http://w3id.org/sepses/resource/snortrule/sid-2015482> ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureRevision>
+                "8" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#sourceIp>
+                "192.168.43.10" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#sourcePort>
+                "1108" .
+
+<http://w3id.org/sepses/resource/snortAlertlog#LogEntry-c82d7c3f-487d-42c1-97a8-becf5bef578d>
+        a       <https://w3id.org/sepses/vocab/log/snort-alert#IDSSnortAlertLogEntry> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
+                <http://dbpedia.org/resource/snort> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#message>
+                "ICMP Destination Unreachable Port Unreachable [**]" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
+                "10/29-16:39:28.054744" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#classification>
+                "Misc activity" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#generatorId>
+                "1" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#priority>
+                3 ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#protocol>
+                "ICMP" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureId>
+                <http://w3id.org/sepses/resource/snortrule/sid-402> ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureRevision>
+                "7" .
+
+<http://w3id.org/sepses/resource/snortAlertlog#LogEntry-6a2da583-455e-4964-8059-1da34bff1c39>
+        a       <https://w3id.org/sepses/vocab/log/snort-alert#IDSSnortAlertLogEntry> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
+                <http://dbpedia.org/resource/snort> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#message>
+                "ICMP Destination Unreachable Port Unreachable [**]" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
+                "10/29-16:38:59.961692" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#classification>
+                "Misc activity" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#generatorId>
+                "1" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#priority>
+                3 ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#protocol>
+                "ICMP" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureId>
+                <http://w3id.org/sepses/resource/snortrule/sid-402> ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureRevision>
+                "7" .
+
+<http://w3id.org/sepses/resource/snortAlertlog#LogEntry-dcd5cde7-8def-45ca-b045-1de859c848de>
+        a       <https://w3id.org/sepses/vocab/log/snort-alert#IDSSnortAlertLogEntry> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
+                <http://dbpedia.org/resource/snort> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#message>
+                "ICMP Destination Unreachable Port Unreachable [**]" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
+                "10/29-16:39:50.089870" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#classification>
+                "Misc activity" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#generatorId>
+                "1" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#priority>
+                3 ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#protocol>
+                "ICMP" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureId>
+                <http://w3id.org/sepses/resource/snortrule/sid-402> ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureRevision>
+                "7" .
+
+<http://w3id.org/sepses/resource/snortAlertlog#LogEntry-dce86573-cd3a-4dc9-9602-d88987d0c4e7>
+        a       <https://w3id.org/sepses/vocab/log/snort-alert#IDSSnortAlertLogEntry> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
+                <http://dbpedia.org/resource/snort> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#message>
+                "ICMP Destination Unreachable Port Unreachable [**]" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
+                "10/29-16:39:58.013669" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#classification>
+                "Misc activity" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#generatorId>
+                "1" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#priority>
+                3 ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#protocol>
+                "ICMP" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureId>
+                <http://w3id.org/sepses/resource/snortrule/sid-402> ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureRevision>
+                "7" .
+
+<http://w3id.org/sepses/resource/snortAlertlog#LogEntry-d56e37a2-363c-42c4-9c56-916648b624be>
+        a       <https://w3id.org/sepses/vocab/log/snort-alert#IDSSnortAlertLogEntry> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
+                <http://dbpedia.org/resource/snort> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#message>
+                "ICMP Destination Unreachable Port Unreachable [**]" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
+                "10/29-16:39:00.965926" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#classification>
+                "Misc activity" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#generatorId>
+                "1" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#priority>
+                3 ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#protocol>
+                "ICMP" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureId>
+                <http://w3id.org/sepses/resource/snortrule/sid-402> ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureRevision>
+                "7" .
+
+<http://w3id.org/sepses/resource/snortAlertlog#LogEntry-1ca50f73-c57d-40a5-b130-f4825dce4b2a>
+        a       <https://w3id.org/sepses/vocab/log/snort-alert#IDSSnortAlertLogEntry> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
+                <http://dbpedia.org/resource/snort> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#message>
+                "ICMP Destination Unreachable Host Unreachable [**]" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
+                "10/29-16:40:03.673014" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#classification>
+                "Misc activity" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#generatorId>
+                "1" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#priority>
+                3 ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#protocol>
+                "ICMP" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureId>
+                <http://w3id.org/sepses/resource/snortrule/sid-399> ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureRevision>
+                "6" .
+
+<http://w3id.org/sepses/resource/snortAlertlog#LogEntry-f9cc761d-44e8-4618-abaf-10b766be68e9>
+        a       <https://w3id.org/sepses/vocab/log/snort-alert#IDSSnortAlertLogEntry> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
+                <http://dbpedia.org/resource/snort> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#message>
+                "ICMP Destination Unreachable Port Unreachable [**]" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
+                "10/29-16:39:14.409985" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#classification>
+                "Misc activity" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#generatorId>
+                "1" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#priority>
+                3 ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#protocol>
+                "ICMP" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureId>
+                <http://w3id.org/sepses/resource/snortrule/sid-402> ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureRevision>
+                "7" .
+
+<http://w3id.org/sepses/resource/snortAlertlog#LogEntry-1e6d1ca9-f369-4396-b5f2-8294888b07fc>
+        a       <https://w3id.org/sepses/vocab/log/snort-alert#IDSSnortAlertLogEntry> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
+                <http://dbpedia.org/resource/snort> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#message>
+                "ICMP Destination Unreachable Port Unreachable [**]" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
+                "10/29-16:39:37.212679" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#classification>
+                "Misc activity" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#generatorId>
+                "1" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#priority>
+                3 ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#protocol>
+                "ICMP" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureId>
+                <http://w3id.org/sepses/resource/snortrule/sid-402> ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureRevision>
+                "7" .
+
+<http://w3id.org/sepses/resource/snortAlertlog#LogEntry-2c4b16a7-0c38-449c-b2df-ef7923c6963b>
+        a       <https://w3id.org/sepses/vocab/log/snort-alert#IDSSnortAlertLogEntry> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
+                <http://dbpedia.org/resource/snort> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#message>
+                "ICMP Destination Unreachable Port Unreachable [**]" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
+                "10/29-16:38:57.973385" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#classification>
+                "Misc activity" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#generatorId>
+                "1" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#priority>
+                3 ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#protocol>
+                "ICMP" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureId>
+                <http://w3id.org/sepses/resource/snortrule/sid-402> ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureRevision>
+                "7" .
+
+<http://w3id.org/sepses/resource/snortAlertlog#LogEntry-83b644e8-f6c6-4de2-b107-0a17c1f4e33e>
+        a       <https://w3id.org/sepses/vocab/log/snort-alert#IDSSnortAlertLogEntry> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
+                <http://dbpedia.org/resource/snort> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#message>
+                "ICMP Destination Unreachable Port Unreachable [**]" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
+                "10/29-16:39:59.091902" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#classification>
+                "Misc activity" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#generatorId>
+                "1" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#priority>
+                3 ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#protocol>
+                "ICMP" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureId>
+                <http://w3id.org/sepses/resource/snortrule/sid-402> ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureRevision>
+                "7" .
+
+<http://w3id.org/sepses/resource/snortAlertlog#LogEntry-eaafefa9-c7ea-4818-a174-3d83b52b5344>
+        a       <https://w3id.org/sepses/vocab/log/snort-alert#IDSSnortAlertLogEntry> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
+                <http://dbpedia.org/resource/snort> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#message>
+                "ICMP Destination Unreachable Port Unreachable [**]" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
+                "10/29-16:39:56.013755" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#classification>
+                "Misc activity" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#generatorId>
+                "1" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#priority>
+                3 ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#protocol>
+                "ICMP" ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureId>
+                <http://w3id.org/sepses/resource/snortrule/sid-402> ;
+        <https://w3id.org/sepses/vocab/log/snort-alert#signatureRevision>
+                "7" .

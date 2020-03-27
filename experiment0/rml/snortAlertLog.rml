@@ -1,0 +1,33 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix carml: <http://carml.taxonic.com/carml/> .
+@prefix ue: <http://w3id.org/sepses/vocab/unix-event#>.
+@prefix sa: <https://w3id.org/sepses/vocab/log/snort-alert#>.
+@prefix cl: <https://w3id.org/sepses/vocab/log/coreLog#>.
+@prefix : <http://epfl.ch/mapping/>.
+
+<#SubjectMapping> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source [
+      a carml:Stream ;
+    ] ;
+    rml:referenceFormulation ql:JSONPath ;
+    rml:iterator "$" ;
+  ] ;
+
+ rr:subjectMap [ rr:template "http://w3id.org/sepses/resource/snortAlertlog#LogEntry-{id}"];
+ rr:predicateObjectMap [ rr:predicate rdf:type; rr:objectMap [ rr:template "https://w3id.org/sepses/vocab/log/snort-alert#IDSSnortAlertLogEntry"]];
+ rr:predicateObjectMap [ rr:predicate cl:hasLogFamily; rr:objectMap [ rr:template "http://dbpedia.org/resource/snort"]];
+ rr:predicateObjectMap [ rr:predicate cl:timestamp;  rr:objectMap [ rr:template "{month}/{day}-{time}";  rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate sa:classification; rr:objectMap [ rr:template "{classification}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate sa:priority; rr:objectMap [rr:template "{priority}"; rr:datatype xsd:integer;]];
+ rr:predicateObjectMap [ rr:predicate sa:generatorId; rr:objectMap [rr:template "{generatorId}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate sa:destinationPort; rr:objectMap [rr:template "{destinationPort}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate sa:destinationIp; rr:objectMap [rr:template "{destinationIp}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate sa:sourceIp; rr:objectMap [rr:template "{sourceIp}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate sa:protocol; rr:objectMap [rr:template "{protocol}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate sa:sourcePort; rr:objectMap [rr:template "{sourcePort}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate sa:signatureId; rr:objectMap [rr:template "http://w3id.org/sepses/resource/snortrule/sid-{signatureId}"]];
+ rr:predicateObjectMap [ rr:predicate sa:signatureRevision; rr:objectMap [rr:template "{signatureRevision}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate cl:message; rr:objectMap [rr:template "{message}"; rr:datatype xsd:string;]].

@@ -1,0 +1,80 @@
+{
+  "queryType": "SELECT",
+  "variables": [
+    {
+      "termType": "Variable",
+      "value": "s"
+    },
+    {
+      "termType": "Variable",
+      "value": "timestamp"
+    },
+    {
+      "termType": "Variable",
+      "value": "message"
+    }
+  ],
+  "where": [
+    {
+      "type": "bgp",
+      "triples": [
+        {
+          "subject": {
+            "termType": "Variable",
+            "value": "s"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "https://w3id.org/sepses/vocab/log/coreLog#message"
+          },
+          "object": {
+            "termType": "Variable",
+            "value": "message"
+          }
+        },
+        {
+          "subject": {
+            "termType": "Variable",
+            "value": "s"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "https://w3id.org/sepses/vocab/log/coreLog#timestamp"
+          },
+          "object": {
+            "termType": "Variable",
+            "value": "timestamp"
+          }
+        }
+      ]
+    },
+    {
+      "type": "filter",
+      "expression": {
+        "type": "operation",
+        "operator": "regex",
+        "args": [
+          {
+            "termType": "Variable",
+            "value": "message"
+          },
+          {
+            "termType": "Literal",
+            "value": "BAD-TRAFFIC",
+            "language": "",
+            "datatype": {
+              "termType": "NamedNode",
+              "value": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "limit": 50,
+  "type": "query",
+  "prefixes": {
+    "cl": "https://w3id.org/sepses/vocab/log/coreLog#",
+    "auth": "https://w3id.org/sepses/vocab/log/authLog#"
+  }
+}

@@ -1,0 +1,91 @@
+@prefix : <http://purl.org/sepses/vocab/log/authlog#> .
+@prefix cl: <http://purl.org/sepses/vocab/log/coreLog#> .
+@prefix syslog: <http://purl.org/sepses/vocab/log/sysLog#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/sepses/vocab/log/authLog> a owl:Ontology .
+
+
+:AuthLogEntry a rdfs:Class ;
+		rdfs:subClassOf cl:logEntry .
+		
+:AuthEvent a rdfs:Class .
+
+:User a rdfs:Class .
+
+:UserStatus a rdfs:Class .
+
+:hasAuthEvent a rdf:Property ;
+	rdfs:domain :AuthLogEntry ;
+	rdfs:range :AuthEvent .
+	
+:hasUser a rdf:Property ;
+	rdfs:domain :authLogEntry ;
+	rdfs:range :User .
+
+:hasUserStatus a rdf:Property ;
+    rdfs:domain :AuthLogEntry ;
+    rdfs:range :UserStatus .	
+
+:hasClientIP a rdf:Property ;
+	rdfs:domain :authLogEntry ;
+	rdfs:range cl:Host .
+	
+:hasProgram a rdf:Property ;
+    rdfs:domain :authLogEntry ;
+	rdfs:range syslog:Program .
+
+:hasTargetUser a rdf:Property ;
+	rdfs:domain :AuthLogEntry ;
+	rdfs:range :User .
+	
+:authEvent a rdf:Property ;
+	rdfs:domain :AuthEvent ;
+	rdfs:range rdfs:Literal .
+	
+:userName a rdf:Property ;
+	rdfs:domain :User ;
+	rdfs:range rdfs:Literal .
+
+:clientIPAddress a rdf:Property ;
+	rdfs:domain cl:Host ;
+	rdfs:range rdfs:Literal .
+	
+:port a rdf:Property ;
+	rdfs:domain :AuthLogEntry ;
+	rdfs:range xsd:Int .
+	
+:pid a rdf:Property ;
+    rdfs:domain :AuthLogEntry ;
+	rdfs:range xsd:Int .
+	
+:sessionId a rdf:Property ;
+    rdfs:domain :AuthLogEntry ;
+	rdfs:range xsd:Int .
+	
+:euid a rdf:Property ;
+	rdfs:domain :AuthLogEntry ;
+	rdfs:range xsd:Int .
+	
+:userStatus a rdf:Property ;
+    rdfs:domain :UserStatus ;
+    rdfs:range rdfs:Literal .
+	
+:uid a rdf:Property ;
+	rdfs:domain :AuthLogEntry ;
+	rdfs:range xsd:Int .
+	
+:programName a rdf:Property ;
+    rdfs:domain cl:Program ;
+	rdfs:range rdfs:Literal .
+
+:tty a rdf:Property ;
+    rdfs:domain :AuthLogEntry ;
+    rdfs:range rdfs:Literal .
+
+:logname a rdf:Property ;
+    rdfs:domain :AuthLogEntry ;
+    rdfs:range rdfs:Literal .

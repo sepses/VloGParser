@@ -1,0 +1,57 @@
+{
+  "title": "Host/Agent Log Parser server",
+  "url": "http://localhost",
+  "port": 8080,
+  "logSources": [ 
+     {
+	      "title": "authlog",
+	      "type": "File",
+	      "logLocation": "experiment0/logfile/auth.log",
+	      "mapping": "experiment0/rml/authlog.rml",
+	      "grokFile": "experiment0/pattern/pattern.grok",
+	      "grokPattern": "%{SYSLOGBASE} %{GREEDYDATA:message}",
+	      "outputModel": "experiment0/output/authlog_model.ttl",
+	      "namegraph": "http://w3id.org/sepses/graph/log/authlog",
+	      "regexMeta": "experiment0/model/regexMeta.ttl",
+	      "regexOntology": "experiment0/model/regexOntology.ttl",
+	      "vocabulary":"https://w3id.org/sepses/vocab/log/authLog#",
+	      "logDateFormat":"MMM d HH:mm:ss",
+	      "logTimeRegex":"\\w+\\s+\\d+\\s\\d{2}:\\d{2}:\\d{2}"      
+    	},
+      {
+	      "title": "apachelog",
+	      "type": "File",
+	      "logLocation": "experiment0/logfile/apache.log",
+	      "mapping": "experiment0/rml/apachelog.rml",
+	      "grokFile": "experiment0/pattern/pattern.grok",
+	      "grokPattern": "%{COMMONAPACHELOG}",
+	      "outputModel": "experiment0/output/apache_model.ttl",
+	      "namegraph": "http://w3id.org/sepses/graph/log/apachelog",
+	      "regexMeta": "experiment0/model/regexMeta.ttl",
+	      "regexOntology": "experiment0/model/regexOntology.ttl",
+	      "vocabulary":"https://w3id.org/sepses/vocab/log/apacheLog#",
+	      "logDateFormat":"MMM d HH:mm:ss",
+	      "logTimeRegex":"\\w+\\s+\\d+\\s\\d{2}:\\d{2}:\\d{2}"       
+     },{
+	      "title": "snortAlertlog",
+	      "type": "File",
+	      "logLocation": "experiment0/logfile/snort-alert-fast1.log",
+	      "mapping": "experiment0/rml/snortAlertlog.rml",
+	      "grokFile": "experiment0/pattern/pattern.grok",
+	      "grokPattern": "%{SNORT}",
+	      "outputModel": "experiment0/output/snort_alert_model.ttl",
+	      "namegraph": "http://w3id.org/sepses/graph/log/snortAlertlog",
+	      "regexMeta": "experiment0/model/regexMeta.ttl",
+	      "regexOntology": "experiment0/model/regexOntology.ttl",
+	      "vocabulary":"https://w3id.org/sepses/vocab/log/snort-alert#",
+	      "logDateFormat":"MM/dd-HH:mm:ss",
+	      "logTimeRegex":"\\d{2}\/\\d{2}-\\d{2}:\\d{2}:\\d+"      
+     }
+    ],
+    "endpoint": {
+	    "sparqlEndpoint":   "http://localhost:8890/sparql",
+	    "user":  "dba",
+	    "pass":   "dba"
+    }
+
+  }
