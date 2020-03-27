@@ -136,19 +136,6 @@ public class StartService3
     			
     			String dt0 = parseRegex(line,dateTimeRegex);
     			 Date dt1 = sdfl.parse(dt0);
-    			// System.out.println(dt1);
-//    			 System.out.println(startt);
-//    			 System.out.println(endt);
-//    			 System.exit(0);
-
-     			//for testing
-//    			 String js = gh.parseGrok(line);
-//    			 System.out.println(line);
-//    			 System.out.println(js);
-//    			 System.out.println(dt1);
-//    			 System.exit(0);
-    			 
-    			 
     			 
     			 if(dt1.after(startt) && dt1.before(endt)) {
  //   				 System.out.println(line);
