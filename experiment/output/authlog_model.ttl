@@ -1,4 +1,4 @@
-<http://w3id.org/sepses/resource/authlog#LogEntry-3888e335-c7b7-4df1-84e8-605c7216a980>
+<http://w3id.org/sepses/resource/authlog#LogEntry-71b6e242-b2b0-47dd-a482-52568ce7ef03>
         a       <https://w3id.org/sepses/vocab/log/authLog#AuthLogEntry> ;
         <https://w3id.org/sepses/vocab/log/authLog#pid>
                 "6034" ;
