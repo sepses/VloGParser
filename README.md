@@ -1,2 +1,2 @@
 # VloGParser
-Virtual Log Graph Parser
+Virtual Log Graph Parser: a log parser for scalable log analysis
