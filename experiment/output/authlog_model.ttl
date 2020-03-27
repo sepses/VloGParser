@@ -1,0 +1,14 @@
+<http://w3id.org/sepses/resource/authlog#LogEntry-3888e335-c7b7-4df1-84e8-605c7216a980>
+        a       <https://w3id.org/sepses/vocab/log/authLog#AuthLogEntry> ;
+        <https://w3id.org/sepses/vocab/log/authLog#pid>
+                "6034" ;
+        <https://w3id.org/sepses/vocab/log/authLog#programName>
+                "sshd" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
+                <http://dbpedia.org/resource/Syslog> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hostName>
+                "ip-172-31-27-153" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#message>
+                "Received disconnect from 193.104.41.58: 11: Bye Bye [preauth]" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
+                "Dec 31 00:01:24"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
