@@ -17,7 +17,7 @@
   ] ;
 
  rr:subjectMap [ rr:template "http://w3id.org/sepses/resource/apachelog#LogEntry-{id}"];
- rr:predicateObjectMap [ rr:predicate rdf:type; rr:objectMap [ rr:template "https://w3id.org/sepses/vocab/log/apacheLog#AuthLogEntry"]];
+ rr:predicateObjectMap [ rr:predicate rdf:type; rr:objectMap [ rr:template "https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry"]];
  rr:predicateObjectMap [ rr:predicate cl:hasLogFamily; rr:objectMap [ rr:template "http://dbpedia.org/page/Common_Log_Format"]];
  rr:predicateObjectMap [ rr:predicate cl:timestamp;  rr:objectMap [ rr:template "{timestamp}";  rr:datatype xsd:dateTime;]];
  rr:predicateObjectMap [ rr:predicate apache:hasAgent; rr:objectMap [ rr:template "{agent}"; rr:datatype xsd:string;]];
@@ -31,4 +31,5 @@
  rr:predicateObjectMap [ rr:predicate apache:hasResponse; rr:objectMap [rr:template "{response}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate apache:hasRequest; rr:objectMap [rr:template "{request}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate apache:hasRawRequest; rr:objectMap [rr:template "{rawrequest}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate cl:message; rr:objectMap [rr:template "{message}"; rr:datatype xsd:string;]];
 .

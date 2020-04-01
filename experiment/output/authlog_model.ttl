@@ -1,14 +1,29 @@
-<http://w3id.org/sepses/resource/authlog#LogEntry-9a73d804-fdc7-494d-8948-5fd83c347a85>
+<http://w3id.org/sepses/resource/authlog#LogEntry-81cf76cb-03a5-4baf-bcc6-22be8e6c8443>
         a       <https://w3id.org/sepses/vocab/log/authLog#AuthLogEntry> ;
         <https://w3id.org/sepses/vocab/log/authLog#pid>
-                "6034" ;
+                "6056" ;
         <https://w3id.org/sepses/vocab/log/authLog#programName>
-                "sshd" ;
+                "CRON" ;
         <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
                 <http://dbpedia.org/resource/Syslog> ;
         <https://w3id.org/sepses/vocab/log/coreLog#hostName>
                 "ip-172-31-27-153" ;
         <https://w3id.org/sepses/vocab/log/coreLog#message>
-                "Received disconnect from 193.104.41.58: 11: Bye Bye [preauth]" ;
+                "pam_unix(cron:session): session opened for user root by (uid=0)" ;
         <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
-                "Dec 31 00:01:24"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+                "Dec 31 00:17:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/authlog#LogEntry-f2cf9566-4904-4617-8a47-4e2c8a1c21c6>
+        a       <https://w3id.org/sepses/vocab/log/authLog#AuthLogEntry> ;
+        <https://w3id.org/sepses/vocab/log/authLog#pid>
+                "6056" ;
+        <https://w3id.org/sepses/vocab/log/authLog#programName>
+                "CRON" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
+                <http://dbpedia.org/resource/Syslog> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hostName>
+                "ip-172-31-27-153" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#message>
+                "pam_unix(cron:session): session closed for user root" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
+                "Dec 31 00:17:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
