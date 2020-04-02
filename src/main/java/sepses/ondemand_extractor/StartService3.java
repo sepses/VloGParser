@@ -13,6 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -21,6 +22,7 @@ import java.util.regex.Pattern;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 
 import com.jayway.jsonpath.JsonPath;
@@ -74,22 +76,42 @@ public class StartService3
         List<String> ldateFormat = JsonPath.read(jcobject,"$.logSources[*].logDateFormat");
        // System.out.print(logSources.size());
         //System.exit(0);
-        String res="";
-        for(int i=0;i<logSources.size();i++) {
-        	res = parse(llogLocation.get(i), lgrokFile.get(i), lgrokPattern.get(i),
-        			lmapping.get(i),pq, loutputModel.get(i), 
-        			lregexMeta.get(i), lregexOntology.get(i),
-        			sparqlEndpoint, user, pass, lnamegraph.get(i), st, et, ltimeRegex.get(i),ldateFormat.get(i));	
-        //System.exit(0);
-        }
-      this.content=res;
+		String res="";
+		long startTime = System.nanoTime();
+		QueryTranslator qt = new QueryTranslator(pq);
+		ArrayList prefixes= qt.prefixes;
+		//System.out.println(prefixes.get(0));
+		
+		
+		for(int i=0;i<logSources.size();i++) {
+
+
+			//check prefix
+			if(prefixes.contains(lvocabulary.get(i))){
+		
+						res = parse(llogLocation.get(i), lgrokFile.get(i), lgrokPattern.get(i),
+								lmapping.get(i),pq, loutputModel.get(i), 
+								lregexMeta.get(i), lregexOntology.get(i),
+								sparqlEndpoint, user, pass, lnamegraph.get(i), st, et, ltimeRegex.get(i),
+								ldateFormat.get(i));	
+					//System.exit(0);
+					this.content=res;
+					
+			}
+		}
+		
+		long elapsedTime = System.nanoTime() - startTime;
+		System.out.println("Total time execution :"+elapsedTime/1000000000+" sec");
+
+		
 		
     }
  
 	public String parse(String logfile, String grokfile, String grokpattern, 
 			String RMLFile, String parsedQuery, String outputModel, String regexMeta, 
 			String regexOntology,String sparqlEndpoint, String user, String pass, 
-			String namegraph,String startTime, String endDate, String dateTimeRegex, String dateFormat) throws IOException, org.json.simple.parser.ParseException, ParseException, GrokException {
+			String namegraph,String startTime, String endDate, String dateTimeRegex,
+			String dateFormat) throws IOException, org.json.simple.parser.ParseException, ParseException, GrokException {
 //		System.out.print(endDate);
 //		System.exit(0);
 		//=======translate the query ===========
@@ -97,14 +119,23 @@ public class StartService3
     	//deleteFile(outputResult);
 		String response="";
     	deleteFile(outputModel);
-         QueryTranslator qt = new QueryTranslator(parsedQuery);
-         
+        QueryTranslator qt = new QueryTranslator(parsedQuery);
+		//ArrayList prefixes= qt.prefixes;
+		//if(prefixes.contains(vocabulary)){
+		//  System.exit(0);
+		 
          Model m = qt.loadRegexModel(regexMeta, regexOntology);
           qt.parseJSONQuery(m);
 	     // System.exit(0);
 	      List<FilterRegex> filterRegex= qt.filterregex;
-	      List<RegexPattern> regexPattern= qt.regexpattern;
-	      //qt.printRegexPattern();    	  	
+		  List<RegexPattern> regexPattern= qt.regexpattern;
+		 
+				
+		  //System.exit(0);
+		  //System.out.println(prefixes.size());
+		 //  System.exit(0);
+		
+		  //qt.printRegexPattern();    	  	
 	      
    
     	
@@ -130,14 +161,25 @@ public class StartService3
 
 			 String jsondata = "";
 			 String jsondataTemp="";
+			 
+			int co=0;
+			JSONArray alljson = new JSONArray();
     		while (in.ready()) {
-    			
+    			co++;
     			String line = in.readLine();
     			
     			String dt0 = parseRegex(line,dateTimeRegex);
     			 Date dt1 = sdfl.parse(dt0);
-    			 
+				
+				 //break after reaching the end of true line
+				if(!dt1.before(endt)){
+					System.out.println("break, true line is reached!, total read: "+co);
+					break;
+				}
+				
+
     			 if(dt1.after(startt) && dt1.before(endt)) {
+					
     				 jsondataTemp = gh.parseGrok(line);
 
     				 if(filterRegex.size()!=0) {
@@ -163,22 +205,21 @@ public class StartService3
     			  } else{
     				 jsondata="";
     			 }	
-//    			 System.out.println(jsondata);
-//    			 System.exit(0);
-    			//mapping to RDF
-     			
+     		
      			if(jsondata!=""){
      				logdata++;
-    // 				System.out.println(jsondata);
-     				String jd = addUUID(jsondata);
-     				model.add(jp.Parse(jd));
-     			}
-    			
-    		}
-    		//model.write(System.out);
-    		
+     			
+					JSONObject jd = addUUID(jsondata);
+					alljson.add(jd);
+				}
+				
+			}
+			JSONObject alljsObj = new JSONObject();
+			alljsObj.put("logEntry",alljson);
+			//System.out.println(alljsObj.toString());
+			model  = jp.Parse(alljsObj.toString());
 			System.out.println("logdata :"+logdata);
-			//System.exit(0);
+			
     	 }finally {
 			   try {
 		    	   in.close();
@@ -194,6 +235,7 @@ public class StartService3
                    // ignore
                }
 		}
+		
 		return response;
     	
 
@@ -329,13 +371,13 @@ public class StartService3
 		
  	}
 	
-	String addUUID(String jsondata) throws org.json.simple.parser.ParseException{
+	 JSONObject addUUID(String jsondata) throws org.json.simple.parser.ParseException{
 		UUID ui = UUID.randomUUID();
 		org.json.simple.parser.JSONParser jp = new org.json.simple.parser.JSONParser();
 		JSONObject json = (JSONObject) jp.parse(jsondata);
 		json.put("id", ui);
 		//System.out.print(json.toString());
-		return json.toString();
+		return json;
 			
 		
 	}

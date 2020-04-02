@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -16,6 +17,7 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.riot.RDFDataMgr;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.json.simple.JSONObject;
 
 import com.jayway.jsonpath.JsonPath;
 
@@ -25,10 +27,13 @@ public class QueryTranslator {
     private List<Triples> triples = new ArrayList<>();
     protected List<RegexPattern> regexpattern = new ArrayList<>();
     protected List<FilterRegex> filterregex = new ArrayList<>();
+	protected ArrayList prefixes = new ArrayList<String>();
 
     
-	public QueryTranslator(String queryString){
+	public QueryTranslator(String queryString) throws IOException, ParseException{
 		this.queryString = queryString;
+		Object json = readJSONQuery(this.queryString);
+		parsePrefixes(json);
 		//System.out.print(this.queryString);
 		//System.exit(0);
 		
@@ -39,7 +44,8 @@ public class QueryTranslator {
 		Object json = readJSONQuery(this.queryString);
 //		System.out.print(json.toString());
 //		System.exit(0);
-	    parseTriple(json);
+
+		parseTriple(json);
 		parseFilter(json);
 		lookupRegex(model);
 		
@@ -77,12 +83,17 @@ public class QueryTranslator {
 		}
 	}
 	
+		
+	public void parsePrefixes(Object json){
+		List<String> prefix = JsonPath.read(json, "$.prefixes[*]");
+		for(int i=0;i<prefix.size();i++){
+			//System.out.println(prefix.get(i));
+				prefixes.add(prefix.get(i));
+		}
+	}
 	public Object readJSONQuery(String qs) throws IOException, ParseException {
 		//read file
 
-		 
-//		System.out.print(qs);
-//		System.exit(0);
 		   JSONParser jsonParser = new JSONParser();
 		   Object obj = jsonParser.parse(qs);
 	          
@@ -223,6 +234,13 @@ class RegexPattern {
 	
 }
 
+class Prefixes {
+	String prefixValue;
+	Prefixes( String prefixValue){
+		this.prefixValue=prefixValue;
+	}
+	
+}
 class grokLabel {
 	String grokLabel,paramValue;
 	grokLabel(String gl, String pv){

@@ -79,7 +79,9 @@ public class JSONRDFParser {
        
        this.mapper = RmlMapper.newBuilder().setLogicalSourceResolver(Rdf.Ql.JsonPath, new JsonPathResolver()).build();
      
-    }
+	}
+
+	
     
 }
 

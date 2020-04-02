@@ -13,7 +13,7 @@
       a carml:Stream ;
     ] ;
     rml:referenceFormulation ql:JSONPath ;
-    rml:iterator "$" ;
+    rml:iterator "$.logEntry.[*]" ;
   ] ;
 
  rr:subjectMap [ rr:template "http://w3id.org/sepses/resource/snortAlertlog#LogEntry-{id}"];
