@@ -120,33 +120,17 @@ public class StartService3
 		String response="";
     	deleteFile(outputModel);
         QueryTranslator qt = new QueryTranslator(parsedQuery);
-		//ArrayList prefixes= qt.prefixes;
-		//if(prefixes.contains(vocabulary)){
-		//  System.exit(0);
-		 
+
          Model m = qt.loadRegexModel(regexMeta, regexOntology);
           qt.parseJSONQuery(m);
 	     // System.exit(0);
 	      List<FilterRegex> filterRegex= qt.filterregex;
 		  List<RegexPattern> regexPattern= qt.regexpattern;
 		 
-				
-		  //System.exit(0);
-		  //System.out.println(prefixes.size());
-		 //  System.exit(0);
-		
-		  //qt.printRegexPattern();    	  	
-	      
-   
-    	
-    	//String dateTimeRegex = "\\w+\\s+\\d+\\s\\d{2}:\\d{2}:\\d{2}";
     	SimpleDateFormat sdfl = new SimpleDateFormat(dateFormat);
     	SimpleDateFormat sdf = new SimpleDateFormat("MMM d HH:mm:ss");
     	Date startt = sdf.parse(startTime);
     	Date endt = sdf.parse(endDate);
-    	
-    	
-    	
     	
     	FileInputStream fis = new FileInputStream(logfile);
     	BufferedReader in = new BufferedReader(new InputStreamReader(fis));
@@ -183,17 +167,10 @@ public class StartService3
     				 jsondataTemp = gh.parseGrok(line);
 
     				 if(filterRegex.size()!=0) {
-						 Boolean c=true;
-						 for (int k=0;k<filterRegex.size();k++){
-    					 	  Boolean  cf = checkFilterJsonWithVariableRegex(jsondataTemp,filterRegex.get(0).variable,filterRegex.get(0).regex);
-							if(!cf){
-								c=cf;
-								break;
-							}
-							
-						}
+						boolean c = checkAllFilter(filterRegex, jsondataTemp);
 						 if(c) {
- 							jsondata=jsondataTemp;
+							 jsondata=jsondataTemp;
+							
  							
  						 }else {
  							jsondata="";
@@ -207,8 +184,7 @@ public class StartService3
     			 }	
      		
      			if(jsondata!=""){
-     				logdata++;
-     			
+     				logdata++;     			
 					JSONObject jd = addUUID(jsondata);
 					alljson.add(jd);
 				}
@@ -269,6 +245,29 @@ public class StartService3
 			return false;
 		}
 	}
+
+	private boolean checkAllFilter(List<FilterRegex> filterRegex, String jsondataTemp ) throws org.json.simple.parser.ParseException{
+		ArrayList resFilter = new ArrayList<Boolean>();
+		
+		 for (int k=0;k<filterRegex.size();k++){
+			// System.out.print(filterRegex.get(k).variable+"|"+filterRegex.get(k).regex);
+    					 	  Boolean  cf = checkFilterJsonWithVariableRegex(jsondataTemp,filterRegex.get(k).variable,filterRegex.get(k).regex);
+							resFilter.add(cf);
+							
+						}
+		//System.out.println(jsondataTemp);
+		for (int k=0;k<resFilter.size();k++){
+					//		   System.out.print(resFilter.get(k)+"|");
+							   
+							
+						}
+		//System.out.println("");			
+		if(resFilter.contains(false)){
+			return false;
+		}else{
+			return true;
+		}
+	}
     
     private boolean checkRegexVariableExist(String Line,String variable,String regex) {
 		String uri = parseRegex(Line,regex);
@@ -294,9 +293,7 @@ public class StartService3
 
 
 	public static String parseRegex(String logline,String regex) {
-//    	System.out.println(logline);
-//    	System.out.println(regex);
-//    	System.exit(0);
+
     	Pattern pattern = Pattern.compile(regex);
     	Matcher matcher = pattern.matcher(logline);
     	String dt = null;
@@ -304,8 +301,6 @@ public class StartService3
     	{
     	    dt= matcher.group(0);
     	}
-//    	System.out.print(dt);
-//    	System.exit(0);
 		return dt;  
 	
     

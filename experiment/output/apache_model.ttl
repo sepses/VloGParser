@@ -1,0 +1,22 @@
+<http://w3id.org/sepses/resource/apachelog#LogEntry-851fabaa-4e7d-4e5f-b6e9-007ea2a60df0>
+        a       <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry> ;
+        <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth>
+                "-" ;
+        <https://w3id.org/sepses/vocab/log/apacheLog#hasClient>
+                "10.2.21.173" ;
+        <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion>
+                "1.0" ;
+        <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent>
+                "-" ;
+        <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest>
+                "/admin/admin.php?SSID=" ;
+        <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb>
+                "GET" ;
+        <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize>
+                "230" ;
+        <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse>
+                "302" ;
+        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
+                <http://dbpedia.org/page/Common_Log_Format> ;
+        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
+                "11/Nov/2011:10:09:33 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .

@@ -74,10 +74,10 @@ public class QueryTranslator {
 	}
 	
 	public void parseFilter(Object json){
-		List<String> type = JsonPath.read(json, "$.where[*].expression.operator");
+		List<String> type = JsonPath.read(json, "$.where[*].type");
 		for(int i=0;i<type.size();i++) {
-			if(type.get(i).contains("regex")) {
-				List<String> args = JsonPath.read(json, "$.where[*].expression.args[*].value");
+			if(type.get(i).contains("filter")) {
+				List<String> args = JsonPath.read(json, "$.where["+i+"].expression.args[*].value");
 				filterregex.add(new FilterRegex(args.get(0),args.get(1)));
 			}
 		}
