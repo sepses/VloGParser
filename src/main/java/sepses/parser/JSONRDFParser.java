@@ -1,7 +1,5 @@
 package sepses.parser;
 
-
-
 import com.taxonic.carml.engine.RmlMapper;
 import com.taxonic.carml.logical_source_resolver.JsonPathResolver;
 import com.taxonic.carml.model.TriplesMap;
