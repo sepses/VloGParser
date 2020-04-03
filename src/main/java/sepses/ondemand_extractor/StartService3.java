@@ -80,6 +80,7 @@ public class StartService3
 		long startTime = System.nanoTime();
 		QueryTranslator qt = new QueryTranslator(pq);
 		ArrayList prefixes= qt.prefixes;
+		String limit = qt.limit;
 		//System.out.println(prefixes.get(0));
 		
 		
@@ -93,7 +94,7 @@ public class StartService3
 								lmapping.get(i),pq, loutputModel.get(i), 
 								lregexMeta.get(i), lregexOntology.get(i),
 								sparqlEndpoint, user, pass, lnamegraph.get(i), st, et, ltimeRegex.get(i),
-								ldateFormat.get(i));	
+								ldateFormat.get(i),limit);	
 					//System.exit(0);
 					this.content=res;
 					
@@ -111,7 +112,7 @@ public class StartService3
 			String RMLFile, String parsedQuery, String outputModel, String regexMeta, 
 			String regexOntology,String sparqlEndpoint, String user, String pass, 
 			String namegraph,String startTime, String endDate, String dateTimeRegex,
-			String dateFormat) throws IOException, org.json.simple.parser.ParseException, ParseException, GrokException {
+			String dateFormat, String limit) throws IOException, org.json.simple.parser.ParseException, ParseException, GrokException {
 //		System.out.print(endDate);
 //		System.exit(0);
 		//=======translate the query ===========
@@ -148,13 +149,24 @@ public class StartService3
 			 
 			int co=0;
 			JSONArray alljson = new JSONArray();
+			int maxLimit=0;
+			if(limit!=null){
+				maxLimit = Integer.parseInt(limit);
+			}
+			int climit=0;
     		while (in.ready()) {
-    			co++;
+    			
     			String line = in.readLine();
     			
     			String dt0 = parseRegex(line,dateTimeRegex);
     			 Date dt1 = sdfl.parse(dt0);
 				
+				 if(limit!=null){
+					 if(climit>=maxLimit){
+						 break;
+					 }
+				 }
+
 				 //break after reaching the end of true line
 				if(!dt1.before(endt)){
 					System.out.println("break, true line is reached!, total read: "+co);
@@ -170,13 +182,14 @@ public class StartService3
 						boolean c = checkAllFilter(filterRegex, jsondataTemp);
 						 if(c) {
 							 jsondata=jsondataTemp;
-							
+							 climit++;
  							
  						 }else {
  							jsondata="";
  						 }
     				 }else {
-    					 jsondata=jsondataTemp;
+						 jsondata=jsondataTemp;
+						 climit++;
 //    					 System.out.println(jsondata);
     				 }
     			  } else{
@@ -188,13 +201,14 @@ public class StartService3
 					JSONObject jd = addUUID(jsondata);
 					alljson.add(jd);
 				}
-				
+				co++;
 			}
 			JSONObject alljsObj = new JSONObject();
 			alljsObj.put("logEntry",alljson);
 			//System.out.println(alljsObj.toString());
 			model  = jp.Parse(alljsObj.toString());
-			System.out.println("logdata :"+logdata);
+			System.out.println("read line :"+co);
+			System.out.println("parsed line :"+logdata);
 			
     	 }finally {
 			   try {

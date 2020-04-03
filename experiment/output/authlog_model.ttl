@@ -1,14 +1,14 @@
-<http://w3id.org/sepses/resource/authlog#LogEntry-e8b3d693-eaed-4513-a21d-6ad626ab49a3>
+<http://w3id.org/sepses/resource/authlog#LogEntry-f7e174f3-6dcf-436f-ad52-da37dc05e753>
         a       <https://w3id.org/sepses/vocab/log/authLog#AuthLogEntry> ;
         <https://w3id.org/sepses/vocab/log/authLog#pid>
-                "6056" ;
+                "6034" ;
         <https://w3id.org/sepses/vocab/log/authLog#programName>
-                "CRON" ;
+                "sshd" ;
         <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
                 <http://dbpedia.org/resource/Syslog> ;
         <https://w3id.org/sepses/vocab/log/coreLog#hostName>
                 "ip-172-31-27-153" ;
         <https://w3id.org/sepses/vocab/log/coreLog#message>
-                "pam_unix(cron:session): session opened for user root by (uid=0)" ;
+                "Received disconnect from 193.104.41.58: 11: Bye Bye [preauth]" ;
         <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
-                "Dec 31 00:17:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+                "Dec 31 00:01:24"^^<http://www.w3.org/2001/XMLSchema#dateTime> .

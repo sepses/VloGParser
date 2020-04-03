@@ -28,31 +28,26 @@ public class QueryTranslator {
     protected List<RegexPattern> regexpattern = new ArrayList<>();
     protected List<FilterRegex> filterregex = new ArrayList<>();
 	protected ArrayList prefixes = new ArrayList<String>();
+	protected String limit;
 
     
 	public QueryTranslator(String queryString) throws IOException, ParseException{
 		this.queryString = queryString;
 		Object json = readJSONQuery(this.queryString);
+		parseLimit(json);
+		
 		parsePrefixes(json);
-		//System.out.print(this.queryString);
-		//System.exit(0);
+		parseLimit(json);
 		
 	}
 	
 	
 	public void parseJSONQuery(Model model) throws IOException, ParseException{
 		Object json = readJSONQuery(this.queryString);
-//		System.out.print(json.toString());
-//		System.exit(0);
 
 		parseTriple(json);
 		parseFilter(json);
 		lookupRegex(model);
-		
-		
-		
-			//System.out.println(subject.get(i)+" "+predicate.get(i)+" "+object.get(i));
-			//triples.add(new Triples(subject.get(i), predicate.get(i), object.get(i)));
 		
 	}
 	
@@ -81,6 +76,17 @@ public class QueryTranslator {
 				filterregex.add(new FilterRegex(args.get(0),args.get(1)));
 			}
 		}
+	}
+
+	public void parseLimit(Object json){
+
+		JSONObject js = (JSONObject) json;
+		if(js.containsKey("limit")){
+			Long limit = JsonPath.read(json, "$.limit");
+			//System.out.println(limit);
+			this.limit=limit.toString();
+		}
+		
 	}
 	
 		
