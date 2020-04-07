@@ -1,5 +1,499 @@
 
-<http://w3id.org/sepses/resource/apachelog#LogEntry-e4b7a946-80b9-4909-8180-d2ed7e2f2597>
+<http://w3id.org/sepses/resource/apachelog#LogEntry-0d9abbe8-1432-410a-8581-f1c21d10b2e8>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:00:16 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-18439cb9-a6ed-432e-b295-1c92e67c8b52>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.253";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:00:44 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-ef379c24-aeb3-4a82-94cb-38052ff4f7ec>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "3.75.190.181";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:00:45 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-83fd87d0-9291-4904-8ac5-9dd4c6d2d449>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.20.10";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.1";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:00:57 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-fc467099-fa2b-4660-8957-23b467c3cefa>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:01:07 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-65052d7a-c03f-45e9-b850-e42011268433>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:01:16 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-f982d970-7e92-4fdd-9a39-b6722b170074>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "3.75.190.181";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:01:45 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-0e6bd539-d8f0-454a-8ba9-460fe15fe221>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:02:16 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-d02af87d-0886-404d-8c17-51c194d6801b>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.253";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:02:44 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-6acc2b05-7802-4a81-bfd1-1175280dbbd5>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "3.75.190.181";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:02:45 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-cb5d590a-78f7-4b84-8dbc-99681477c022>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:03:16 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-3f7c78cb-ac86-47f8-9d00-00c1ed7dc7b9>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "3.75.190.181";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:03:45 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-b6a0fd28-4ec6-49f3-8c62-51a5927b97dd>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.20.10";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.1";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:04:02 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-30994c57-5d9a-45d0-a57f-af2778206357>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:04:10 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-9617c0a0-9799-4840-a163-fa11bcdbfe89>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:04:10 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-e82bd96a-7681-4bbe-bf8d-28098a0f90eb>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:04:16 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-94848201-f099-441a-9621-868b06079268>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.253";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:04:44 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-4b0fd232-9133-49bd-9bd1-cdf81d536278>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "3.75.190.181";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:04:45 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-0dd4fb1f-b3bd-45d4-98a7-bed4d6da4448>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.20.10";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.1";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:05:00 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-6f35428e-5411-44a0-9415-e609b8d888d6>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:05:16 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-a63631de-7c74-4264-94d2-847e17b34995>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.90.5";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.1";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:05:34 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-2b3d688c-1d19-45b0-adf4-bdf7bf3b8901>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.20.10";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.1";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "204";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:05:38 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-0f944e0e-685e-44dd-85cc-c82d01cfddad>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "3.75.190.181";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:05:45 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-5c005de7-cfca-4e08-85e9-1ff65d50e32c>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.90.31";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.1";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:05:54 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-5d707602-867e-4170-a5eb-6685cde6f558>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:06:16 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-a74b512a-355c-40bb-809f-be6e273b413d>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.253";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:06:44 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-d5b863dc-b596-40f1-9935-dd38894f637f>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "3.75.190.181";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:06:45 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-abf681ab-fbe7-41fc-985e-c541b445fe52>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.26.156";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/%32%47%32%47%78%13%99%76%78%13%99%76";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "229";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:06:52 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-c8326c1b-5fba-4dfa-98d8-33b97311f7ff>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.26.156";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/redteamsayshiplzblockmeagainandagainandagainandagain";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "261";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:06:52 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-e7feff30-ce37-4414-bd0c-2c5f50a706fb>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.26.156";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/orgchart.php?%47%78%13%99%76%78";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "252";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:06:53 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-99f20abd-9bca-4e89-a13d-147ccea8232b>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.26.156";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/Iliketosendtrafficatyou";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "232";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:06:53 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-bac9cfdf-d34e-4c54-bcbf-52154707b70e>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:07:16 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-926d7f30-2077-430f-a6ac-b7832ad05260>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "3.75.190.181";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:07:45 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-cd04e5ec-3150-4b52-aeec-0a9cc47b4a53>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:08:16 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-a63c59a1-37f1-4400-b56d-5af2f7439383>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.253";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:08:44 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-f347ee63-1b76-46d8-a8ce-4c6ddf2dd30a>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "3.75.190.181";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:08:45 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-7fb3e42b-862b-4ab6-b3e5-4776dc2d9c4e>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:09:10 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-44465d78-973e-4060-abb1-be4ce85518a9>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:09:16 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-22640d9d-9413-4fc9-89a7-d5dc4f5cd7c4>
   a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
   <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
   <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.21.173";
@@ -12,7 +506,7 @@
   <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
   <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:09:33 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
-<http://w3id.org/sepses/resource/apachelog#LogEntry-86b5b38a-5f35-4f43-9458-e0c0218e8bc8>
+<http://w3id.org/sepses/resource/apachelog#LogEntry-411ea953-2591-4c64-9d9f-dadf124c288f>
   a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
   <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
   <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.21.173";
@@ -25,7 +519,7 @@
   <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
   <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:09:34 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
-<http://w3id.org/sepses/resource/apachelog#LogEntry-a41a05a7-c81b-44d6-ae9c-671f95876c68>
+<http://w3id.org/sepses/resource/apachelog#LogEntry-b23a076b-ac8d-4a98-89fb-128fce5d1cfe>
   a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
   <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
   <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.21.173";
@@ -38,7 +532,20 @@
   <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
   <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:09:34 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
-<http://w3id.org/sepses/resource/apachelog#LogEntry-fd20d394-9c59-405f-a36c-41e08664182e>
+<http://w3id.org/sepses/resource/apachelog#LogEntry-d86d4730-1ad4-4653-8878-9b8e7a51fb54>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.21.173";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/staff.aspx?%78%13%99%76%78%13%99%76%78%13%99%76%78%13%99%76%78%13%99%76%78%13%99%76%78%13%99%76%78%13%99%76";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "380";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:09:34 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-e76108b9-af0a-4bb1-9411-05f6692a7d4f>
   a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
   <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
   <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.21.173";
@@ -50,3 +557,939 @@
   <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
   <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
   <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:09:34 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-eaa1133f-3e61-42db-89c5-bbdddce4a8d9>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "3.75.190.181";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:09:45 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-34837c58-ca5f-427c-b107-4ebc28ff3018>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.6";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%B0%153F%D8%82%E4%92%D8-9%B8%10%F7%CF9U%01CVh%3C+%D5%9D,@v%D1%8D%A8%D9F%83%EF%D3";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "295";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:10 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-d30094f7-5aa1-43ba-a5e7-19e93706401c>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.6";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%1Bc%F2%C8S.%A0%EA%CFv%AC$%DBKpO82l$%C1%F4$%98%B7%02(%F0%FD%D6%1C%DA%7Fw%BF%DE%96%CF%BC%06%B2%FD%A8-%7F%E0%90%EAU%F8%D1%8D%D2:%FB%84%02/,Q%F7%BA2%C2%9D%EErI%01%0E%E2%06%5E%11%96%EB_%B2%C9%A98";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "406";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:12 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-d8af86e5-9069-426f-bc2c-92d09d2530a7>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.6";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/S,%EB1%8DP%C8jW%1E%A5%7B%E6%EE%3E%93%D2%BB%A0I;-%97U%D4%1F%B5%C1%D6%CD%DC%E8%06%D0%E3p%85?kF%BA%BAQ%7F%A7%BF%A6:%1C%B6ec%8D%16N6?%0F%C7%B4%A7%98%D9%D3%1C%B1%5C%8B%B3c%AC";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "434";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:13 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-e9d11cf7-d5ce-4d93-943a-cac50cc0d63f>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.122";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%FC%F2%DF%EDkp%087aU%82%18%04%A8t;o%FE%DE%C5H%8Ax%96%1B%AF%D9i%E2%C4%19%C5j%A1%84%06X%8A%CBZ,%9C%9E%1E%BB%CC%93%A7%F3%0B%864'%8An%A0%BD%B2s%87%82%96%88%DFZ%B5%CE%98%B96;%10%98%16%A1F%F9P%FEz%C0%F0xV%F1%074%8E%C3=8%E6q%FB%C3%96w7%1C@+%CD7%15jnV%95%9B%0F%D0%22us%E0%F0%98%914%A7~J%C8[";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "503";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:14 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-0606e43a-12be-40a9-b134-8ff75857a660>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.122";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/r%E92%86wn%93bPS%AF%F4:%D7%A8A%E2G%87,A@%E9*%9A%EE%D4%B9%F2F?%22%B7%09Y%18%AF%C4x~%22X[%1Ev%C8%19%D4%D4o%9B%20%B8r%25;%D2%A2%9A%02%25Y%09W%F1%A3C%1B%A2n5%CB%E0%D4%EAi%03%20%16l-,%F60%D3%91%16Ky%F8%DA%02H%7D0%9C%1E'%194%C2%7C%FBs%01%84'%DD%7F%B7%9D%11%15%86s%C9%D9%89%CB%C0%81J%84b%11%EFK%C0%1A%F2%F0I%0E%80%8F*+%C08~8%C0r%95%17OL%E4E%C8%D2n%A9%D7[r%3C%0B%8F%07%C2%E9E%B4S%CD%D1%AAa%C8%19q%06%82%20%AF%19%88%EF%848%F7J%B5%05)Y%0B%0A%DC%18Q%E6%92%BD%98%ED%DA%5E%B6%1E%F7%E7K!d%0A%BF%C93w%EE%F84%E4%E0%18%85%B8~DWbB%B7%13d&%7C%E4C%0A%5C%20%7C%FF%0E@%8A%80%C2%E3%A6%A0%DER%F2+%D9%9F%CBY%25!%DC%BF";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "1123";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:15 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-f3a4a2b0-5f6f-4fb0-9dde-ed37122e31b0>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:16 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-6e317d67-e1c5-448f-800b-c2fac7b869b5>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.122";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/D%BEu%BA%DE!%ED%18:Ji%A9%91AvO_%86%C8%18Bm%FD%FC%950%B0%0D%14%1C~%FE%1E+%DC%E6Z%D3Og1%D2%B3%82%C4%F7%15E%18%B7@%9DL%91%0B%E9%AC%5E%20%EF,m%D5%7F[%16%A5%0CP%83Iz%81%91%A8%CF%F7%08%9A%A2";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "401";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:17 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-10705d58-e11c-42ec-abe8-a18f748f70b3>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.122";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%03%1A%EA%8CO%D6%E1%E0%06%20%0F8%22%7Ct'U%C7'%22%0Avz%C2%DD*%C0O%12%05%B0=%06:O%9C%FD[%C4&%A2F%05%EC%D7%09%E5%B8%3E%A63%F0e%F8%DCV%85%C0%D5%8C%F4";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "217";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:18 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-72ac5926-6cc2-48d8-9b03-aba04cbd86fb>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.250";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%FA%8F%F6%F7%8F%DD%FEO%AA%04%B6%97%C2:%1FD%19%BF%B9d-%11+I%BA%AF*%08%1C%9C%C9&%90S%83%E25%FE%B1%B08%8DPv@u%CEd%25S%01z6NJ%C9pp%D6%D0'%95%FBX%A3N%02%C3on%EC%22%B8%E7p)E%C0H%FC%C5%8D%03cq%F31Iv%DC-%98%1D%0D5%1F%16%D7%03";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "436";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:19 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-26784df5-2206-42c8-ac30-2fda2fe9e726>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.250";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%CD%A0%0A%A8%D0%EA%E0%22%9A)%C1%18%FBY%18%98%0C)%D2%BCa%5C%E6";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "217";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:20 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-0ae72be0-3455-44c2-b5aa-1014646080b0>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.250";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%E0n%1A%1B%16%F0%ADg%9D%DC;%85t%DA%BE%C6%ABO%D9%9B%87%7F%F83%02%EC%F4%15%C4%F7%B8Zxa%AD%94%DChU%02%D2%DE%A6%D9%F5%EE%98%D1@%3C%F7E%9F%1Et%F3p%9D%FA%0E%0D%04&%DC:%AD%99%0Aea'l%D0%F4~$]~%F6-(h%C6%B7a%19%99%09%CCu%1E%D6%D6%C5N%BE%D1z%DF%CF%1C";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "217";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:22 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-6d9cb510-6a5b-4dcb-bc05-22ab83a6d8db>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.250";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%C1%09%A3%AB%C0%E8%9F%AE%89%BDA)%E5%B0-%AE%E9%13%1D%80O%8COcF%B6%83%9E%E5%18k%7F%C5$%C3%CC%F5%80%FC%0F%9B%DF%8A%F4%F7%B2%EE%80@%95r%C4g%D6%1B%1B%E1V%1A%B4dh%87W%F3%ADe%19_%80%5C%84%F1%E4%8Au%E5f1%7F%5C%18%A5%06E%CC%950m%F4%A8%90%A1%FE%F4%A8%0Fg%92%E2%F2l4%1Ew%DC%06%EA%F2%F0%AC8%EC%3C%AD%7C%9Cp(%CAa%0F%7C%0F:%E5%06%D0%12%CB1%99%98%9C%BA%0FB!C7%DF%98%A0@g%F8%CE%E1%A1%05%15%E4%EE%25&%D9%E2[=%D8I%1B%D2%60%C0_k%B0%8C%91%C8%D8=$%8B%B5";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "653";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:23 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-af12cd1a-8ff1-40e3-8f18-922ccb63321a>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.108";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/=%14%F8%EA%18%D7%FEpy%E6d%A5%1C%81'%97%BE5n%AD%11%F7%04%84%C2!e%EDb@%DA%7Cz%FD%CE%05%86%98%A8%81ZIR%14%D5%B7%3C/%03%91%1D%B6%DAA%B4?z5*%87f%A4%0F%EC%EC)o";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "378";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:30 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-212e2e69-ac83-4cee-a474-2cc442d870c7>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.108";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%FC%AE%5E8%08%7D%04%C9%7D0%FA%992%C4%AC%01%CA%07e%C1%84C%01%F1A+%06%16%9F%CBo%86E%05j%C1%60p%CD%FA%8DBX%19%D1AnE%E4K%04%8A%E4u%14%84%81%112%04%7D";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "360";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:31 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-1d5c7e1f-3a00-4c8c-a5d7-a4edda8cbd1f>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.108";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%BE%B6%C1%AD%B3ym%02s%97%C1=:?uN%F8%E7%E9n%EA%B6'%81%A6%BB,%9E%8C3k%03%8DI%0B%8D%F8%B2%225%C1%A3n%C77%F9B]%E5J%0D%D2%F5%F3%13SX%3Ec%0D!%18%C5%1F%12%86%BF%C5x'9%AE%07i%92%B73%0D3%EAq%E7%CB,(%D4%9B%3E;%F2%95C%AD%D3%D8g%1D%A7%C5[0%7C%E5w%1E%FCe)%82%BC-j*/%B0)%22%11%80[t%94%B5%0F%FC%9B%FEX%1F+%12KY+_%E3%DE%9B%E6%06%CC%E3%E7:%D9'%C2%F1%E5%1C%05t%9Bu%ED%9Ey%B7%5E%CF%F8w%F2%9AR%AC%1A%15H%F7U(%FB%97%B8%02%EC%EA%8D%8B%01N%F6%98O%AA%FB%BC;%193%F5?!%7C%8A%F4%8C%988%8C%7CE%D6a%F8*%1C%05;%90I%B7l%F5%AA%84%982Z%C7!%FD%E9%EC%CF%9E%DB%85BX;%13";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "1048";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:33 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-c5e7d77f-3a17-4710-991f-d0e6d9924cc4>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.211";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%D0%25%9DB*3%10%7F%89%AD%A3%06%1E%82%AB;%D1%A68%CC%F8%D4%91%03%F4%FA%20[%95%8F%B5%B8%96!%FE&S%1B%89%93r%D2QvO%1A%F9%D2j%B6%B4%BB%F6%91%CC%A8%C9%F2j%BB%0D%E8%D0;%A7%AB&%13%06%96%5C%89*r%07%F4%0E%7F%D5%91%96%F8%04%9F%25%AA%F3%94%EB%8Bu%06%88%F6%84bj%0A%92%BC%96%93%8E%07%89O%D3f2%25%116%8C%B2%FD1%B1%CE%03%C2%D7y%FA%B6%07%18%89%1C%A3%3E%B0%22%C3%D0DF%10%C3%83R%B2%CF%BF%95%7Fw%D1s%8C5%A7%E1i4%BD%EA%0E%15%9F%E3%CE";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "217";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:35 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-516474b7-5c76-4473-b2e6-58082aac9c2b>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.211";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%C9%CB5%22%D0%84%DCRh4F%08%BE%13cAm%05%96%EFI%86%A4]%FD%94%AB%ACf]-03%9E%F5%22%A7%DF%A3%97e%BE%E0%01%1Dy_%91%DB%D5Y%A4%C9%81/;%E6q%1F,w%A7%C6,&wjN%AF%D0%D3%E4cO%97P%96%E51%B8%BD~%13%5C%9B%B0%C0%17%60Z%FF%95%D0%D4%A9%B3%19%1D%E5%A2%85M%01%C3%133sQ%86%FA%F5B%B8)%25%80F%F3q%D3%5E%B9%D6%D8%BE%AF;7uid%AE%1D%7C%F6%81~G%966%8C%C8%8A%CC;%97%8B%F5%AC%CEx%A9%E5%1F%B9i/%DB%19R%B4%A3h%F2%0C%C1%B0X%0BP%BFRh%C3h%CEX%95_%F1%D5%13%7B5%DB%FB%DC%BD(%D8%ACbJ%0Ap%0F%12";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "217";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:36 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-48273a88-9840-4ddc-b665-505075a18739>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.211";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%C4%FA%09:-cAH%D7%ABWH";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "237";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:37 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-f062ecea-c854-467f-adca-36d6db4dbe2f>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.211";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%9D%FB%19$%B9%15%BE%FFd%F1%8A%C1%85GE%0E%C4%C2;%01%F9%AD%98%EE%87%1D%F1*%C4%97u%CBy-%A5%8C%C4%DF%D5%D6%19%93%EA%16zZM%0C%BCy%D9%09JC(%5C%BBX%9Af%B71%A5u%3E%FE1%AB%95In/I%18%16H%9E+%C2%14%EF%C8O%EED%90W%0C[%FFG%8E%0A%7B%BC,%8AJ%0D%F4AZg(%9AXk%93%AF%1D%D1&m%07%B1%DD1%92q%BA%F8%1E%E1L%9Dz&%E2%09%0B%E8%B6%1A%60O%1B%01i-IWtWu%93o%98%C1%E14Z~B%1Bz%17%8B%E4m%B2%FF)$/0%C5%1E%05%8E%C7M%E4HZ%AE%07%EF%04%C7%01%09%F7%5C%1F%5C%D3%25;%1A+%ACv%5E%C9%93%F2%0E%B2%9D%DE%A5%81Vn%FDQ%94%81%CDo%1C%C8u%09%EF%FA%B0%AAR%D8%E1%95%8C:%8B%0B%D1%A1+%EA%FC%BC%10%C9f%B4(%9AC%05%F8%09?%F2%3C%17%DF%CEm%F3t%E4%8F%81i%F6";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "217";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:39 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-88503a48-b6aa-4a32-b99e-f12b5c3c5a0d>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.253";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:44 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-c87f9279-0134-40ce-bc13-3e281d38754b>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "3.75.190.181";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:45 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-63ce2178-ca5b-4ba9-bfa4-320932a2e66f>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.254";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%941%988W%96%C2%0Fc%DF%98%EA%11%FD,w%DAJ%AC%C2]8%F7Ti%98I2=%C2%1A%F5%C1%D0%BD%22%0F%7F$%EB%A4%F22%A3%E9%9B:%8D%8A%E5(v%7Fc!LRO%EA%91%0E6%A7%A3j%D2F0+i%DF%95%D6G%8Al%BC%E3Mp%82%E5%FB%93%1E%13P%DF&y]%11%07%CE%1At%E0%9C%0DUM[%A8%84Hi%3C3%20%B9AM%87%F3%ED%11%D8n%9Fi$[%B0%7C%D5%9D__%DAy%03f%0BE";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "517";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:46 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-b4611d14-d93f-4ef9-892b-fd8e13364f3f>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.254";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/lfBUx%FD%C4'%C8";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "230";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:47 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-68e6b6b7-3afb-4e68-9b1b-df3646c130c4>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.254";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%BD%81%88%14%FC%1Fe%C2%0D%B7%10%AD%60Y%B4%81%93LjpZ(%8F)b%03%C1%162%CB%A7%0B%11oz%0D%9E7%CD%E3%AA%CA%DF%8D%7B5%D5%0Fp)%A6m%B1!5%C2%9A%AA%D2%0C%AD=%CA5%B8RNl%F3%B6%DDS%82it'yg&%87%D76J%E6%0Eb%B2m%C4%DD%22%D4%CE%F5%01%DC%8F%B6n%BC%D2%C0%0D%E9%14%DE%9E%0F%82%BAFK%A4%DCZ%B9L%9F%25%1A%0EU%25%FE3Ml%E8%F5%8B%C6L%83%FC%82%88%84%D0%1E%BEV%B5%B9%88N%C9B%E1%12%11G%8A%AD";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "580";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:49 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-d8d66fbd-e5c5-420f-bb76-393bbe49eb81>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.1";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%25%B2%C3%CF%82%92%18VI%9B%06%04%A19%92%13%EF%A1w%E8%E64L%E0(%60,J%C2%86%EA%FC%AA%5E%83%FE%EC/%85%9F%9D%E1%B5%FBo%03%20%22%D8%09%03%E3%8AM%A1~c%11zXjQ%A0%0D[Y%E1-%7F-,1HU%D70%87%9A(%3C%CD%B8%C6%98%DA%D5%BC%FC%BEq%F4%10t%F2%F7%93%DA%8A%92%A4";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "457";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:56 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-064c873a-8a9d-4dbe-9c46-8e5614d3a409>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.1";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%89%D2%D1%D2(%AB%19%1A%CC%C2%A5%99x%D9%C3%09!@X%5C%B0%13%83E%DF%C5%CF%039%16%DF%BC%AD%15%7F%05%0C%95%E769%FE%DB%FE%CC%1D%83%17r%0D%DA%A2Ho/?%C8%89%D5%9A%DE%EE:%1B%1B%CF%90%8F%DEf%B8%0B%8D5nL%17%C2%0C:%F2%DEjR%E3%DC.%F0%B4%1F%BC%FD%EA%DBv%3E%BAWk2%82%9D%9E/A%8B0]%25%0D%E0lj%02t%A2%D7%19%A0%86%80%16%F9P%18P%AE%B9%02%89%12%AC;%C1%F8%91B%CEp%5E]%1B%80%84%D9%20%FC%25U%1F$1%8A";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "730";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:57 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-e30a9780-0583-461a-9cf8-637bed8ebe2b>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.1";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%CC%04%D8%0C[%F7%F8%C4%15xlf%FC%82%FE%1F%7C%3E%E6%0C]%F6%A6%93v%A0%B8%F3zO%AC%E8%1D%BA";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "305";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:10:58 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-819b63ad-2133-408e-9053-b42b0472a86a>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.212";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%E6%E2%E4%F7%8B%91%CF%D4%C0%1F%A1%FC%ADG%BF%B4%C8%60%BE%A6@%B5i%9CEI%D0%D1%95%7C%15%7DU%84%A1%DAG%FCFI%18%CA%FE%B4%F7%C7iN%B29%FAj%D6%8F%99''%95%81%B5.p%E5%D5U%0B%09%AFv%90%19%0Er%E4%CF%C8%A3%AE:%BD%B2%B1O%F8%FE%8D";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "429";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:00 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-55134011-36a0-466a-884c-e266b3c1fdc5>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.212";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/l%25%9D%BD%C3%A8l%96%BE%A6%E7%7C%22%A26%A6Z%C3%05/%82%E6r%85%9C%FEl%88d+M%07%0Eur%D8r%0D%0DE%E7%B6)%08%1B%7Fg%16";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "327";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:01 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-65c7a59a-146a-4583-9983-a57d7f83787d>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.212";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/[%20J-u%BF%D4%8C%83%D6U%BB=%AB%DA%82n%83%7DG/%AAJ%81%81M%CC%AB%82%83%D7%C1t%9D%84%A9PV%D2.%1D%1D%BAk%FDu%CF%E2W%80%8B%14%F4._Z";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "343";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:02 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-4be4b2dd-7633-457c-bade-6ece76a050a8>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.212";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%81O%FEK%82%FAqy3%8At%F5,%F5%E3%B1%175%B9%D5%0Bpk%17%ED%03B%89%20%D1P3%B9+%8Cg*%EA%B1R%F48%7C%0F'1%143%E8%DF;%FB%93%0E%C4y%CE%AE?%B0%BFr,%20%B4%B3Q%D0D%DE+%8A%D0%5C%FC%D0%5E%88%01%B4w%85Ua%BAV%16P%04%83%B1";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "466";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:03 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-f254beb6-7ae4-44d2-b28b-17261c901363>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.23";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/s%BE%CC%81D%86%06%B5%FA*%D7%828%85_%FA%B5%E0%09%EF%E5%E0%1D~9%F2o%12%E4+%D93%01%98%941t%C0=%DF%07%FC%AC%C1%F4%96M%C9%A1lO;%EB%E3%D0E%88%BB%D0y%94%1Fb%15c%9A%A7%E0V%09%13&@%A5@%C9f%EF%1CK%B5%AAu%B1%C3%80F%3ET%B7%FD%C1%A8%9B%5E(K%A6F!%9E%AA%18%B4%B6%A4%A7%C38%1C%94%A2[%C5%B1%22%9A%04d%C4V%5E%DFC%94%E3%12%A4%E7+%7C%06%8A%1F%99%C5%B7%F3~%BB%83%82%D2%E3%DB%BEHv%E7Y%A7%EB%A3%B9%7C%95%E1%AB%1B9%A9%F6%AD%DBD+hQW8%EE%D4%BE%C0;%CE%AF%9E%C0%815Za?Rh%B7k%D1%02%DCh%C7h%B1z%A5K%C5%14%16%DB%04%107%8D%08%A1%EAo%0A%DE%F8~";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "775";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:05 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-bfe4a636-0c83-4443-9bfc-80487137f8e9>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.23";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%E4%F6%E4+%94%0D%A3%5E%B6V%19%19A%5E%DE%FC%F78OB%CB%0F%EC%E8%A8E%0B%D6%1De%C3%D6%08%BA%A6%9C_%06%0B%7Be%0FH%C4A?%B66y(Q%EA%D3%D5%BE%20%3CN%91%070a%03A%12%0AS%8D%C6X%93%1B%B6%B8%7B%EC%B3!%D5WT1C%CBB%DF%C0%EF%C5Nx%0DN%C3%04%19%11lN%B7%CF%87%AD%FB9%A3v~%1FB%5C%22,%FC%1C%D2%BF%1C%B8%8ER%FD%1D";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "604";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:06 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-1ed8940e-1cfc-41bb-b663-88d0fa3a6c7e>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.23";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%1Ab%0EHwO%F4o%D2%EA!S%8E%8A%E1%A2%E2%91%176%D3%97%14%A75%86d%19e%D1%CA%14G%C5%DE~%F8%DE%DF%B4A%F0%14%0C%9C-%5C%04%E5Y%AF%D8%FB%048%92%D6%EF%E2Q%F6%FE%16R%86%A7d%9A%06%25%06%C8&%B0%BF%965%BB%F6;%18%7D%86of%8C%0F%EA%9Da%0E%14%81%DE%9E;_s%1E-%B3";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "466";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:07 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-56a4c9f0-f453-4a27-9fba-c88468a771f6>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.23";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%F0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "218";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:09 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-71a17d56-d200-4bfc-8fab-91fa35a1667f>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.2";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%EFW%98%CEt%DB%CBv%03G%DD%DA%A8%90M%FC%04]%A9%09%8FO%9B%FF%04%C5%D3%CEl%01%D8%1A%E3%C4%0E%CA%01rA%D7x!J%D4%D1%92%1B%8C%1CN%BD%D8%EDgx%85Z%9CV%F3Gl%AEU%C0KF%B2%042%DE%01$z%F2iM%90%1E%96%93%F8%AC%E0%1CWb%EF%A7%B5%06%C6Mr%D49F%BA01%02%E0%C3%14%D5%B3%8F%1F%CE%BD%9D%D0%E9%96%DC%FF%04%C31%F5:K%DC%86i%BD%06%C8%E7%A9%D8E%A1%E6V%9D%1EF:%E7%804Q%9A6%22%CD%C3B%17Q%FD%EE%16po%EE%7F%87%F7%02%BB%C4%88z%F3%60%CA!%DF~%9E%22t%FE%CC%C2%FA&%B9%866%F2%B7x4%DF4%1A%0Ad%07.%BB%F8%5C%AD%94G%CFnPr%5E%F9%92%ECLwHa%94%8A%EAa4?~L%BAu%9A,%8A%11*q%F0%84h%19%9A_%1C=/%D2g%CD%CB%7C%1AD%BD+%D5%C6w%E0%15%C8r%DD%E8";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "217";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:10 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-45637aca-a0a7-41ca-8038-cccddc4bcd07>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.189.250";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.1";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:10 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-caafef4b-1d5c-49ca-89ea-259014ddc440>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.2";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%02N%A4_K%B9%FD$%F5ZKB%03L%94m%D7u%90%ADM%D9%17%95Y%E7%02%E0%CB%0B?%F9%04%EA%7F%06%B1yA%5E%7ChK%1D%E6%FD%F8%ED%16%F4%C5%F7%17%CF%94t,T%175%A8%F6%B4?%B4%C4%A2m%BE%F2%0E%FF%D9EiN%9A%98%C9%DD%B3%87s%96Q%0D%D5O%D3%B85%E3%C9%A5%BC%06v%99T%E0e%C6%A9o%94%B1%D8%9D%C8]%F4%DA+%C5Wj?%90@%05%11$)j%CE%92]T%D7-%B8[z%7C-W%AB%F2H%A8%87";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "690";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:11 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-29142a02-043f-4322-b016-d20870d89347>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.2";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%DE%5E%C6%A6%DF]%C8%DF%97%EA&%9D%3ES1;z%7D%88k%FAh%A4%8Ep%A4%E2%D2%ABn%B7%DC%FA3G!q%20%92%18%60%95%F9%97Z%A99&%C8%7BxvT%5E%7D%88%FD%1A%0C%18%9B%CD%15%DFWA%B4%20A$%DC%D3%7D%F3%E9%C8%97%A8%1D%FF%C2n'*%AE%C7%A5O?-s%E4%A4%C4%9A9E%0A";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "465";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:12 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-539eb023-a2ff-4c55-9045-7a14ee375d1d>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.2";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%EA%F1%B09%85[%98%AA%A1%7CR%F2%E1%9B%89%E8%E3%AA%05y%97D%12%89R%B4%98%60%C5?I%ACS%E1%C4%99h%AE%CF!%B2.%B0%D1%A5%1Dl%BC%9E%8A%9E%25:C%BA/%B1%CCc%8A%A4%13V%C8%87e%0Dx%AF%FCW%8E]%8A%7D%EB%97%A8%99%17sE%8E&%7B%07%E5%9D%0C%BFu%81%96b_%C0v%92%0C%EB%BF";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "566";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:14 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-50422b98-0472-44f7-8dfa-220595656b27>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.100";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%B1%D4K%F0EV%E74%A1%A7_w%D0xq%CC2%B9%B9LX%F1%DC%EBAr%FB%25/%03j%A6%C6%D1%7C%80%F9%81%CB,%08G%99%E0%8B%12%B5%EF%E3%ECd%E4%F9s%C1%C0%254%AA5%9Cw%81%A7%D1%CD8%97O%DA%897%CD%83V6%B1M?Vj%DF%20%83%FD%FE%F7%C0%BE%CDQWM$%9A/%EE%C8%0B%25%1D%91%BB%22%FC%AC%EAt%7FE%CEYg%7B%06%C6%A3%F52%B0%DE%E4~%8F]%DF3%3E%B4%82*%0D%EA%89.%CD%D2%C5%F0C%12DT/S%89.%80%01v_DH%1E%F8%9Bx%B3%D2K5%90%F3%AC%A3%BA%AC%1F=]]%97%7F%A0%AC%15%C4%B4%A3[%18s%E1%7D%9E%5E%B5%10m%0C%E4L%9D%A2%BE%FE&%07i%DB%92%14%C8D,J%C8%B2%7F%C5%07%8CD%A5%7D*%93/%DA%C1&b%10)%E9%F0%F0%84%A1%B1%F2%F3%930%191%9A,%93%A8%82%3C%A0M%DB%FE%FC%E1%BB)%89%E3%9Cn%10%86";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "1079";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:15 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-72b48489-650f-44c9-b035-15c93d328874>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.1.60.203";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:16 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-2da29276-5611-4825-922c-7a22e4e0f23f>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.100";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/]%16%DB%D6'z%CCh%D0%7B%07y%D3%99%82%C7%3E%E7(%7F%D2%D6%9A%A5wW%FC%14%ECu%F0%D6%C0%03Z%D4%97T%9F%03%80%EF%8D%03%CA%02UB%1C%1A%D8";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "344";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:16 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-3a3cd788-f268-4cd6-8146-8828677ae4a0>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.100";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%11%B4%E1%7D%19:Z%B8%89V%7B%87%09%B2N%CE+%7B(%1C:/%B2DvU%B1,%9C%90%D0%D2";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "287";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:17 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-82a3bb8e-fcc8-40aa-bbbc-5563125b3921>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.100";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%BE%F2%82%B7%D1%F2=%15g%92%C3m%93%BE%1Bvs%D2%F8%D5I%82%FF%ED$T%02%E8%BCj%89%DD%0A%D8%DE%E7%0E%8B%BA%95%20%C3%1EI9s%C7%D8";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "217";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:19 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-e09591e4-d3ee-4e1c-8129-c209ab88f8f5>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.207";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/C%F3%90%99%CE%85%DA/%09%20%97%CC%C6?%F1*%DA%10%19%B6n%CD%F4%84hw%AA%C5%E8G%A0+%1D%DC%DB&%E7%A2%E0%D2%15GK,j%19%1DT=H?%09kQ%9E%93%EDYgF9,%ECB%B4;%86%A3%DB%10j%DE=%96I%DD%E8h%DE%1D%03,%7D%96%5C%08%E6~%DB%8D%AF%BCv%CC%DC%C6-%22%20%1An%EEl%EC%AAb%15%C5%14%B4%F2%1EUV%B3%BA%3C%ABE2%D2%91H%AA%B3%5Eq%E0J%F9%22%9C%C7%0C%0C%AE%A4%1F$%10q7%0B%01%DF%0A%B5y%D1%07";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "755";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:20 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-41ec1817-d9a6-4715-b3d3-5fd01c7ad703>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.207";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/F%ED%D7%B4%95%E7i%17%94%CE%C6gX%E4%F3%C2%F3%94z%B5%F5%84og%10%86%DC%C8%88%E4%B6j%8D%E8%8E%C8%0EtS%DC%CB_%A3_%C3%8D%867%CC%DC%89j%84b%0A,%7B%E9%C4%8A%03%9E%EE.%C3%C8n7%FC%9D%9D%B6%1CDL%AC%8F%AF%12%BA%25%1E%82%15%C0p%1EU%BE%1Dh%8C%FA%92%12%EB%06%04%A8%AA%D0%09%C9%FF%20%DB%18:%25l%8F&P%C1l)e%60y%DA%8DIm%A8%BF%90$]%D5N";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "217";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:21 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-bd872740-3ddb-4eb0-880c-a288493f835a>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.207";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%A3]]%DD%93L%15x%FA%89%17%DB%15%FF*%82I%03M%B2C%09%AA%A4%F3%D0%F5P%E9%A7%D4b%A9%09%20%FEG%B2UF%22%EF1w%9BL%D7%D5)O%F1%F5x%C0h%D8%D8%FC%B3%14W%F3B%B6%D5w'%C6%83K%9F%B7;cH%D2%80%8F%BD%60%CA%F0%8E%12%CC%A2%CF%BDg%5E%FBzT9%06e)%80%E7?%F3%D9Zh%98%10G_%84-%7D.%84%10%F5%B8%B4%88%F5%0B%E6%94%FD%F0Z=%A9H%B0d%03%86%16i)h$d%CFT%AB%1C%9E%BFN%C1%C0%9B%CB%C6%7B2%EBH%3E%801E%80%7B%97%BA%14%EA%01%C8%0Eg%95%06%1D%18%1D)%16%B0%11w%B0:%DB,%7CP%BB%0D%0Ak%9C%D4%C9%D9%FA%C3%B1%90%98%B1%03x%FA%DE%3C%7BVN%FB%D9+%7C%B0o%98%A1&%D6%A2z%5E/%CC%D4%F8%FB%13(%17Sq%9C%DA'?%E0%93?'DN%9F%CD%A6%E2%F18qj%BD%B9pv%ABg%C2%A1%E5";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "1035";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:23 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-3205d8cb-d591-45bc-af52-a9083373cda8>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.207";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%B25%C5X%0Dm%87%AD%A8%15go%E4%0C;%93%87%1DSM%05%B4%E8%97%CE]%D3gM%97%87/%1A%A1%B2:il%D5%03e%B7%8E%E0%07:9%E8%B4n%A3%9D%D1%95G%86%B1e%05%95%0F%B2F%B8%C0%FB%E90%0F%F4%DC%ABF4%DE%ED=%A5%0Cq%91%14%F9%B7%8F.*%DB.(%C4j%A8N%0E%A7%09%D2i%FC%90u%CD%E9%25%87%7C%01.%BB%F4%93%E6%D3%09%CB%CC%99l%02%CE(%B1*%DD%09%D4%B6%1E%0A(%FF2k%F9%F2%8E%94.M%8EY%1E%DC%071%AF%EC%16*%9F%B3%C2i%AA%91DP%C6%25%83%06%BD%7D%D0~%B8yD%F5%FF(%C4NE%B8%D9%7F%DE%FEO%7B%C8f%F9%98Q%98*f%BC%0B%AFg%89%03cE%89,%E4%08%11%895%FB8B@%CA4%5E%0E%0F%AE%7Da%8Bu%F6%9D%A3%B9$-%9EO%AC5%0B%F1x%81%5E%C5%CD%D7%08A%99%BB%F4%10MY%BF%E2%80e%B1Q%7Fv%E5_%10";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "217";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:24 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-50710cec-6f57-4179-9e8f-27237645dd0d>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.86";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/uND%BF,";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "222";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:31 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-a41ff6ea-411f-42c9-9329-ed6c35d3aa07>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.86";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%B9%D1%94M8%D7%1F%10[%81vE!%7F[%0A%95d%91'%F5%B1%CE]%A7y%E2M%A1W%AD%F1O%D0.%E4b%F1%97%1B:%9A%05A%88%B0%88%3C%A1%15%D2%FDA%0D%B8%8Egt%05%AD%01JP%C9*%D1%DD%A4%CBh%DC%C6%02%16%B3%DD%EA%A5%A2%FC1A+k%88%8Ft%11xx%20%1EY%8A%1E%A49%D4S%FF8A;%97%85P%97%94M%E0h%8Aa%F4%B3%13~%D7S%C2z6A%DB%DF%C9%B6+e%C1%60%95%C0H%0Di%DE-%D2%C5%ADh%C8%25%92%D5W%A4%D7H%15=%98%1DB%93%B3%D6Y%D6%BD(%9F%D2=%1A%D7+%1ES%F6f%04%1F:%5E%92%7B%E7%B0%81A%8D%04%90%90uJ%E9w%3E9%8D%E7%3E%CF%C7:%7C(yv%B0%92%80%FB%93b%1B%9C%FD%CA%81%FAB%9Cz%FF%FD%BD%5Cxi%0EF%25R%03%DB%97%FA%A5%D7%1E";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "217";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:33 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-71baeeec-1593-4652-866c-e9d7f1486c56>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.86";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%AC%F9%CB%D6%1E2v8%9F%A2T%8B]%C3,%CC%AF%EA%83%9E%14%D6%8A;oJ%98%A7ey%A5%02%DA%FD%A8%C5%C9%F4%7Cw%F4.%14%D5A0%DBY%9C%D5Z%AE";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "341";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:34 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-a29cdc64-fb19-429f-b160-583f6781251d>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.53";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%0C%E7%FCf%B1%A9%10%FE%81U%E6%13l%D9%AA%01%055%8A%BD%97%94qU%13%5E%8D%DA%9D%B66%8C,%F6%0D%E50%91%1F%E9%F9i%1B%09%8A%8D%A8%09@%BB%A8%FCc%F7i%C3%83%9B%C2%03%11%86!%18%BAWf%0EKQ:%FB%80%9As_%A8%E8%C6%85%C0%E9%F4g%F8%E6(?b%C1%3EwB%0FO%06d%FB2%DCL%AE%04%10%5EL,*%D88%E7%11%F2%E4%0E%AE&%05%FB%91%D0%C4c%B2%A6%C7]%06%B7.%15%B5%D6%A7%1A%C0%E1%1FF%C6%FEn%BF%AEM%A2x;%FF%EE%22%A4%C6%AE%A3%D6%BF%A8r%89va%05!%DA%B9%D4%94J%16%8D%A3f%11J%07%C2%8B%5E%03zB%08%D0%9F%9A%CD%8A1%FD%E6%60n%DD%5EP%97%8F%F8h%1E%1E%03_%B3%3E%C8%C2%94S%06%5C%9E%81%C9%C5%11$A%9F%B5cN%98nO%8E%16%60e%1F@%92%A8X%B9%E1w%16Lo*%B4%E6%82%9F%EC%CFB%F2w%99R%3C%93%B2";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "1075";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:35 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-c052c5fb-45b2-4f76-83f7-78900936c52e>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.53";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/a%86%DDa%F4%EFb%8Cm%F3%E6%13%7C%CB4m%B2%A8%FF%0E%96h%F3%A3%BE0u%91%99%D4b%D3%E2%7C/%FA[%02-%13%7C%AA%E8XF6HG%19%0B]1?%D4%DF%0F*]S4%B5[%1AV%0Ah%AF-%F3%D2%D2vo%C2*qN(*%9Cl_%5C%EEm%A1l%A9%0F%BA%1E%B8L:v%A7V%D3+%F4%20mi*%CDSp%B9K%F88-%60%8CL%0C%C9T%C3P%120z%1B%A4%B0%7F%F6%EF%DA%CAg%D9%F5%FD%E4%A5%CC%18%D9%83%C9%8A%85%97%D6%DDJ%9B%A3%B4_%8D%DF@%CA%EAb;%DB%171%18%94R%FB%A6%7CL%C7%E3+%D8%C2X%99$%F0%E8%A9y%0F%9E/%CE0f%B8%B2%DD%EB%08%5E%B0%E0%A1%D9%F6%07%CE:%E5%1D:L%0A%1E9Y%EB%FA%AE%96%C6B%D0%99%93E%DBD%0D%03%AEHH%C9t%E4%FF%F2%15%C9%19(IDa%16J%91%A4-%8A%1D%C0%97%96%E7=%DD$%BD%0A@%A0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "1065";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:36 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-45770a36-7a6e-4aa4-ba6d-a8842a0e07de>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.53";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%14%EC%D6D%D3%BF%1B%94%250_%C8%A7-%EE%AFR%C2%82%15p%09%F5%B4e1%C8%D8%F2)%D4%22%0D%18%05wR%AF%AB%F5q%B4[%A8%B5Z%D3%7D%05%D68%81%C2x%87%A1w%98%BF%EC%AE%8E+p(%E6n%03%9CY%EE4w%C4%B1%F7%828%B8%B9%1A[%89%98%B1%F0%12%AC:y.%D8";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "437";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:38 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-baada2d4-d995-40a3-90ff-6d1f07220b5d>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.53";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%83%88~hvu%B1=)%93%0Dc%09%A0%086%B7%7F%E6%FD%A0%0B%D74%901%1F%90%9D%03%AEn%FA%E9%DB%0DZ%16%CE%83%DD%EBa:%A7%D4%3E%86%01%FB@%06%B6%02%06%09%11i%EA/N%14%DC%10%86%10%8A%0C/%AF%A7%1B%9C%A9%05=[%5Er%19*%D8*%09lL%F8%03%D59?-%89%96-%DF%87%88o%0E%5E%05%19F[%F3!Z1%93%D5%D9$%A5%1E4%90%18%DD@%A2%AD%C2%10,%AA%C5%83%BC%C4AsVB%A0%E5%16%CFc_%1A(%98%F9,%F899%CAOU%FD%D7%8D%C1%B1GDpp%1A%1B%97%A5rE%C4%D1E%C8%0E%801%7B%C6%D7%05%CA%A7%1C%17%F8%D6%A1%8A8%F3%FE%C3%CBER%FEdKZ-%E5%9A,%E28Vo%CA%CD%ED%EEyp%60%16%D7&E;%CA%10%81tJ%C7%E4%ED%13%8D%F1%0F%DD*%09f%13-%B7!%93W%D9%A8.%C6%B3+%C9%0E%CEb%E9$%18%7B%1A?1z";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "1021";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:39 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-75bf52f2-01bf-4862-8b25-22655303c9c7>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.243";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%DD%0Fa),/j%C8%03%19L4?%1F%08%C2%88%EAH%EA%19%B2%80L%22uh%CE%ACE%18%D6%D9%BB%84%D2%CA%16gF%BC%11%1B%9B9oT%14%89%B3c%A6%9AmP%E1G%8Et/%13q%0Ed%82%1E%04%C8%A6%BC%5E%EE%F1g%D7%93%D6(!%D4QT%89%DB%A1~%3E;T%EBZ%09%DB%227%B8%F6z%1C%E9%F0%B7%E2%C8%A7%C0%F5a%F3%F9%E1%20%AFI%91%0F%BB%D0%F0%F88F%FF'%19%1Ey&%B0%C7%5C%0D%EF%E6%F7%E1%FA4%B3A%EB%15%D6%9C%B3P'%AB%BFl%22s%ED%F6%14%B5%B9)];m%AD%8D'w0%ABdzF%FF%1A%CC@K%D7%9D%98%D5q%18%AD%0D%D7%F0%87%09z%7C%1BZ%BC%09%AD%20Y%D4%BF%03%09%D4%18%A3mN%86%1B%99%FC%D9U%0E%95%A7%C9%F8%FF%B1%C2%DA%EF%BCA%BD%10%13%0F%B5%09%9D%E5%01%8C%F6%EB%DB=:%1A%C5%A1%D7%9B%B5mC%94%D3%7D%12%F3]H%E8a?";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "1187";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:40 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-81471c24-6a5b-4d6f-bb5b-06287566c932>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.243";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%C2%DBU%92%D7%1D%1A%BC%08%FE%B4%7CJ~%BB%D4%87%97%BD%0C%17%D6%A5%BB%7B%07dB%FA%C2%ACQ%FD%1B%CAw%C6%7B%1F%D0h/Y]t%D5D!2%03%06t%C0%87%B4%1B%01q%FCK%A1%F0%90%D5j%C5t%DF%FF%111)?%10%06%7F%C1x%D1_%BF%1F%25%AB%DEFLc%0E%0D%8Ch%19%5C%3Cx%20%20%0D%97%C5%09%C2%B7%10%05%60%FE%CDj%7FQ%9BE%C8)%B7V%F4%8E%9B%7D%B3%E0pd%A2%82b%C8M%AD%DF%D5%04%1A%E8%8Cm%B2%FE@OeU%A0%EE%1B%9Ea%BD%87:$%EA%3E%AA%10%83i%8A%8D%0C%C2W%B8%C6%D6o%83%18%BC%E4%E3%7CR%A3%E3%8E%F1q%91%D6%9C%B7Y%1Ao%D0%C5tj%0Cy%F4l%A4%BEt%D5%E2,%A0%15i%81%16W%C2%AC%A3:in%DC%9A%A0%D0na%C8%C7%D1%B0%08%B30A+%A8y.%B1%F8~%A3%1Fir%F5%1F%BF0%8C%A3%F9%BF%BC%8D%BB(1MPM%D6";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "1073";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:41 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-cf5e94a7-fe01-484e-b631-620160c02ee7>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.243";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/Q%0B%9B%EA%91Guc%F26-%06%CA%EE%22%E9%84%FBp%95SZJ%CBf%B1v%1E%CCI%11%E0%BB%10%25)%CA%7B%D8%0A%A8%A48%F6%98%C3%A8%8Ei%BF%20%84a%EE4%80N%C4t%C0%03sC%D3%B0%1F%A8%D6";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "217";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:43 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-d15fdfa3-1b8a-4f42-b9be-59aeba7481f3>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.243";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/6%A6%15%0EY%ACe%C7I%A1%0D%BA%9AmV%CB%85%7B%DE9gO%94%09%B7m%85(K%8F%07u%1D%E6%8A%E5%96%F6%C0%BC%F2Nl%B9%98o%90%E1W8%20%9D%A1%EC%22%10%E5%AF%1D%86%1B%25%82N5%1D;%13%85hP(%ABgw";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "390";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:44 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-2070c623-b09b-4b2f-98b3-b80d12bb18d8>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "3.75.190.181";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "209";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:45 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-ceeab062-48b7-4882-abe4-f8ec8ab1dd48>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.3";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%11/%CB%F1%B4a%B5_([%CBr6%95%0E%A6%81%FA%B0%A4%05r%E3%DD%CAB%95Z%94%E3T%8A!%1DH%11%AD%E3$%ABx%C7%D6$%DC%9A_as%84%88%25%5Ct%BC%DER%12W%88%E3%E7%FC%3C%14%12%C8%1A%BF%11%84p%8B%8B%E2%90E%E4%B6%B7%B8~L%82@8%C4Q%15%7B%9C%94%C7%B8&T]Q%5C%8E%0B%87%09m%E7%B9OW?Ca/4%F8%F5S,Z%16t%F8$?*%B9%AA%B0%DE%5C%D9=%D9%04=C%12%D59]%CDZ%D7%F5%0E%93%D8%1E%8A!%01%25%06(%B08Yo%F15";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "638";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:45 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-82f2cd16-8aa1-4ecd-bdac-75f291d06f4e>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.3";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%01%B6_uC%C9%B7!%8E%BD%80M%A3%11%C89%14%B2%B9%15%0D%1B(p%83Z%3C~%04%0C'[%B3%94%EC%02%C3%08-%DB%13%EA,%8D%E7N%BC2%FD%F2%F5i%F9%DCj%89%7D%0Dd%CDM%F5%B3p%84c(8%C1%EC%B8%C6n%7B%9D%08z%F1%83%DF%B8%B3%D5%C60l=9%BE%83%E9%84%CB~%11%9ED'%C3%C01lW%7C%1B%B2%D8%8Eh%C7%94xll%CD%C0%DFA%1F%01%91%80%88%BE%ED%03%09%CA%FB%A5%9A@%80%DC%AF%1Ew+w%DCA)%A1@%98F%A2%AF%E7%0D2%F7d%9C]%08%20%E4J%B8;J%FDP%C7%C9%BF%60%EAJ";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "617";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:47 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-1ae9e48c-2306-41be-8660-77ea7f6459a9>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.3";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%C6%B9%8A%D6%B3%60%EC%0F%04%08%ACYA%97%81$%8EI%08%AF%88T%F5t%1B%B8%E1%F9%E3e%02,%CF,%EE%96%C1w%EA%A4%0F%98%A5%3C%F7%EAk%8E%87mq%8C%87j[%BC%BD%15%FB%1D%9E%3E%3Er%DF%B9%A6%D3S";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "390";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:48 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-f55f11a5-6c38-4a71-82b9-4b79c6f90a42>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.3";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%7B%02%0E=%05q%94%98j%BCZi%03c%E1%88%FByuceT%DC%F7%96G%9D'%F6%AD2%C8J%25%FF%83%0C%A4%97%9F%94j=%9B%DC%DA%DF%3C%DA%1E!&%EB%5C(%D2%DB%D0%99%CB";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "359";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:49 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-564c2391-3d1f-406c-8c06-34d5e96ac1af>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.229";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/:,%AB3+y%F4h%99%E2%FBp%3C%85%C7QQ%D8E%02%87%96X%D1%DC%8F%20%0B%9EMuNU%BA!%7C%8A%0B%18%0B%B4bEkA%04r%BB";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "317";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:50 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-02df0920-0c22-40c5-88f5-111a5006f421>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.229";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%D8__u%C8VS%D1%E5g!%22%C0%CC";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "243";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:52 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-829d2f13-ea3a-46f8-a6a3-73fbf5c2b4bb>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.229";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%C2%81%06%DB%F6c%E7%5E%C9SR%F3%A3%B2%AA~6%AF,%06%7FMS%90%AB)%83%B3%1E6%A6%3Em%E6%12F%1D%E2:%8C$z%3E%D3%C8%1Br%DCY%7F:%8E%CB%FA%D3%BC%98C%19%10%3C%AF%F6%C1d%22%13n%B5%9B%EE%0AV%CC%F9%FB%1B/%18%DC%84lF%E9[3%17%1E%EC%A1%06%B0~yS%60%0F%03%CAD%B7%7D(%0E%CFJ7%12%1A%F2%AEo%E7%1A%A4U%AD%B8K%25VONl%1C%A5%0E%B34%15e%A1(%06HV%B6%12%18H%AA%AB%DB%C4~%8B%D3P%10%7D%BEl%D9%B8%A3%1Dp%AF%10%B23%EF%A6%DA%93%1Dp%0DM%87G%95%B2";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "217";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:53 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-36f2dada-1eca-4614-94b7-ab003c213e38>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.229";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/S%25%B1%CC%87w%B4%EDW'%1Cb%132%CA++%1Bb%92%96%DA%FB*%F7%81%9B%9B%93%1E%03%FC%05O50X%E3n%A47%CA!%D8%19%02PmR%DA%FF%BAF%C6%9Ah%CC%9ARQ(%E0g%F7%D3%C8%0E%CD%BA%C5%B0%F9%FA%9Bv%01%9A%92bA%E8%B5%01EG%93";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "411";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:11:54 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-2fcb455c-e174-4ae1-95b5-921224c752c2>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.136";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%11%8B%AF%1D%F9%22%92%AAjf%17%8Fd%B9zk%80%B8%85yL%FF%13%CE%F1%CE%02M%D1P%89%EC%AC%3E?%25x%B21%94%E9%D43%1E%20%C1k%D1%B2%8C%17%8C%A3A%8F%F0%17%ACU%AB%F4%D8%05%20t%1A%CB%E0%5C%09%16%17m%CF%EF%B2%F6";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "478";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:12:02 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/apachelog#LogEntry-6edd7bea-641c-4e83-ace9-d384ae3eb1ec>
+  a <https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasAuth> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasClient> "10.2.23.136";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasHttpVersion> "1.0";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasIdent> "-";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequest> "/admin/%CB%B9%85E9%CEz%BD%06%A2%F9Z%FC%B4%B7%B0%06n%9CAI%16%BA%04%C6%EA%19%E1T%94%20%D7HV%3C%85c%A0(%E4%8C%B6%C9%CA%9E%1B%CDD%F3%EC%C6%06KqB%17%C8%03%5E%F9c%09%94%04&%8F%BC%BE%C0%A8%22%A8%CECb%B3I%A1%11hE%0C%05w%ACjm";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasRequestVerb> "GET";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResourceSize> "428";
+  <https://w3id.org/sepses/vocab/log/apacheLog#hasResponse> "302";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "11/Nov/2011:10:12:03 -0500"^^<http://www.w3.org/2001/XMLSchema#dateTime> .

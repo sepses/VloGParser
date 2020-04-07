@@ -1,6 +1,8 @@
 package sepses.ondemand_extractor;
 
 import sepses.parser.GrokHelper;
+
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.util.UUID;
 import java.io.File;
@@ -11,6 +13,7 @@ import java.io.InputStreamReader;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -18,7 +21,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.json.simple.JSONObject;
@@ -39,6 +43,9 @@ public class StartService
 {
 	
 	private String content;
+	private static final Logger log = LoggerFactory.getLogger(StartService.class);
+
+  
    
 
 
@@ -89,7 +96,7 @@ public class StartService
 
 			//check prefix
 			if(prefixes.contains(lvocabulary.get(i))){
-		
+				log.info("parsing start");
 						res = parse(llogLocation.get(i), lgrokFile.get(i), lgrokPattern.get(i),
 								lmapping.get(i),pq, loutputModel.get(i), 
 								lregexMeta.get(i), lregexOntology.get(i),
@@ -133,8 +140,6 @@ public class StartService
     	Date startt = sdf.parse(startTime);
     	Date endt = sdf.parse(endDate);
     	
-    	//FileInputStream fis = new FileInputStream(logfile);
-    	BufferedReader in = new BufferedReader(new FileReader(logfile));
     	
     	Integer logdata = 0;
     	JSONRDFParser jp = new JSONRDFParser(RMLFile);
@@ -154,13 +159,23 @@ public class StartService
 				maxLimit = Integer.parseInt(limit);
 			}
 			int climit=0;
-    		while (in.ready()) {
-    			
-    			String line = in.readLine();
+			
+
+		//optionI	
+		BufferedReader in = new BufferedReader(new FileReader(logfile));
+		//option II
+		//BufferedInputStream bf= new BufferedInputStream(new FileInputStream(logfile));
+		//BufferedReader in = new BufferedReader(new InputStreamReader(bf, StandardCharsets.UTF_8));
+
+		//option III
+		//BufferedReader in = Files.newBufferedReader(Paths.get(logfile), StandardCharsets.UTF_8);
+    	        while (in.ready()) {
+                String line = in.readLine();
     			
     			String dt0 = parseRegex(line,dateTimeRegex);
     			 Date dt1 = sdfl.parse(dt0);
 				
+				 // break when limit is reached
 				 if(limit!=null){
 					 if(climit>=maxLimit){
 						 
@@ -170,7 +185,7 @@ public class StartService
 
 				 //break after reaching the end of true line
 				if(!dt1.before(endt)){
-					System.out.println("break, true line is reached!, total read: "+co);
+					log.info("break, true line is reached!, total read: "+co);
 					break;
 				}
 				
@@ -204,30 +219,25 @@ public class StartService
 				}
 				co++;
 			}
+			
 			JSONObject alljsObj = new JSONObject();
 			alljsObj.put("logEntry",alljson);
 			//System.out.println(alljsObj.toString());
-			
+			log.info("filtering finished");
 			org.eclipse.rdf4j.model.Model rdf4jmodel  = jp.Parse(alljsObj.toString());
 			Util ut = new Util();
 			
+			log.info("parsing finished finished");
 			ut.saveRDF4JModel(rdf4jmodel, outputModel);
 			ut.storeFileInRepo(outputModel, sparqlEndpoint, namegraph, user, pass);
 			response = "{\"content\":\"success\",\"endopoint\":\""+sparqlEndpoint+"\"}";
 			System.out.println("read line :"+co);
 			System.out.println("parsed line :"+logdata);
+			in.close();
 			
-    	 }finally {
-			   try {
-		    	   in.close();
-            	  
-            	   //ut.relodLDF(ldflog);
-       			   //rdf4jmodel.close();
-               }
+    	 }
                catch (IOException closeException) {
-                   // ignore
-               }
-		}
+          	}
 		
 		return response;
     	
