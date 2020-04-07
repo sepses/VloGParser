@@ -35,7 +35,7 @@ public class JSONRDFParser {
 		initParse(rmlFile);
 	}
 	
-    public Model Parse(String jsonString) throws IOException {
+    public org.eclipse.rdf4j.model.Model Parse(String jsonString) throws IOException {
         
         // load RML file and all supporting functions
        
@@ -50,23 +50,24 @@ public class JSONRDFParser {
     	        
     	        targetStream.close();
 
-    	        // create a temp file and return jena model
-    	        File file = File.createTempFile("model3", ".ttl");
-    	        file.deleteOnExit();
-    	        OutputStream tempOutput = new FileOutputStream(file);
-    	        Rio.write(model, tempOutput, RDFFormat.TURTLE); // write mapping
-    	        model.clear();
-    	        tempOutput.flush();
-    	        tempOutput.close();
+    	//         // create a temp file and return jena model
+    	//         File file = File
+    	//         file.deleteOnExit();
+    	//         OutputStream tempOutput = new FileOutputStream(file);
+    	//         Rio.write(model, tempOutput, RDFFormat.TURTLE); // write mapping
+    	//         model.clear();
+    	//         tempOutput.flush();
+    	//         tempOutput.close();
 
-    	        // create jena model
-    	        Model jmodel = ModelFactory.createDefaultModel();
-    	        InputStream tempInput = new FileInputStream(file);
-    	        RDFDataMgr.read(jmodel, tempInput, Lang.TURTLE);
-    	       // jmodel.write(System.out);
-    	        tempInput.close();
+    	//         // create jena model
+    	//         Model jmodel = ModelFactory.createDefaultModel();
+    	//         InputStream tempInput = new FileInputStream(file);
+    	//         RDFDataMgr.read(jmodel, tempInput, Lang.TURTLE);
+    	//        // jmodel.write(System.out);
+    	//         tempInput.close();
     	        
-        return jmodel;
+		// return jmodel;
+		return model;
     }
 
    public void initParse(String rmlFile) {

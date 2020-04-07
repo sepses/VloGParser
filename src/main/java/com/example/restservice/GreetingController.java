@@ -23,16 +23,6 @@ public class GreetingController {
 		return new Greeting(counter.incrementAndGet(), String.format(template, name));
 	}
 	
-	@GetMapping("/startservice")
-	public StartService startservice(@RequestParam(name = "queryString") String queryString, @RequestParam(name = "parsedQuery") String parsedQuery, @RequestParam(name = "startTime") String startTime, @RequestParam(name = "endTime") String endTime) throws IOException, ParseException, InterruptedException, URISyntaxException, org.json.simple.parser.ParseException, GrokException {
-		return new StartService(queryString,parsedQuery,startTime,endTime);
-	}
-	
-	@GetMapping("/startservice2")
-	public StartService2 startservice2(@RequestParam(name = "queryString") String queryString, @RequestParam(name = "parsedQuery") String parsedQuery, @RequestParam(name = "startTime") String startTime, @RequestParam(name = "endTime") String endTime) throws IOException, ParseException, InterruptedException, URISyntaxException, org.json.simple.parser.ParseException, GrokException {
-		return new StartService2(queryString,parsedQuery,startTime,endTime);
-	}
-	
 	@GetMapping("/startservice3")
 	public StartService3 startservice3(@RequestParam(name = "queryString") String queryString, @RequestParam(name = "parsedQuery") String parsedQuery, @RequestParam(name = "startTime") String startTime, @RequestParam(name = "endTime") String endTime) throws IOException, ParseException, InterruptedException, URISyntaxException, org.json.simple.parser.ParseException, GrokException {
 		return new StartService3	(queryString,parsedQuery,startTime,endTime);

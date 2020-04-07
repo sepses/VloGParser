@@ -1,14 +1,54 @@
-<http://w3id.org/sepses/resource/authlog#LogEntry-2f357729-fa37-47e9-9915-f1c9a2968b95>
-        a       <https://w3id.org/sepses/vocab/log/authLog#AuthLogEntry> ;
-        <https://w3id.org/sepses/vocab/log/authLog#pid>
-                "6034" ;
-        <https://w3id.org/sepses/vocab/log/authLog#programName>
-                "sshd" ;
-        <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily>
-                <http://dbpedia.org/resource/Syslog> ;
-        <https://w3id.org/sepses/vocab/log/coreLog#hostName>
-                "ip-172-31-27-153" ;
-        <https://w3id.org/sepses/vocab/log/coreLog#message>
-                "Received disconnect from 193.104.41.58: 11: Bye Bye [preauth]" ;
-        <https://w3id.org/sepses/vocab/log/coreLog#timestamp>
-                "Dec 31 00:01:24"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/authlog#LogEntry-e7351647-e9d5-4701-b5c1-1a9777766923>
+  a <https://w3id.org/sepses/vocab/log/authLog#AuthLogEntry>;
+  <https://w3id.org/sepses/vocab/log/authLog#pid> "6034";
+  <https://w3id.org/sepses/vocab/log/authLog#programName> "sshd";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/resource/Syslog>;
+  <https://w3id.org/sepses/vocab/log/coreLog#hostName> "ip-172-31-27-153";
+  <https://w3id.org/sepses/vocab/log/coreLog#message> "Received disconnect from 193.104.41.58: 11: Bye Bye [preauth]";
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "Dec 31 00:01:24"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/authlog#LogEntry-8c340560-5b89-4425-a4e4-dbe3a9619a98>
+  a <https://w3id.org/sepses/vocab/log/authLog#AuthLogEntry>;
+  <https://w3id.org/sepses/vocab/log/authLog#pid> "6037";
+  <https://w3id.org/sepses/vocab/log/authLog#programName> "sshd";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/resource/Syslog>;
+  <https://w3id.org/sepses/vocab/log/coreLog#hostName> "ip-172-31-27-153";
+  <https://w3id.org/sepses/vocab/log/coreLog#message> "Connection closed by 122.225.97.71 [preauth]";
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "Dec 31 00:04:29"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/authlog#LogEntry-38ec4a81-48e7-41af-96ec-3d56df5f9b54>
+  a <https://w3id.org/sepses/vocab/log/authLog#AuthLogEntry>;
+  <https://w3id.org/sepses/vocab/log/authLog#pid> "6039";
+  <https://w3id.org/sepses/vocab/log/authLog#programName> "sshd";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/resource/Syslog>;
+  <https://w3id.org/sepses/vocab/log/coreLog#hostName> "ip-172-31-27-153";
+  <https://w3id.org/sepses/vocab/log/coreLog#message> "Connection closed by 122.225.97.71 [preauth]";
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "Dec 31 00:05:23"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/authlog#LogEntry-66d8672e-5344-4e93-b816-6e286e46879e>
+  a <https://w3id.org/sepses/vocab/log/authLog#AuthLogEntry>;
+  <https://w3id.org/sepses/vocab/log/authLog#pid> "6041";
+  <https://w3id.org/sepses/vocab/log/authLog#programName> "sshd";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/resource/Syslog>;
+  <https://w3id.org/sepses/vocab/log/coreLog#hostName> "ip-172-31-27-153";
+  <https://w3id.org/sepses/vocab/log/coreLog#message> "Connection closed by 122.225.97.71 [preauth]";
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "Dec 31 00:06:15"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/authlog#LogEntry-c5b69805-c0c1-43ad-925e-526e9056c93e>
+  a <https://w3id.org/sepses/vocab/log/authLog#AuthLogEntry>;
+  <https://w3id.org/sepses/vocab/log/authLog#pid> "6056";
+  <https://w3id.org/sepses/vocab/log/authLog#programName> "CRON";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/resource/Syslog>;
+  <https://w3id.org/sepses/vocab/log/coreLog#hostName> "ip-172-31-27-153";
+  <https://w3id.org/sepses/vocab/log/coreLog#message> "pam_unix(cron:session): session opened for user root by (uid=0)";
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "Dec 31 00:17:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<http://w3id.org/sepses/resource/authlog#LogEntry-6606417d-60a2-41df-bee1-191fe8dc7cb5>
+  a <https://w3id.org/sepses/vocab/log/authLog#AuthLogEntry>;
+  <https://w3id.org/sepses/vocab/log/authLog#pid> "6056";
+  <https://w3id.org/sepses/vocab/log/authLog#programName> "CRON";
+  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/resource/Syslog>;
+  <https://w3id.org/sepses/vocab/log/coreLog#hostName> "ip-172-31-27-153";
+  <https://w3id.org/sepses/vocab/log/coreLog#message> "pam_unix(cron:session): session closed for user root";
+  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "Dec 31 00:17:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .

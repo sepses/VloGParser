@@ -133,8 +133,8 @@ public class StartService3
     	Date startt = sdf.parse(startTime);
     	Date endt = sdf.parse(endDate);
     	
-    	FileInputStream fis = new FileInputStream(logfile);
-    	BufferedReader in = new BufferedReader(new InputStreamReader(fis));
+    	//FileInputStream fis = new FileInputStream(logfile);
+    	BufferedReader in = new BufferedReader(new FileReader(logfile));
     	
     	Integer logdata = 0;
     	JSONRDFParser jp = new JSONRDFParser(RMLFile);
@@ -163,6 +163,7 @@ public class StartService3
 				
 				 if(limit!=null){
 					 if(climit>=maxLimit){
+						 
 						 break;
 					 }
 				 }
@@ -206,20 +207,22 @@ public class StartService3
 			JSONObject alljsObj = new JSONObject();
 			alljsObj.put("logEntry",alljson);
 			//System.out.println(alljsObj.toString());
-			model  = jp.Parse(alljsObj.toString());
+			
+			org.eclipse.rdf4j.model.Model rdf4jmodel  = jp.Parse(alljsObj.toString());
+			Util ut = new Util();
+			
+			ut.saveRDF4JModel(rdf4jmodel, outputModel);
+			ut.storeFileInRepo(outputModel, sparqlEndpoint, namegraph, user, pass);
+			response = "{\"content\":\"success\",\"endopoint\":\""+sparqlEndpoint+"\"}";
 			System.out.println("read line :"+co);
 			System.out.println("parsed line :"+logdata);
 			
     	 }finally {
 			   try {
 		    	   in.close();
-            	   Util ut = new Util();
-            	   ut.saveModel(model, outputModel);
-            	   ut.storeFileInRepo(outputModel, sparqlEndpoint, namegraph, user, pass);
-            	   //this.content = ut.executeQuery(queryString, model);
-            	   response = "{\"content\":\"success\",\"endopoint\":\""+sparqlEndpoint+"\"}";
+            	  
             	   //ut.relodLDF(ldflog);
-       			   model.close();
+       			   //rdf4jmodel.close();
                }
                catch (IOException closeException) {
                    // ignore

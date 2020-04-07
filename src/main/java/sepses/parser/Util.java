@@ -1,5 +1,5 @@
 package sepses.parser;
-
+import java.io.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -11,6 +11,8 @@ import java.util.regex.Pattern;
 
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.sparql.function.library.leviathan.log;
+import org.eclipse.rdf4j.rio.RDFFormat;
+import org.eclipse.rdf4j.rio.Rio;
 
 import sepses.ondemand_extractor.JenaQueryEngine;
 
@@ -25,6 +27,14 @@ public class Util {
     	
 	}
 	
+	public void saveRDF4JModel(org.eclipse.rdf4j.model.Model model,String outputModel) throws IOException { 
+				
+				OutputStream tempOutput = new FileOutputStream(outputModel);
+    	        Rio.write(model, tempOutput, RDFFormat.TURTLE); // write mapping
+    	        model.clear();
+    	        tempOutput.flush();
+    	        tempOutput.close();
+	}
 	
 	  public void storeFileInRepo(String filename, String sparqlEndpoint, String namegraph, String user, String pass) {
 		  Storage  storage = VirtuosoStorage.getInstance();
