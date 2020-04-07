@@ -35,14 +35,14 @@ import sepses.parser.Util;
  * @author KKurniawan
  * @version 1
  */
-public class StartService3
+public class StartService
 {
 	
 	private String content;
    
 
 
-	public StartService3(String qs, String pq, String st, String et) throws IOException, ParseException, InterruptedException, URISyntaxException, org.json.simple.parser.ParseException, GrokException {
+	public StartService(String qs, String pq, String st, String et) throws IOException, ParseException, InterruptedException, URISyntaxException, org.json.simple.parser.ParseException, GrokException {
 //    	System.out.println(qs);
 //    	System.out.println(pq);
 //		System.out.println(st);
@@ -378,7 +378,7 @@ public class StartService3
 		String startTime = "May 30 19:09:00";
     	String endDate = "May 30 19:10:00";
     	
-			StartService3 ss = new StartService3(queryString,parsedQuery, startTime, endDate);
+			StartService ss = new StartService(queryString,parsedQuery, startTime, endDate);
 		
 		
  	}
