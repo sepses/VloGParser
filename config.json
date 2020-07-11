@@ -1,8 +1,9 @@
-{
+	{
   "title": "Host/Agent Log Parser server",
   "url": "http://localhost",
   "port": 8080,
-  "logSources": [ 
+  "outputDir": "experiment/output/",
+    "logSources": [ 
      {
 	      "title": "authlog",
 	      "type": "File",
@@ -10,14 +11,16 @@
 	      "mapping": "experiment/rml/authlog.rml",
 	      "grokFile": "experiment/pattern/pattern.grok",
 	      "grokPattern": "%{SYSLOGBASE} %{GREEDYDATA:message}",
-	      "outputModel": "experiment/output/authlog_model.ttl",
+		  "outputModel": "experiment/output/authlog_model.ttl",
+		  "hdtOutput": "experiment/output/authlog.hdt",
 	      "namegraph": "http://w3id.org/sepses/graph/log/authlog",
 	      "regexMeta": "experiment/model/regexMeta.ttl",
 	      "regexOntology": "experiment/model/regexOntology.ttl",
 	      "vocabulary":"https://w3id.org/sepses/vocab/log/authLog#",
 	      "logDateFormat":"MMM d HH:mm:ss",
 	      "logTimeRegex":"\\w+\\s+\\d+\\s\\d{2}:\\d{2}:\\d{2}"      
-    	},
+		},
+
       {
 	      "title": "apachelog",
 	      "type": "File",
@@ -25,7 +28,8 @@
 	      "mapping": "experiment/rml/apachelog.rml",
 	      "grokFile": "experiment/pattern/pattern.grok",
 	      "grokPattern": "%{COMMONAPACHELOG}",
-	      "outputModel": "experiment/output/apache_model.ttl",
+		  "outputModel": "experiment/output/apache_model.ttl",
+		  "hdtOutput": "experiment/output/apache.hdt",
 	      "namegraph": "http://w3id.org/sepses/graph/log/apachelog",
 	      "regexMeta": "experiment/model/regexMeta.ttl",
 	      "regexOntology": "experiment/model/regexOntology.ttl",
@@ -39,7 +43,8 @@
 	      "mapping": "experiment/rml/snortAlertlog.rml",
 	      "grokFile": "experiment/pattern/pattern.grok",
 	      "grokPattern": "%{SNORT}",
-	      "outputModel": "experiment/output/snort_alert_model.ttl",
+		  "outputModel": "experiment/output/snort_alert_model.ttl",
+		  "hdtOutput": "experiment/output/snort_alert.hdt",
 	      "namegraph": "http://w3id.org/sepses/graph/log/snortAlertlog",
 	      "regexMeta": "experiment/model/regexMeta.ttl",
 	      "regexOntology": "experiment/model/regexOntology.ttl",

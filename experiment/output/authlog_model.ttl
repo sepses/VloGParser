@@ -1,9 +1,0 @@
-
-<http://w3id.org/sepses/resource/authlog#LogEntry-07976600-e57c-49ad-9061-5dad102d1fee>
-  a <https://w3id.org/sepses/vocab/log/authLog#AuthLogEntry>;
-  <https://w3id.org/sepses/vocab/log/authLog#pid> "6056";
-  <https://w3id.org/sepses/vocab/log/authLog#programName> "CRON";
-  <https://w3id.org/sepses/vocab/log/coreLog#hasLogFamily> <http://dbpedia.org/resource/Syslog>;
-  <https://w3id.org/sepses/vocab/log/coreLog#hostName> "ip-172-31-27-153";
-  <https://w3id.org/sepses/vocab/log/coreLog#message> "pam_unix(cron:session): session opened for user root by (uid=0)";
-  <https://w3id.org/sepses/vocab/log/coreLog#timestamp> "Dec 31 00:17:01"^^<http://www.w3.org/2001/XMLSchema#dateTime> .

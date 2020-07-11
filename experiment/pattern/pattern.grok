@@ -101,6 +101,9 @@ HTTPD_ERRORLOG %{HTTPD20_ERRORLOG}|%{HTTPD24_ERRORLOG}
 #snort
 SNORT %{MONTHNUM:month}/%{MONTHDAY:day}-%{TIME:time}%{SPACE}\[\*\*\]%{SPACE}\[%{INT:generatorId}:%{INT:signatureId}:%{INT:signatureRevision}\]%{SPACE}%{DATA:message}%{SPACE}\[Classification:%{SPACE}%{DATA:classification}\]%{SPACE}\[Priority:%{SPACE}%{DATA:priority}\]%{SPACE}\{%{DATA:protocol}\}%{SPACE}(%{IP:sourceIp}:%{NUMBER:sourcePort}|%{IP:sourceIp})%{SPACE}->%{SPACE}(%{IP:destinationIp}:%{NUMBER:destinationPort}|%{IP:destinationIp})
 
+#authlog
+AUTHLOG (%{SYSLOGBASE} %{DATA:authEvent} %{DATA:authEvent2} for %{DATA:user} from %{IPORHOST:clientIPAddress} port %{NUMBER:clientPort} ssh2|%{SYSLOGBASE} %{DATA:authEvent} %{DATA:authEvent2} from %{IPORHOST:clientIPAddress} Bye Bye \[preauth\])
+
 # Log Levels
 LOGLEVEL ([Aa]lert|ALERT|[Tt]race|TRACE|[Dd]ebug|DEBUG|[Nn]otice|NOTICE|[Ii]nfo|INFO|[Ww]arn?(?:ing)?|WARN?(?:ING)?|[Ee]rr?(?:or)?|ERR?(?:OR)?|[Cc]rit?(?:ical)?|CRIT?(?:ICAL)?|[Ff]atal|FATAL|[Ss]evere|SEVERE|EMERG(?:ENCY)?|[Ee]merg(?:ency)?)
 

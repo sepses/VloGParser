@@ -1,6 +1,5 @@
 package sepses.ondemand_extractor;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -31,7 +30,7 @@ public class QueryTranslator {
 	protected String limit;
 
     
-	public QueryTranslator(String queryString) throws IOException, ParseException{
+	public QueryTranslator(String queryString) throws Exception, ParseException{
 		this.queryString = queryString;
 		Object json = readJSONQuery(this.queryString);
 		parseLimit(json);
@@ -42,7 +41,7 @@ public class QueryTranslator {
 	}
 	
 	
-	public void parseJSONQuery(Model model) throws IOException, ParseException{
+	public void parseJSONQuery(Model model) throws Exception, ParseException{
 		Object json = readJSONQuery(this.queryString);
 
 		parseTriple(json);
@@ -97,7 +96,7 @@ public class QueryTranslator {
 				prefixes.add(prefix.get(i));
 		}
 	}
-	public Object readJSONQuery(String qs) throws IOException, ParseException {
+	public Object readJSONQuery(String qs) throws Exception, ParseException {
 		//read file
 
 		   JSONParser jsonParser = new JSONParser();
@@ -197,7 +196,7 @@ public class QueryTranslator {
 	
     
    }
-	public static void main( String[] args ) throws IOException, ParseException  {
+	public static void main( String[] args ) throws Exception, ParseException  {
 		
       String queryString = "experiment/input/query.json";
       String regexMeta =  "experiment/input/regexMeta.ttl";

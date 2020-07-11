@@ -1,6 +1,5 @@
 package sepses.parser;
 
-import java.io.IOException;
 import java.util.Iterator;
 
 import org.json.simple.JSONArray;
@@ -17,7 +16,7 @@ public class GrokHelper {
 	private String grokfile;
 	private String grokpattern;
 
- public static void main(String[] args) throws GrokException, IOException, ParseException {
+ public static void main(String[] args) throws GrokException, Exception, ParseException {
 	 String logline ="Dec 31 20:40:19 KABULHOST sshd[7855]: Invalid user mike from 87.106.50.214";
 	 String grokfile ="experiment/input/pattern.grok";
 	 String grokpattern="%{SYSLOGBASE} %{GREEDYDATA:message}";
@@ -53,7 +52,7 @@ public class GrokHelper {
 	 return gm.toJson();
   }
  
-  public static boolean checkIfKeyValueExist(String jsonString, String pkey, String pvalue) throws IOException, ParseException {
+  public static boolean checkIfKeyValueExist(String jsonString, String pkey, String pvalue) throws Exception, ParseException {
 	  JSONObject jsonObj = parseJSON(jsonString);
 	boolean exist=false;
 		if(jsonObj.containsKey(pkey)) {
@@ -70,7 +69,7 @@ public class GrokHelper {
 	 
   }
   
-	public static JSONObject parseJSON(String js) throws IOException, ParseException {
+	public static JSONObject parseJSON(String js) throws Exception, ParseException {
 		//read file
 		   JSONParser jsonParser = new JSONParser();
 		   JSONObject obj = (JSONObject)jsonParser.parse(js);

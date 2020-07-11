@@ -1,24 +1,27 @@
 package sepses.parser;
 import java.io.*;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.sparql.function.library.leviathan.log;
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.Rio;
+import org.rdfhdt.hdt.enums.RDFNotation;
+import org.rdfhdt.hdt.exceptions.ParserException;
+import org.rdfhdt.hdt.hdt.HDT;
+import org.rdfhdt.hdt.hdt.HDTManager;
+import org.rdfhdt.hdt.header.Header;
+import org.rdfhdt.hdt.options.HDTSpecification;
 
 import sepses.ondemand_extractor.JenaQueryEngine;
 
 public class Util {
 	
-	public void saveModel(Model model,String outputModel) throws IOException { 	
+	public void saveModel(Model model,String outputModel) throws Exception { 	
     	FileWriter out = new FileWriter(outputModel);
     	model.write(out,"TURTLE");
     	System.out.println("Model is saved!");
@@ -27,7 +30,7 @@ public class Util {
     	
 	}
 	
-	public void saveRDF4JModel(org.eclipse.rdf4j.model.Model model,String outputModel) throws IOException { 
+	public void saveRDF4JModel(org.eclipse.rdf4j.model.Model model,String outputModel) throws Exception { 
 				
 				OutputStream tempOutput = new FileOutputStream(outputModel);
     	        Rio.write(model, tempOutput, RDFFormat.TURTLE); // write mapping
@@ -35,13 +38,32 @@ public class Util {
     	        tempOutput.flush();
     	        tempOutput.close();
 	}
+	public void generateHDTFile(String baseURI, String filename, String inputType, String hdtOutput) throws IOException, ParserException {
+		
+		HDT hdt = HDTManager.generateHDT(filename, baseURI, RDFNotation.parse(inputType), new HDTSpecification(), null);
+		
+		// Add additional domain-specific properties to the header:
+		Header header = hdt.getHeader();
+		header.insert("myResource1", "property" , "value");
+		
+		// Save generated HDT to a file
+		hdt.saveToHDT(hdtOutput, null);
+	}
 	
 	  public void storeFileInRepo(String filename, String sparqlEndpoint, String namegraph, String user, String pass) {
 		  Storage  storage = VirtuosoStorage.getInstance();
 		 System.out.println("Store data: "+filename+" to " + sparqlEndpoint + " using graph " + namegraph);
 	       storage.replaceData(filename, sparqlEndpoint, namegraph, true, user, pass);
 	    }
-	  
+	 
+	  public void storeHDTFile(String filename, String url) throws IOException {
+		  String command = "curl -F statement=@"+filename+" "+  url;
+          System.out.println(command);
+          Process process = Runtime.getRuntime().exec(command);
+          InputStream is = process.getInputStream();
+          System.out.print("Data stored successfully");
+  
+	  }
 	  
 	
 	 public String executeQuery(String queryString,Model model) {
@@ -49,7 +71,7 @@ public class Util {
 			return jena.executeQuery();
 	    }
 	 
-	 public void relodLDF(String ldflog) throws IOException {
+	 public void relodLDF(String ldflog) throws Exception {
 		
 			String ldflogS = new String(Files.readAllBytes(Paths.get(ldflog)));
 			String regex = "master\\s\\d+";
@@ -78,7 +100,7 @@ public class Util {
 	    
 	}
 		
-		public static void emptyFile(String file) throws IOException {
+		public static void emptyFile(String file) throws Exception {
 			PrintWriter writer = new PrintWriter(file);
 			writer.flush();
 			writer.close();

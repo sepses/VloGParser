@@ -6,15 +6,10 @@ import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.util.UUID;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URISyntaxException;
+import java.net.InetAddress;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.nio.charset.StandardCharsets;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -25,6 +20,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
@@ -44,12 +40,13 @@ public class StartService
 	
 	private String content;
 	private static final Logger log = LoggerFactory.getLogger(StartService.class);
+	private long startTime = System.nanoTime();
 
   
    
 
 
-	public StartService(String qs, String pq, String st, String et) throws IOException, ParseException, InterruptedException, URISyntaxException, org.json.simple.parser.ParseException, GrokException {
+	public StartService(String qs, String pq, String st, String et) throws Exception {
 //    	System.out.println(qs);
 //    	System.out.println(pq);
 //		System.out.println(st);
@@ -68,6 +65,8 @@ public class StartService
         
         //logsources
         List<String> logSources = JsonPath.read(jcobject, "$.logSources");
+
+        String outputDir = JsonPath.read(jcobject,"$.outputDir");
         List<String> ltitle = JsonPath.read(jcobject,"$.logSources[*].title");
         List<String> ltype = JsonPath.read(jcobject,"$.logSources[*].type");
         List<String> llogLocation = JsonPath.read(jcobject,"$.logSources[*].logLocation");
@@ -75,6 +74,7 @@ public class StartService
         List<String> lgrokFile = JsonPath.read(jcobject,"$.logSources[*].grokFile");
         List<String> lgrokPattern = JsonPath.read(jcobject,"$.logSources[*].grokPattern");
         List<String> loutputModel = JsonPath.read(jcobject,"$.logSources[*].outputModel");
+        List<String> lhdtOutput = JsonPath.read(jcobject,"$.logSources[*].hdtOutput");
         List<String> lnamegraph = JsonPath.read(jcobject,"$.logSources[*].namegraph");
         List<String> lregexMeta = JsonPath.read(jcobject,"$.logSources[*].regexMeta");
         List<String> lregexOntology = JsonPath.read(jcobject,"$.logSources[*].regexOntology");
@@ -84,12 +84,13 @@ public class StartService
        // System.out.print(logSources.size());
         //System.exit(0);
 		String res="";
-		long startTime = System.nanoTime();
+		//this.startTime = System.nanoTime();
 		QueryTranslator qt = new QueryTranslator(pq);
 		ArrayList prefixes= qt.prefixes;
 		String limit = qt.limit;
 		//System.out.println(prefixes.get(0));
 		
+		org.eclipse.rdf4j.model.Model rdf4JM = new LinkedHashModel();
 		
 		for(int i=0;i<logSources.size();i++) {
 
@@ -97,8 +98,8 @@ public class StartService
 			//check prefix
 			if(prefixes.contains(lvocabulary.get(i))){
 				log.info("parsing start");
-						res = parse(llogLocation.get(i), lgrokFile.get(i), lgrokPattern.get(i),
-								lmapping.get(i),pq, loutputModel.get(i), 
+						res = parse(rdf4JM, llogLocation.get(i), lgrokFile.get(i), lgrokPattern.get(i),
+								lmapping.get(i),pq, loutputModel.get(i), lhdtOutput.get(i),
 								lregexMeta.get(i), lregexOntology.get(i),
 								sparqlEndpoint, user, pass, lnamegraph.get(i), st, et, ltimeRegex.get(i),
 								ldateFormat.get(i),limit);	
@@ -108,18 +109,29 @@ public class StartService
 			}
 		}
 		
-		long elapsedTime = System.nanoTime() - startTime;
-		System.out.println("Total time execution :"+elapsedTime/1000000000+" sec");
+		Util ut = new Util();
+		String hostname = InetAddress.getLocalHost().getHostAddress();
+		//String hostname="localhost";
+		String outputModel = outputDir+hostname+".ttl";
+		String hdtOutput = outputDir+hostname+".hdt";
+	
+		ut.saveRDF4JModel(rdf4JM, outputModel);
+		System.out.println("generate HDT file..");
+		ut.generateHDTFile("http://w3id.org/sepses/graph/"+hostname.toString(), outputModel, "TURTLE", hdtOutput);
+		//ut.storeHDTFile(hdtOutput, "http://10.5.0.2:3000/upload");
+		ut.storeHDTFile(outputModel, "http://10.5.0.2:3000/upload");
+		long elapsedTime = System.nanoTime() - this.startTime;
+		System.out.println("Total time execution :"+elapsedTime/1000000+" ms");
 
 		
 		
     }
  
-	public String parse(String logfile, String grokfile, String grokpattern, 
-			String RMLFile, String parsedQuery, String outputModel, String regexMeta, 
+	public String parse(org.eclipse.rdf4j.model.Model JModel, String logfile, String grokfile, String grokpattern, 
+			String RMLFile, String parsedQuery, String outputModel, String hdtOutput, String regexMeta, 
 			String regexOntology,String sparqlEndpoint, String user, String pass, 
 			String namegraph,String startTime, String endDate, String dateTimeRegex,
-			String dateFormat, String limit) throws IOException, org.json.simple.parser.ParseException, ParseException, GrokException {
+			String dateFormat, String limit) throws Exception {
 //		System.out.print(endDate);
 //		System.exit(0);
 		//=======translate the query ===========
@@ -164,11 +176,12 @@ public class StartService
 		//optionI	
 		BufferedReader in = new BufferedReader(new FileReader(logfile));
 		//option II
-		//BufferedInputStream bf= new BufferedInputStream(new FileInputStream(logfile));
-		//BufferedReader in = new BufferedReader(new InputStreamReader(bf, StandardCharsets.UTF_8));
+	//	BufferedInputStream bf= new BufferedInputStream(new FileInputStream(logfile));
+	//	BufferedReader in = new BufferedReader(new InputStreamReader(bf, StandardCharsets.UTF_8));
 
 		//option III
-		//BufferedReader in = Files.newBufferedReader(Paths.get(logfile), StandardCharsets.UTF_8);
+	//	BufferedReader in = Files.newBufferedReader(Paths.get(logfile), StandardCharsets.UTF_8);
+		long timereading=0;
     	        while (in.ready()) {
                 String line = in.readLine();
     			
@@ -189,7 +202,11 @@ public class StartService
 					break;
 				}
 				
-
+				if(logdata.equals(1)){
+					timereading = System.nanoTime() - this.startTime;
+					
+				}
+				
     			 if(dt1.after(startt) && dt1.before(endt)) {
 					
     				 jsondataTemp = gh.parseGrok(line);
@@ -225,18 +242,27 @@ public class StartService
 			//System.out.println(alljsObj.toString());
 			log.info("filtering finished");
 			org.eclipse.rdf4j.model.Model rdf4jmodel  = jp.Parse(alljsObj.toString());
-			Util ut = new Util();
-			
+			//Util ut = new Util();
+			long parsingtime = System.nanoTime()-this.startTime;
 			log.info("parsing finished finished");
-			ut.saveRDF4JModel(rdf4jmodel, outputModel);
-			ut.storeFileInRepo(outputModel, sparqlEndpoint, namegraph, user, pass);
+			JModel.addAll(rdf4jmodel);
+			//ut.saveRDF4JModel(rdf4jmodel, outputModel);
+			//long savingtime = System.nanoTime()-this.startTime;
+			//ut.storeFileInRepo(outputModel, sparqlEndpoint, namegraph, user, pass);
+			//ut.generateHDTFile(namegraph, outputModel, "TURTLE", hdtOutput);
+			//long storingtime = System.nanoTime()-this.startTime;
 			response = "{\"content\":\"success\",\"endopoint\":\""+sparqlEndpoint+"\"}";
 			System.out.println("read line :"+co);
 			System.out.println("parsed line :"+logdata);
+			System.out.println("reading time :"+timereading/1000000+" ms");
+			System.out.println("parsing time :"+(parsingtime-timereading)/1000000+" ms");
+			//System.out.println("Saving model time :"+(savingtime-parsingtime)/1000000+" ms");
+			//System.out.println("Storing to TripleStore time :"+(storingtime-savingtime)/1000000+" ms");
+			
 			in.close();
 			
     	 }
-               catch (IOException closeException) {
+               catch (Exception closeException) {
           	}
 		
 		return response;
@@ -257,7 +283,7 @@ public class StartService
 		}
 	}
 	
-	public void translateQuery(String pq,String rm,String ro) throws IOException, org.json.simple.parser.ParseException{
+	public void translateQuery(String pq,String rm,String ro) throws Exception, org.json.simple.parser.ParseException{
 		QueryTranslator qt = new QueryTranslator(pq);
 	      Model m = qt.loadRegexModel(rm, ro);
 	      qt.parseJSONQuery(m);
@@ -332,7 +358,7 @@ public class StartService
 	
     
 }
-	public static void deleteFile(String file) throws IOException {
+	public static void deleteFile(String file) throws Exception {
 		File f = new File(file);
 		f.delete();
 	}
@@ -346,7 +372,7 @@ public class StartService
 		}
 	}
 
-	public String getContents(String outputResult) throws IOException, InterruptedException {
+	public String getContents(String outputResult) throws Exception, InterruptedException {
 		//System.out.println("getContent: "+outputResult);
 		String r = null;
 		File file = new File(outputResult); 
@@ -379,7 +405,7 @@ public class StartService
         String randomUUIDString = uuid.toString();
         return randomUUIDString;
 	}
-	public static void main( String[] args ) throws IOException, ParseException, InterruptedException, URISyntaxException, GrokException, org.json.simple.parser.ParseException
+	public static void main( String[] args ) throws Exception
   {
 		String parsedQueryFile = "experiment0/input/query.json";
 		String parsedQuery = new String(Files.readAllBytes(Paths.get(parsedQueryFile))); 

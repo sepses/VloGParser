@@ -4,7 +4,6 @@ import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.io.InputStream;
 
 public enum VirtuosoStorage implements Storage {
@@ -39,7 +38,7 @@ public enum VirtuosoStorage implements Storage {
 
             long end = System.currentTimeMillis() / 1000;
             log.info("Writing process for '" + file + "' took " + (end - start) + " seconds");
-        } catch (IOException e) {
+        } catch (Exception e) {
             log.error(e.getMessage(), e);
         }
 
@@ -66,7 +65,7 @@ public enum VirtuosoStorage implements Storage {
 
             long end = System.currentTimeMillis() / 1000;
             log.info("Writing process for '" + file + "' took " + (end - start) + " seconds");
-        } catch (IOException e) {
+        } catch (Exception e) {
             log.error(e.getMessage(), e);
         }
 

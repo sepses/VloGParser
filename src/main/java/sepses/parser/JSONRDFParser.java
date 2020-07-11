@@ -29,13 +29,13 @@ public class JSONRDFParser {
      * @param xmlFileName
      * @param rmlFile
      * @return
-     * @throws IOException
+     * @throws Exception
      */
 	public JSONRDFParser(String rmlFile) {
 		initParse(rmlFile);
 	}
 	
-    public org.eclipse.rdf4j.model.Model Parse(String jsonString) throws IOException {
+    public org.eclipse.rdf4j.model.Model Parse(String jsonString) throws Exception {
         
         // load RML file and all supporting functions
        
