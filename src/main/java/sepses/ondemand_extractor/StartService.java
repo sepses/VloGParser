@@ -67,6 +67,7 @@ public class StartService
         List<String> logSources = JsonPath.read(jcobject, "$.logSources");
 
         String outputDir = JsonPath.read(jcobject,"$.outputDir");
+        String hdtrepo = JsonPath.read(jcobject,"$.hdt-repo");
         List<String> ltitle = JsonPath.read(jcobject,"$.logSources[*].title");
         List<String> ltype = JsonPath.read(jcobject,"$.logSources[*].type");
         List<String> llogLocation = JsonPath.read(jcobject,"$.logSources[*].logLocation");
@@ -119,7 +120,7 @@ public class StartService
 		System.out.println("generate HDT file..");
 		ut.generateHDTFile("http://w3id.org/sepses/graph/"+hostname.toString(), outputModel, "TURTLE", hdtOutput);
 		//ut.storeHDTFile(hdtOutput, "http://10.5.0.2:3000/upload");
-		ut.storeHDTFile(outputModel, "http://10.5.0.2:3000/upload");
+		ut.storeHDTFile(outputModel, hdtrepo);
 		long elapsedTime = System.nanoTime() - this.startTime;
 		System.out.println("Total time execution :"+elapsedTime/1000000+" ms");
 
