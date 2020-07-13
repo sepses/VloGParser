@@ -1,6 +1,6 @@
 	{
   "title": "Host/Agent Log Parser server",
-   "hdt-repo": "http://10.10.20.4:3000/upload",
+   "hdt-repo": "http://localhost:3000/upload",
   "url": "http://localhost",
   "port": 8080,
   "outputDir": "experiment/output/",
