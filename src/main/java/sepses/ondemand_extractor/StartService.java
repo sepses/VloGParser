@@ -111,7 +111,7 @@ public class StartService
 		}
 		
 		Util ut = new Util();
-		String hostname = InetAddress.getLocalHost().getHostAddress();
+		String hostname = InetAddress.getLocalHost().getHostName();
 		//String hostname="localhost";
 		String outputModel = outputDir+hostname+".ttl";
 		String hdtOutput = outputDir+hostname+".hdt";
