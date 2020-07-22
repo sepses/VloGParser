@@ -61,7 +61,7 @@ public class Util {
           System.out.println(command);
           Process process = Runtime.getRuntime().exec(command);
           InputStream is = process.getInputStream();
-          System.out.print("Data stored successfully");
+          System.out.println("Data stored successfully");
   
 	  }
 	  
