@@ -80,7 +80,7 @@ public class StartService
         List<String> lgrokFile = JsonPath.read(jcobject,"$.logSources[*].grokFile");
         List<String> lgrokPattern = JsonPath.read(jcobject,"$.logSources[*].grokPattern");
         List<String> loutputModel = JsonPath.read(jcobject,"$.logSources[*].outputModel");
-        List<String> lhdtOutput = JsonPath.read(jcobject,"$.logSources[*].hdtOutput");
+        //List<String> lhdtOutput = JsonPath.read(jcobject,"$.logSources[*].hdtOutput");
         List<String> lnamegraph = JsonPath.read(jcobject,"$.logSources[*].namegraph");
         List<String> lregexMeta = JsonPath.read(jcobject,"$.logSources[*].regexMeta");
         List<String> lregexOntology = JsonPath.read(jcobject,"$.logSources[*].regexOntology");
@@ -106,7 +106,7 @@ public class StartService
 			if(prefixes.contains(lvocabulary.get(i))){
 				log.info("parsing start");
 						res = parse(rdf4JM, llogLocation.get(i), lgrokFile.get(i), lgrokPattern.get(i),
-								lmapping.get(i),pq, loutputModel.get(i), lhdtOutput.get(i),hdtrepo,
+								lmapping.get(i),pq, loutputModel.get(i), hdtOutput,hdtrepo,
 								lregexMeta.get(i), lregexOntology.get(i),
 								sparqlEndpoint, user, pass, lnamegraph.get(i), st, et, ltimeRegex.get(i),
 								ldateFormat.get(i),limit);	
