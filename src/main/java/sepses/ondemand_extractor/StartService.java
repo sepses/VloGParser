@@ -264,6 +264,7 @@ public class StartService
 			long compressingtime = System.nanoTime()-this.startTime;
 			log.info("compression (hdt) finished..");
 			Util.storeHDTFile(hdtOutput, hdtrepo);
+			long uploadingtime = System.nanoTime()-this.startTime;
 			response = "{\"content\":\"success\",\"endopoint\":\""+sparqlEndpoint+"\"}";
 			System.out.println("===========SUMMARY============");
 			System.out.println("read line :"+co);
@@ -272,6 +273,8 @@ public class StartService
 			System.out.println("extraction time :"+(timeextracting-timereading)/1000000+" ms");
 			System.out.println("parsing time :"+(parsingtime-timeextracting)/1000000+" ms");
 			System.out.println("Compressing time :"+(compressingtime-parsingtime)/1000000+" ms");
+			System.out.println("Uploading time :"+(uploadingtime-compressingtime)/1000000+" ms");
+			
 			
 			//System.out.println("Storing to TripleStore time :"+(storingtime-savingtime)/1000000+" ms");
 			
