@@ -93,12 +93,18 @@
         </exclusion>
       </exclusions> 
 	</dependency>
-					
+					<!-- https://mvnrepository.com/artifact/io.thekraken/grok -->
 		<dependency>
+		    <groupId>io.thekraken</groupId>
+		    <artifactId>grok</artifactId>
+		    <version>0.1.5</version>
+		</dependency>
+							
+		<!--  <dependency>
 		  <groupId>com.nflabs</groupId>
 		  <artifactId>grok</artifactId>
 		  <version>0.0.6</version>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 
 	<build>

@@ -7,9 +7,10 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import com.nflabs.grok.Grok;
-import com.nflabs.grok.GrokException;
-import com.nflabs.grok.Match;
+import io.thekraken.grok.api.Grok;
+import io.thekraken.grok.api.Match;
+import io.thekraken.grok.api.exception.GrokException;
+
 
 
 public class GrokHelper {
