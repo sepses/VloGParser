@@ -68,6 +68,11 @@ public class StartService
 
         String outputDir = JsonPath.read(jcobject,"$.outputDir");
         String hdtrepo = JsonPath.read(jcobject,"$.hdt-repo");
+    	String hostname = InetAddress.getLocalHost().getHostName();
+		//String hostname="localhost";
+		String outputModel = outputDir+hostname+".ttl";
+		String hdtOutput = outputDir+hostname+".hdt";
+        
         List<String> ltitle = JsonPath.read(jcobject,"$.logSources[*].title");
         List<String> ltype = JsonPath.read(jcobject,"$.logSources[*].type");
         List<String> llogLocation = JsonPath.read(jcobject,"$.logSources[*].logLocation");
@@ -82,6 +87,7 @@ public class StartService
         List<String> lvocabulary = JsonPath.read(jcobject,"$.logSources[*].vocabulary");
         List<String> ltimeRegex = JsonPath.read(jcobject,"$.logSources[*].logTimeRegex");
         List<String> ldateFormat = JsonPath.read(jcobject,"$.logSources[*].logDateFormat");
+        
        // System.out.print(logSources.size());
         //System.exit(0);
 		String res="";
@@ -100,7 +106,7 @@ public class StartService
 			if(prefixes.contains(lvocabulary.get(i))){
 				log.info("parsing start");
 						res = parse(rdf4JM, llogLocation.get(i), lgrokFile.get(i), lgrokPattern.get(i),
-								lmapping.get(i),pq, loutputModel.get(i), lhdtOutput.get(i),
+								lmapping.get(i),pq, loutputModel.get(i), lhdtOutput.get(i),hdtrepo,
 								lregexMeta.get(i), lregexOntology.get(i),
 								sparqlEndpoint, user, pass, lnamegraph.get(i), st, et, ltimeRegex.get(i),
 								ldateFormat.get(i),limit);	
@@ -110,17 +116,21 @@ public class StartService
 			}
 		}
 		
-		Util ut = new Util();
-		String hostname = InetAddress.getLocalHost().getHostName();
+	//	Util ut = new Util();
+	//	String hostname = InetAddress.getLocalHost().getHostName();
 		//String hostname="localhost";
-		String outputModel = outputDir+hostname+".ttl";
-		String hdtOutput = outputDir+hostname+".hdt";
+	//	String outputModel = outputDir+hostname+".ttl";
+	//	String hdtOutput = outputDir+hostname+".hdt";
 	
-		ut.saveRDF4JModel(rdf4JM, outputModel);
-		System.out.println("generate HDT file..");
-		ut.generateHDTFile("http://w3id.org/sepses/graph/"+hostname.toString(), outputModel, "TURTLE", hdtOutput);
+	//	ut.saveRDF4JModel(rdf4JM, outputModel);
+	//	System.out.println("generate HDT file..");
+	//	ut.generateHDTFile("http://w3id.org/sepses/graph/"+hostname.toString(), outputModel, "TURTLE", hdtOutput);
 		//ut.storeHDTFile(hdtOutput, "http://10.5.0.2:3000/upload");
-		ut.storeHDTFile(hdtOutput, hdtrepo);
+		
+		
+		// ut.storeHDTFile(hdtOutput, hdtrepo);
+		
+		
 		long elapsedTime = System.nanoTime() - this.startTime;
 		System.out.println("Total time execution :"+elapsedTime/1000000+" ms");
 
@@ -129,7 +139,7 @@ public class StartService
     }
  
 	public String parse(org.eclipse.rdf4j.model.Model JModel, String logfile, String grokfile, String grokpattern, 
-			String RMLFile, String parsedQuery, String outputModel, String hdtOutput, String regexMeta, 
+			String RMLFile, String parsedQuery, String outputModel, String hdtOutput, String hdtrepo,String regexMeta, 
 			String regexOntology,String sparqlEndpoint, String user, String pass, 
 			String namegraph,String startTime, String endDate, String dateTimeRegex,
 			String dateFormat, String limit) throws Exception {
@@ -240,24 +250,29 @@ public class StartService
 			
 			JSONObject alljsObj = new JSONObject();
 			alljsObj.put("logEntry",alljson);
+			long timeextracting = System.nanoTime() - this.startTime;
 			//System.out.println(alljsObj.toString());
 			log.info("filtering finished");
 			org.eclipse.rdf4j.model.Model rdf4jmodel  = jp.Parse(alljsObj.toString());
 			//Util ut = new Util();
 			long parsingtime = System.nanoTime()-this.startTime;
-			log.info("parsing finished finished");
+			log.info("parsing finished");
 			JModel.addAll(rdf4jmodel);
-			//ut.saveRDF4JModel(rdf4jmodel, outputModel);
+			Util.saveRDF4JModel(rdf4jmodel, outputModel);
 			//long savingtime = System.nanoTime()-this.startTime;
 			//ut.storeFileInRepo(outputModel, sparqlEndpoint, namegraph, user, pass);
-			//ut.generateHDTFile(namegraph, outputModel, "TURTLE", hdtOutput);
-			//long storingtime = System.nanoTime()-this.startTime;
+			Util.generateHDTFile(namegraph, outputModel, "TURTLE", hdtOutput);
+			long compressingtime = System.nanoTime()-this.startTime;
+			log.info("compression (hdt) finished..");
+			Util.storeHDTFile(hdtOutput, hdtrepo);
 			response = "{\"content\":\"success\",\"endopoint\":\""+sparqlEndpoint+"\"}";
 			System.out.println("read line :"+co);
 			System.out.println("parsed line :"+logdata);
 			System.out.println("reading time :"+timereading/1000000+" ms");
-			System.out.println("parsing time :"+(parsingtime-timereading)/1000000+" ms");
-			//System.out.println("Saving model time :"+(savingtime-parsingtime)/1000000+" ms");
+			System.out.println("extraction time :"+(timeextracting-timereading)/1000000+" ms");
+			System.out.println("parsing time :"+(parsingtime-timeextracting)/1000000+" ms");
+			System.out.println("Compressing time :"+(compressingtime-parsingtime)/1000000+" ms");
+			
 			//System.out.println("Storing to TripleStore time :"+(storingtime-savingtime)/1000000+" ms");
 			
 			in.close();

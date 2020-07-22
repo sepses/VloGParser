@@ -21,7 +21,7 @@ import sepses.ondemand_extractor.JenaQueryEngine;
 
 public class Util {
 	
-	public void saveModel(Model model,String outputModel) throws Exception { 	
+	public static void saveModel(Model model,String outputModel) throws Exception { 	
     	FileWriter out = new FileWriter(outputModel);
     	model.write(out,"TURTLE");
     	System.out.println("Model is saved!");
@@ -30,7 +30,7 @@ public class Util {
     	
 	}
 	
-	public void saveRDF4JModel(org.eclipse.rdf4j.model.Model model,String outputModel) throws Exception { 
+	public static void saveRDF4JModel(org.eclipse.rdf4j.model.Model model,String outputModel) throws Exception { 
 				
 				OutputStream tempOutput = new FileOutputStream(outputModel);
     	        Rio.write(model, tempOutput, RDFFormat.TURTLE); // write mapping
@@ -38,7 +38,7 @@ public class Util {
     	        tempOutput.flush();
     	        tempOutput.close();
 	}
-	public void generateHDTFile(String baseURI, String filename, String inputType, String hdtOutput) throws IOException, ParserException {
+	public static void generateHDTFile(String baseURI, String filename, String inputType, String hdtOutput) throws IOException, ParserException {
 		
 		HDT hdt = HDTManager.generateHDT(filename, baseURI, RDFNotation.parse(inputType), new HDTSpecification(), null);
 		
@@ -50,13 +50,13 @@ public class Util {
 		hdt.saveToHDT(hdtOutput, null);
 	}
 	
-	  public void storeFileInRepo(String filename, String sparqlEndpoint, String namegraph, String user, String pass) {
+	  public static void storeFileInRepo(String filename, String sparqlEndpoint, String namegraph, String user, String pass) {
 		  Storage  storage = VirtuosoStorage.getInstance();
 		 System.out.println("Store data: "+filename+" to " + sparqlEndpoint + " using graph " + namegraph);
 	       storage.replaceData(filename, sparqlEndpoint, namegraph, true, user, pass);
 	    }
 	 
-	  public void storeHDTFile(String filename, String url) throws IOException {
+	  public static void storeHDTFile(String filename, String url) throws IOException {
 		  String command = "curl -F statement=@"+filename+" "+  url;
           System.out.println(command);
           Process process = Runtime.getRuntime().exec(command);
