@@ -269,7 +269,7 @@ public class StartService
 			System.out.println("===========SUMMARY============");
 			System.out.println("read line :"+co);
 			System.out.println("parsed line :"+logdata);
-			//System.out.println("reading time :"+timereading/1000000+" ms");
+			System.out.println("reading time :"+timereading/1000000+" ms");
 			System.out.println("extraction time :"+(timeextracting-timereading)/1000000+" ms");
 			System.out.println("parsing time :"+(parsingtime-timeextracting)/1000000+" ms");
 			System.out.println("Compressing time :"+(compressingtime-parsingtime)/1000000+" ms");
