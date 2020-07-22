@@ -26,7 +26,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 
 import com.jayway.jsonpath.JsonPath;
-import com.nflabs.grok.GrokException;
 import sepses.parser.JSONRDFParser;
 import sepses.parser.Util;
 
