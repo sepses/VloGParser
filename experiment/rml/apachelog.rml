@@ -19,7 +19,7 @@
  rr:subjectMap [ rr:template "http://w3id.org/sepses/resource/apachelog#LogEntry-{id}"];
  rr:predicateObjectMap [ rr:predicate rdf:type; rr:objectMap [ rr:template "https://w3id.org/sepses/vocab/log/apacheLog#ApacheLogEntry"]];
  rr:predicateObjectMap [ rr:predicate cl:hasLogFamily; rr:objectMap [ rr:template "http://dbpedia.org/page/Common_Log_Format"]];
- rr:predicateObjectMap [ rr:predicate cl:timestamp;  rr:objectMap [ rr:template "{timestamp}";  rr:datatype xsd:dateTime;]];
+ rr:predicateObjectMap [ rr:predicate cl:timestamp;  rr:objectMap [ rr:template "{timestamp}";  rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate apache:hasAgent; rr:objectMap [ rr:template "{agent}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate apache:hasReferrer; rr:objectMap [rr:template "{referrer}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate apache:hasRequestVerb; rr:objectMap [rr:template "{verb}"; rr:datatype xsd:string;]];
