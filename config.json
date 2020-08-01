@@ -36,8 +36,7 @@
 	      "regexOntology": "experiment/model/regexOntology.ttl",
 	      "vocabulary":"https://w3id.org/sepses/vocab/log/apacheLog#",
 	      "logDateFormat":"MMM d HH:mm:ss",
-	      "logTimeRegex2":"\\w+\\s+\\d+\\s\\d{2}:\\d{2}:\\d{2}"
-              "logTimeRegex":"\\d{2}\/\\w+\/\\d{4}:\\d{2}:\\d{2}:\\d{2}"         
+	      "logTimeRegex":"\\w+\\s+\\d+\\s\\d{2}:\\d{2}:\\d{2}"      
      },{
 	      "title": "snortAlertlog",
 	      "type": "File",
