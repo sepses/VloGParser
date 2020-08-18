@@ -14,16 +14,14 @@
 <http://w3id.org/sepses/vocab/log/coreLog> a owl:Ontology ;
     regex:hasGrokPattern "%{SYSLOGBASE} %{GREEDYDATA:message}" .
 
-auth:userName a rdf:Property ;
-    regex:hasRegexPattern regex:user .
-
+auth:user a rdf:Property ;
+    regex:hasRegexPattern regex:user ;
+    rdfs:label "username" .
+    
 cl:originatesFrom a rdf:Property ;
     regex:hasRegexPattern regex:host ;
-    rdfs:label "logsource" .
+    rdfs:label "hostname" .
 
-cl:hostName a rdf:Property ;
-    regex:hasRegexPattern regex:host ;
-    rdfs:label "logsource" .
 
 auth:programName a rdf:Property ;
     rdfs:label "program" .
