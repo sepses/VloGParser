@@ -17,6 +17,10 @@
 auth:userName a rdf:Property ;
     regex:hasRegexPattern regex:user .
 
+cl:originatesFrom a rdf:Property ;
+    regex:hasRegexPattern regex:host ;
+    rdfs:label "logsource" .
+
 cl:hostName a rdf:Property ;
     regex:hasRegexPattern regex:host ;
     rdfs:label "logsource" .
