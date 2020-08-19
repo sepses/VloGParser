@@ -3,3 +3,12 @@ Virtual Log Graph Parser is a simple log parser engine that receives and analyze
 
 ![ ](https://raw.githubusercontent.com/sepses/VloGParser/hdt-version/docs/querytranslationexample.png)
 <p align="center">**Figure 1**. VlogGraph Parser Overview.</p>
+
+
+This project can be setup by cloning and installing it as follows:
+
+```bash
+$ git clone https://github.com/sepses/VloGParser.git
+$ cd VlogParser
+$ mvn clean install
+```
