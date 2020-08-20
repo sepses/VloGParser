@@ -17,7 +17,7 @@ $ cd VlogParser
 $ mvn clean install
 ```
 
-To configure which log sources to parse, please take a look at the configuration file (config.json).
+The example data for experiment can be found at ./experiment directory. to configure which log sources to parse, please take a look at the configuration file (config.json).
 
 ```bash
   "logSources": [ 
@@ -36,7 +36,11 @@ To configure which log sources to parse, please take a look at the configuration
 		}..
 ```
 
+To run the compiled project: 
 
+```bash
+$ java -jar ./target/rest-service-0.0.1-SNAPSHOT.jar
+```
 
 
 
