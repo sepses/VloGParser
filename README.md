@@ -35,14 +35,14 @@ To configure which log sources to parse, please take a look at the configuration
 
 ## Run the Code
 
-The application can be installaed and run as follows:
+This project can be setup by cloning and installing and running it as follows:
 
 ```bash
-$ git clone https://github.com/sepses/VloGraphQueryProcessor
+$ git clone https://github.com/sepses/VloGraphQueryProcessor.git
+$ cd VlogGraphQueryProcessor
 $ npm install
 $ npm start
 ```
-
 
 ## License
 
