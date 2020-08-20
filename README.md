@@ -35,16 +35,21 @@ To configure which log sources to parse, please take a look at the configuration
 
 ## Run the Code
 
-This project can be setup by cloning and installing and running it as follows:
+This project can be setup by cloning and installing it as follows:
 
 ```bash
-$ git clone https://github.com/sepses/VloGraphQueryProcessor.git
-$ cd VlogGraphQueryProcessor
-$ npm install
-$ npm start
+$ git clone https://github.com/sepses/VloGParser.git
+$ cd VlogParser
+$ mvn clean install
+```
+
+To run the compiled project: 
+
+```bash
+$ java -jar ./target/rest-service-0.0.1-SNAPSHOT.jar
 ```
 
 ## License
 
-The Virtual Log Graph Query Processor is written by [Kabul Kurniawan](https://kabulkurniawan.github.io/) released under the [MIT license](http://opensource.org/licenses/MIT).
+The Virtual Log Graph Parser is written by [Kabul Kurniawan](https://kabulkurniawan.github.io/) released under the [MIT license](http://opensource.org/licenses/MIT).
 
