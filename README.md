@@ -9,15 +9,11 @@ This engine runs several components:
 - **RDF Mapping**, the extracted log data are mapped and parsed into RDF representation.
 - **RDF Compression**, this component compressed the generated RDF log data into a compact binary format of RDF.
 
-This project can be setup by cloning and installing it as follows:
+##Configuration
 
-```bash
-$ git clone https://github.com/sepses/VloGParser.git
-$ cd VlogParser
-$ mvn clean install
-```
+The example data for experiment can be found at ./experiment directory. 
 
-The example data for experiment can be found at ./experiment directory. to configure which log sources to parse, please take a look at the configuration file (config.json).
+To configure which log sources to parse, please take a look at the configuration file (config.json).
 
 ```bash
   "logSources": [ 
@@ -36,6 +32,17 @@ The example data for experiment can be found at ./experiment directory. to confi
 		}..
 ```
 
+
+## Run the Code
+
+This project can be setup by cloning and installing it as follows:
+
+```bash
+$ git clone https://github.com/sepses/VloGParser.git
+$ cd VlogParser
+$ mvn clean install
+```
+
 To run the compiled project: 
 
 ```bash
@@ -43,4 +50,7 @@ $ java -jar ./target/rest-service-0.0.1-SNAPSHOT.jar
 ```
 
 
+
+
+The Virtual Log Graph Parser is written by [Kabul Kurniawan](https://kabulkurniawan.github.io/) released under the [MIT license](http://opensource.org/licenses/MIT).
 
