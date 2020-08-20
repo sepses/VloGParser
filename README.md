@@ -5,9 +5,9 @@ Virtual Log Graph Parser is a simple log parser engine that receives and analyze
 
 This engine runs several components:
 - **Query Translator**, this component decomposes the SPARQL query to identify relevant elements for log source selection and log line matching (see Figure 1).
-- **Log Extractor**, this component extract the selected raw log lines (identified by Query Translation) and split them into a key-value pair representation by using predefined regular expression pattern.
-- **RDF Mapping**, the extracted log data are mapped and parsed into RDF representation.
-- **RDF Compression**, this component compressed the generated RDF log data into a compact binary format of RDF.
+- **Log Extractor**, this component extract the selected raw log lines (identified by Query Translation) and split them into a key-value pair representation by using predefined regular expression pattern. We use <a target="_blank" href="https://github.com/logstash-plugins/logstash-patterns-core/blob/master/patterns/grok-patterns">Logstash Grok Patterns</a>, a collection of composeable regular expression patterns that can be reused forspecific log sources (e.g., auth-log, apache-log, snort-log)
+- **RDF Mapping**, the extracted log data are mapped and parsed into RDF representation. We used <a target="_blank" href="https://github.com/carml/carml">CARML</a>, a Java-based tool that usesthe <a target="_blank" href="https://rml.io/">RML</a> Mapping11specification to parse JSON data into RDFrepresentation.
+- **RDF Compression**, this component compressed the generated RDF log data into a compact binary format of RDF.We used the <a target="_blank" href="http://www.rdfhdt.org/">HDT</a> library, a compact datastructure and binary serialization format for RDF that keeps bigdatasets compressed to save space while maintaining search andbrowse operations without prior decompression.	
 
 ## Configuration
 
