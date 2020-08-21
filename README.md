@@ -1,5 +1,5 @@
 # VloGParser
-Virtual Log Graph Parser is a simple log parser engine that receives and analyzes SPARQL queries sent by users and accordingly extracts raw log data from hosts, parses the extracted log data into an RDF representation and compress the resulting RDF data into the HDT format.
+Virtual Log Graph Parser is a simple log parser engine that receives and analyzes SPARQL queries sent by users via <a target="_blank" href="https://github.com/sepses/VloGraphQueryProcessor"> Query Processor</a> and accordingly extracts raw log data from hosts, parses the extracted log data into an RDF representation and compress the resulting RDF data into the HDT format.
 
 ![ ](https://raw.githubusercontent.com/sepses/VloGParser/hdt-version/docs/querytranslationexample.png)<p align="center"> **Figure 1** SPARQL query translation Overview.
 
