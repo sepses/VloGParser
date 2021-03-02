@@ -27,7 +27,6 @@ import io.krakens.grok.api.exception.GrokException;
 
 
 public class GrokHelper {
-	private String grokfile;
 	private InputStream grokfilestream;
 	private String grokpattern;
 
@@ -51,7 +50,6 @@ public class GrokHelper {
 }
  
  public GrokHelper(String grokfile,String grokpattern) throws FileNotFoundException {
-	 this.grokfile=grokfile;
 	 this.grokpattern=grokpattern;
 	 File initialFile = new File(grokfile);
 	 this.grokfilestream = new FileInputStream(initialFile);
