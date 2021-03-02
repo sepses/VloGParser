@@ -74,9 +74,8 @@ public class GrokHelper {
 //		Match gm = g.match(logline);;
 	 
 	 final Map<String, Object> capture = gm.capture();
-	 ObjectMapper objectMapper = new ObjectMapper();
-	  String json = objectMapper.writeValueAsString(capture);
-	  JsonNode jsonNode = objectMapper.readTree(json);
+	 ObjectMapper mapper = new ObjectMapper();
+	 JsonNode jsonNode = mapper.valueToTree(capture);
 //		//System.out.println(gm.toJson());
 //		//See the result
 //	 System.out.println(json);
