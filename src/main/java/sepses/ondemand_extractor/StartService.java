@@ -28,15 +28,14 @@ import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.jayway.jsonpath.JsonPath;
-import com.jsoniter.JsonIterator;
-import com.jsoniter.any.Any;
+
 
 import sepses.parser.JSONRDFParser;
 import sepses.parser.Util;
-import sepses.parser.GrokHelper;
+
 
 /**
  * Hello world!
@@ -182,13 +181,7 @@ public class StartService
     	Model model = ModelFactory.createDefaultModel();
     	try {
   		
-    		 File initialFile = new File(grokfile);
-    		 InputStream grokfilestream = new FileInputStream(initialFile);
-    		
-
-    		
-
-			 JsonNode jsondata=null;
+    		JsonNode jsondata=null;
 			 JsonNode jsondataTemp=null;
 			 
 			int co=0;
@@ -209,6 +202,8 @@ public class StartService
 		//option III
 	//	BufferedReader in = Files.newBufferedReader(Paths.get(logfile), StandardCharsets.UTF_8);
 		long timereading=0;
+		 File initialFile = new File(grokfile);
+		 InputStream grokfilestream = new FileInputStream(initialFile);
     	        while (in.ready()) {
                 String line = in.readLine();
     			

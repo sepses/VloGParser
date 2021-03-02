@@ -28,7 +28,29 @@ import io.krakens.grok.api.exception.GrokException;
 public class GrokHelper {
 
 
+ public static void main(String[] args) throws GrokException, Exception, ParseException {
+	 String logline ="Dec 31 20:40:19 KABULHOST sshd[7855]: Invalid user mike from 87.106.50.214";
+	 String grokfile ="experiment/pattern/pattern.grok";
+	 String grokpattern="%{SYSLOGBASE} %{GREEDYDATA:message}";
+	 String jsonParam = "{\"logsource\":\"KABULHOST\",\"program\":\"ssh\"}";
+
+	 File initialFile = new File(grokfile);
+	 InputStream grokfilestream = new FileInputStream(initialFile);
+		
+
+	JsonNode rs = parseGrok(grokfilestream,grokpattern,logline);
+////	 
+	 System.out.println(rs);
+//	 if(checkIfKeyValueExist(rs, "logsource", "KABULHOST")) {
+//		 System.out.print("True");
+//	 }else {
+//		 System.out.print("False");
+//		 }
+	 
+
+}
  
+
  public static JsonNode parseGrok(InputStream grokfilestream, String grokpattern, String logline) throws IOException  {
 	
 	    GrokCompiler grokCompiler = GrokCompiler.newInstance();
