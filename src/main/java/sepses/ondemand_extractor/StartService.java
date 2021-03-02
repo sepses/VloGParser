@@ -158,8 +158,7 @@ public class StartService
     	//delete existing output file
     	//deleteFile(outputResult);
 		
-	    File initialFile = new File(grokfile);
-	    InputStream grokfilestream = new FileInputStream(initialFile);
+	   
 		
 		String response="";
     	deleteFile(outputModel);
@@ -182,7 +181,7 @@ public class StartService
     	Model model = ModelFactory.createDefaultModel();
     	try {
   		
-    		GrokHelper gh = new GrokHelper(grokfilestream, grokpattern);
+    		GrokHelper gh = new GrokHelper(grokfile, grokpattern);
     		
 
 			 JsonNode jsondata=null;

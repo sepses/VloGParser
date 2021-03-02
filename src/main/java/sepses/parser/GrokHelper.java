@@ -3,6 +3,7 @@ package sepses.parser;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
@@ -26,7 +27,8 @@ import io.krakens.grok.api.exception.GrokException;
 
 
 public class GrokHelper {
-	private InputStream grokfile;
+	private String grokfile;
+	private InputStream grokfilestream;
 	private String grokpattern;
 
  public static void main(String[] args) throws GrokException, Exception, ParseException {
@@ -48,17 +50,17 @@ public class GrokHelper {
 
 }
  
- public GrokHelper(InputStream grokfile,String grokpattern) throws IOException {
+ public GrokHelper(String grokfile,String grokpattern) throws FileNotFoundException {
 	 this.grokfile=grokfile;
 	 this.grokpattern=grokpattern;
-	   
-	   
+	 File initialFile = new File(grokfile);
+	 this.grokfilestream = new FileInputStream(initialFile);
  }
  
  public JsonNode parseGrok(String logline) throws GrokException, IOException {
-	 	GrokCompiler grokCompiler = GrokCompiler.newInstance();
-	    grokCompiler.register(grokfile);
-	    Grok grok = grokCompiler.compile(this.grokpattern);
+	    GrokCompiler grokCompiler = GrokCompiler.newInstance();
+	    grokCompiler.register(grokfilestream);
+		 final Grok grok = grokCompiler.compile(this.grokpattern);
 		 Match gm = grok.match(logline);
 		 final Map<String, Object> capture = gm.capture();
 		 ObjectMapper mapper = new ObjectMapper();
