@@ -178,7 +178,7 @@ public class StartService
     		
 
 			 JsonNode jsondata=null;
-			 String jsondataTemp="";
+			 JsonNode jsondataTemp=null;
 			 
 			int co=0;
 			JSONArray alljson = new JSONArray();
@@ -227,21 +227,21 @@ public class StartService
 					
     				 jsondataTemp = gh.parseGrok(line);
     				 
-    				 ObjectMapper mapper = new ObjectMapper();
-    				 JsonNode json = mapper.readTree(jsondataTemp);
+//    				 ObjectMapper mapper = new ObjectMapper();
+//    				 JsonNode json = mapper.readTree(jsondataTemp);
     				 
     				 //Any json=JsonIterator.deserialize(jsondataTemp);
     				 
     				 if(filterRegex.size()!=0) {
     					 
-						boolean c = checkAllFilter(filterRegex, json);
+						boolean c = checkAllFilter(filterRegex, jsondataTemp);
 						 if(c) {
-							 jsondata=json;
+							 jsondata=jsondataTemp;
 							 climit++;
  							
  						 }
     				 }else {
-						 jsondata=json;
+						 jsondata=jsondataTemp;
 						 climit++;
     				 }
     			  } 

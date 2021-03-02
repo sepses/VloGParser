@@ -11,6 +11,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.krakens.grok.api.Grok;
@@ -52,7 +53,7 @@ public class GrokHelper {
 	 this.grokpattern=grokpattern;
  }
  
- public String parseGrok(String logline) throws GrokException, IOException {
+ public JsonNode parseGrok(String logline) throws GrokException, IOException {
 
 	 /* Create a new grokCompiler instance */
 	    File initialFile = new File(this.grokfile);
@@ -70,14 +71,16 @@ public class GrokHelper {
 //		g.addPatternFromFile(this.grokfile);
 //		g.compile(this.grokpattern);
 //		//System.out.println(logline);
-//		Match gm = g.match(logline);
+//		Match gm = g.match(logline);;
 	 
 	 final Map<String, Object> capture = gm.capture();
+	 ObjectMapper objectMapper = new ObjectMapper();
 	  String json = new ObjectMapper().writeValueAsString(capture);
+	  JsonNode jsonNode = objectMapper.readTree(json);
 //		//System.out.println(gm.toJson());
 //		//See the result
 //	 System.out.println(json);
-	 return json;
+	 return jsonNode;
 	
   }
  
