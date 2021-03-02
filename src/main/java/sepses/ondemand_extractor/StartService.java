@@ -6,7 +6,9 @@ import sepses.parser.GrokHelper;
 import java.io.BufferedReader;
 import java.util.UUID;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
+import java.io.InputStream;
 import java.net.InetAddress;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -93,6 +95,8 @@ public class StartService
         List<String> ltimeRegex = JsonPath.read(jcobject,"$.logSources[*].logTimeRegex");
         List<String> ldateFormat = JsonPath.read(jcobject,"$.logSources[*].logDateFormat");
         
+	
+	    
        // System.out.print(logSources.size());
         //System.exit(0);
 		String res="";
@@ -153,6 +157,10 @@ public class StartService
 		//=======translate the query ===========
     	//delete existing output file
     	//deleteFile(outputResult);
+		
+	    File initialFile = new File(grokfile);
+	    InputStream grokfilestream = new FileInputStream(initialFile);
+		
 		String response="";
     	deleteFile(outputModel);
         QueryTranslator qt = new QueryTranslator(parsedQuery);
@@ -174,7 +182,7 @@ public class StartService
     	Model model = ModelFactory.createDefaultModel();
     	try {
   		
-    		GrokHelper gh = new GrokHelper(grokfile, grokpattern);
+    		GrokHelper gh = new GrokHelper(grokfilestream, grokpattern);
     		
 
 			 JsonNode jsondata=null;

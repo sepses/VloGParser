@@ -26,7 +26,7 @@ import io.krakens.grok.api.exception.GrokException;
 
 
 public class GrokHelper {
-	private String grokfile;
+	private InputStream grokfile;
 	private String grokpattern;
 
  public static void main(String[] args) throws GrokException, Exception, ParseException {
@@ -35,7 +35,7 @@ public class GrokHelper {
 	 String grokpattern="%{SYSLOGBASE} %{GREEDYDATA:message}";
 	 String jsonParam = "{\"logsource\":\"KABULHOST\",\"program\":\"ssh\"}";
 
-	 GrokHelper gh = new GrokHelper(grokfile, grokpattern);
+	// GrokHelper gh = new GrokHelper(grokfile, grokpattern);
 //	 String rs = gh.parseGrok(logline);
 //	 
 //	 //System.out.println(rs);
@@ -48,37 +48,21 @@ public class GrokHelper {
 
 }
  
- public GrokHelper(String grokfile,String grokpattern) {
+ public GrokHelper(InputStream grokfile,String grokpattern) throws IOException {
 	 this.grokfile=grokfile;
 	 this.grokpattern=grokpattern;
+	   
+	   
  }
  
  public JsonNode parseGrok(String logline) throws GrokException, IOException {
-
-	 /* Create a new grokCompiler instance */
-	    File initialFile = new File(this.grokfile);
-	    InputStream targetStream = new FileInputStream(initialFile);
-	 GrokCompiler grokCompiler = GrokCompiler.newInstance();
-	 grokCompiler.register(targetStream);
-
-	 /* Grok pattern to compile, here httpd logs */
-	 final Grok grok = grokCompiler.compile(this.grokpattern);
-
-	 /* Line of log to match */
-	
-	 Match gm = grok.match(logline);
-//	 Grok g = new Grok();
-//		g.addPatternFromFile(this.grokfile);
-//		g.compile(this.grokpattern);
-//		//System.out.println(logline);
-//		Match gm = g.match(logline);;
-	 
-	 final Map<String, Object> capture = gm.capture();
-	 ObjectMapper mapper = new ObjectMapper();
-	 JsonNode jsonNode = mapper.valueToTree(capture);
-//		//System.out.println(gm.toJson());
-//		//See the result
-//	 System.out.println(json);
+	 	GrokCompiler grokCompiler = GrokCompiler.newInstance();
+	    grokCompiler.register(grokfile);
+	    Grok grok = grokCompiler.compile(this.grokpattern);
+		 Match gm = grok.match(logline);
+		 final Map<String, Object> capture = gm.capture();
+		 ObjectMapper mapper = new ObjectMapper();
+		 JsonNode jsonNode = mapper.valueToTree(capture);
 	 return jsonNode;
 	
   }
