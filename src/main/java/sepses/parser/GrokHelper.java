@@ -75,7 +75,7 @@ public class GrokHelper {
 	 
 	 final Map<String, Object> capture = gm.capture();
 	 ObjectMapper objectMapper = new ObjectMapper();
-	  String json = new ObjectMapper().writeValueAsString(capture);
+	  String json = objectMapper.writeValueAsString(capture);
 	  JsonNode jsonNode = objectMapper.readTree(json);
 //		//System.out.println(gm.toJson());
 //		//See the result
