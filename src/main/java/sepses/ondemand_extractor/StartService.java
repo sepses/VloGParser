@@ -2,6 +2,7 @@ package sepses.ondemand_extractor;
 
 import sepses.parser.GrokHelper;
 
+
 import java.io.BufferedReader;
 import java.util.UUID;
 import java.io.File;
@@ -13,7 +14,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.slf4j.Logger;
@@ -244,7 +244,7 @@ public class StartService
      		
      			if(jsondata!=""){
      				logdata++;     			
-					Any jd = addUUID(jsondata);
+					JSONObject jd = addUUID(jsondata);
 					alljson.add(jd);
 				}
 				co++;
@@ -442,13 +442,11 @@ public class StartService
 		
  	}
 	
-	 Any addUUID(String jsondata) throws org.json.simple.parser.ParseException{
+	 JSONObject addUUID(String jsondata) throws org.json.simple.parser.ParseException{
 		UUID ui = UUID.randomUUID();
-//		org.json.simple.parser.JSONParser jp = new org.json.simple.parser.JSONParser();
-//		JSONObject json = (JSONObject) jp.parse(jsondata);
-		Any json=JsonIterator.deserialize(jsondata);
-		((Map) json).put("id", ui);
-	
+		org.json.simple.parser.JSONParser jp = new org.json.simple.parser.JSONParser();
+		JSONObject json = (JSONObject) jp.parse(jsondata);
+		json.put("id", ui);
 		//System.out.print(json.toString());
 		return json;
 			
