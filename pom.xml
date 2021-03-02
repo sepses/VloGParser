@@ -106,10 +106,15 @@
       </exclusions> 
 	</dependency>
 					<!-- https://mvnrepository.com/artifact/io.thekraken/grok -->
-		<dependency>
+	<!-- 	<dependency>
 		    <groupId>io.thekraken</groupId>
 		    <artifactId>grok</artifactId>
 		    <version>0.1.5</version>
+		</dependency> -->
+		<dependency>
+		    <groupId>io.krakens</groupId>
+		    <artifactId>java-grok</artifactId>
+		    <version>0.1.9</version>
 		</dependency>
 							
 	</dependencies>

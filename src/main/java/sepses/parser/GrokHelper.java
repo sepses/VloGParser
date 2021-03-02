@@ -4,9 +4,12 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import io.thekraken.grok.api.Grok;
-import io.thekraken.grok.api.Match;
-import io.thekraken.grok.api.exception.GrokException;
+import io.krakens.grok.api.Grok;
+import io.krakens.grok.api.GrokCompiler;
+import io.krakens.grok.api.Match;
+import io.krakens.grok.api.exception.GrokException;
+
+
 
 
 
@@ -38,16 +41,18 @@ public class GrokHelper {
  }
  
  public String parseGrok(String logline) throws GrokException {
-
-	 Grok g = new Grok();
-		g.addPatternFromFile(this.grokfile);
-		g.compile(this.grokpattern);
+	 GrokCompiler grokCompiler = GrokCompiler.newInstance();
+	 grokCompiler.registerPatternFromClasspath(this.grokfile);
+	 final Grok g = grokCompiler.compile(this.grokpattern);
+//	 Grok g = new Grok();
+//		g.addPatternFromFile(this.grokfile);
+//		g.compile(this.grokpattern);
 		//System.out.println(logline);
 		Match gm = g.match(logline);
-		gm.captures();
+		gm.capture();
 		//System.out.println(gm.toJson());
 		//See the result
-	 return gm.toJson();
+	 return gm.toString();
   }
  
   public static boolean checkIfKeyValueExist(String jsonString, String pkey, String pvalue) throws Exception, ParseException {

@@ -227,23 +227,23 @@ public class StartService
 					
     				 jsondataTemp = gh.parseGrok(line);
     				 
-    				 ObjectMapper mapper = new ObjectMapper();
-    				 JsonNode json = mapper.readTree(jsondataTemp);
-    				 
-    				 //Any json=JsonIterator.deserialize(jsondataTemp);
-    				 
-    				 if(filterRegex.size()!=0) {
-    					 
-						boolean c = checkAllFilter(filterRegex, json);
-						 if(c) {
-							 jsondata=json;
-							 climit++;
- 							
- 						 }
-    				 }else {
-						 jsondata=json;
-						 climit++;
-    				 }
+//    				 ObjectMapper mapper = new ObjectMapper();
+//    				 JsonNode json = mapper.readTree(jsondataTemp);
+//    				 
+//    				 //Any json=JsonIterator.deserialize(jsondataTemp);
+//    				 
+//    				 if(filterRegex.size()!=0) {
+//    					 
+//						boolean c = checkAllFilter(filterRegex, json);
+//						 if(c) {
+//							 jsondata=json;
+//							 climit++;
+// 							
+// 						 }
+//    				 }else {
+//						 jsondata=json;
+//						 climit++;
+//    				 }
     			  } 
      		
      			if(jsondata!=null){
