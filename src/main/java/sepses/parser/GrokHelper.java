@@ -36,14 +36,14 @@ public class GrokHelper {
 	 String jsonParam = "{\"logsource\":\"KABULHOST\",\"program\":\"ssh\"}";
 
 	 GrokHelper gh = new GrokHelper(grokfile, grokpattern);
-	 String rs = gh.parseGrok(logline);
-	 
-	 //System.out.println(rs);
-	 if(checkIfKeyValueExist(rs, "logsource", "KABULHOST")) {
-		 System.out.print("True");
-	 }else {
-		 System.out.print("False");
-		 }
+//	 String rs = gh.parseGrok(logline);
+//	 
+//	 //System.out.println(rs);
+//	 if(checkIfKeyValueExist(rs, "logsource", "KABULHOST")) {
+//		 System.out.print("True");
+//	 }else {
+//		 System.out.print("False");
+//		 }
 	 
 
 }
