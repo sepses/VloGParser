@@ -27,7 +27,7 @@ import io.krakens.grok.api.exception.GrokException;
 
 
 public class GrokHelper {
-	private InputStream grokfilestream;
+	private String grokfile;
 	private String grokpattern;
 
  public static void main(String[] args) throws GrokException, Exception, ParseException {
@@ -51,11 +51,12 @@ public class GrokHelper {
  
  public GrokHelper(String grokfile,String grokpattern) throws FileNotFoundException {
 	 this.grokpattern=grokpattern;
-	 File initialFile = new File(grokfile);
-	 this.grokfilestream = new FileInputStream(initialFile);
+	 this.grokfile = grokfile;
  }
  
  public JsonNode parseGrok(String logline) throws GrokException, IOException {
+	 File initialFile = new File(grokfile);
+	InputStream grokfilestream = new FileInputStream(initialFile);
 	    GrokCompiler grokCompiler = GrokCompiler.newInstance();
 	    grokCompiler.register(grokfilestream);
 		 final Grok grok = grokCompiler.compile(this.grokpattern);
