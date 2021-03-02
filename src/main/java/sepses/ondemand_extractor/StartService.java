@@ -25,6 +25,9 @@ import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.jayway.jsonpath.JsonPath;
 import com.jsoniter.JsonIterator;
 import com.jsoniter.any.Any;
@@ -174,7 +177,7 @@ public class StartService
     		GrokHelper gh = new GrokHelper(grokfile, grokpattern);
     		
 
-			 String jsondata = "";
+			 JsonNode jsondata=null;
 			 String jsondataTemp="";
 			 
 			int co=0;
@@ -223,28 +226,29 @@ public class StartService
     			 if(dt1.after(startt) && dt1.before(endt)) {
 					
     				 jsondataTemp = gh.parseGrok(line);
-
+    				 
+    				 ObjectMapper mapper = new ObjectMapper();
+    				 JsonNode json = mapper.readTree(jsondataTemp);
+    				 
+    				 //Any json=JsonIterator.deserialize(jsondataTemp);
+    				 
     				 if(filterRegex.size()!=0) {
-						boolean c = checkAllFilter(filterRegex, jsondataTemp);
+    					 
+						boolean c = checkAllFilter(filterRegex, json);
 						 if(c) {
-							 jsondata=jsondataTemp;
+							 jsondata=json;
 							 climit++;
  							
- 						 }else {
- 							jsondata="";
  						 }
     				 }else {
-						 jsondata=jsondataTemp;
+						 jsondata=json;
 						 climit++;
-//    					 System.out.println(jsondata);
     				 }
-    			  } else{
-    				 jsondata="";
-    			 }	
+    			  } 
      		
-     			if(jsondata!=""){
+     			if(jsondata!=null){
      				logdata++;     			
-					JSONObject jd = addUUID(jsondata);
+					JsonNode jd = addUUID(jsondata);
 					alljson.add(jd);
 				}
 				co++;
@@ -291,10 +295,7 @@ public class StartService
     	
 
 	}
-	public boolean checkFilterJsonWithVariableRegex(String jsondata, String variable, String regex) throws org.json.simple.parser.ParseException {
-//		JSONParser parser = new JSONParser(); 
-//		JSONObject json = (JSONObject) parser.parse(jsondata);
-		Any json=JsonIterator.deserialize(jsondata);
+	public boolean checkFilterJsonWithVariableRegex(JsonNode json, String variable, String regex) throws org.json.simple.parser.ParseException {
 		if(json.get(variable)==null){
 			return true;
 		}else{
@@ -322,7 +323,7 @@ public class StartService
 		}
 	}
 
-	private boolean checkAllFilter(List<FilterRegex> filterRegex, String jsondataTemp ) throws org.json.simple.parser.ParseException{
+	private boolean checkAllFilter(List<FilterRegex> filterRegex, JsonNode jsondataTemp ) throws org.json.simple.parser.ParseException{
 		ArrayList resFilter = new ArrayList<Boolean>();
 		
 		 for (int k=0;k<filterRegex.size();k++){
@@ -442,11 +443,10 @@ public class StartService
 		
  	}
 	
-	 JSONObject addUUID(String jsondata) throws org.json.simple.parser.ParseException{
+	 JsonNode addUUID(JsonNode json) throws org.json.simple.parser.ParseException{
 		UUID ui = UUID.randomUUID();
-		org.json.simple.parser.JSONParser jp = new org.json.simple.parser.JSONParser();
-		JSONObject json = (JSONObject) jp.parse(jsondata);
-		json.put("id", ui);
+		((ObjectNode) json).put("id", ui.toString());
+		//json.put("id", ui);
 		//System.out.print(json.toString());
 		return json;
 			
