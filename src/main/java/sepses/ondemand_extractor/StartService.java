@@ -202,8 +202,7 @@ public class StartService
 		//option III
 	//	BufferedReader in = Files.newBufferedReader(Paths.get(logfile), StandardCharsets.UTF_8);
 		long timereading=0;
-		 File initialFile = new File(grokfile);
-		 InputStream grokfilestream = new FileInputStream(initialFile);
+	
     	        while (in.ready()) {
                 String line = in.readLine();
     			
@@ -231,7 +230,7 @@ public class StartService
 				
     			 if(dt1.after(startt) && dt1.before(endt)) {
 					
-    				 jsondataTemp = GrokHelper.parseGrok(grokfilestream, grokpattern, line);
+    				 jsondataTemp = GrokHelper.parseGrok(grokfile, grokpattern, line);
     				 
 //    				 ObjectMapper mapper = new ObjectMapper();
 //    				 JsonNode json = mapper.readTree(jsondataTemp);

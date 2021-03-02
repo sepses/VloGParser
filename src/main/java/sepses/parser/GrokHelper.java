@@ -38,9 +38,9 @@ public class GrokHelper {
 	 InputStream grokfilestream = new FileInputStream(initialFile);
 		
 
-	JsonNode rs = parseGrok(grokfilestream,grokpattern,logline);
+	//JsonNode rs = parseGrok(grokfilestream,grokpattern,logline);
 ////	 
-	 System.out.println(rs);
+//	 System.out.println(rs);
 //	 if(checkIfKeyValueExist(rs, "logsource", "KABULHOST")) {
 //		 System.out.print("True");
 //	 }else {
@@ -51,8 +51,9 @@ public class GrokHelper {
 }
  
 
- public static JsonNode parseGrok(InputStream grokfilestream, String grokpattern, String logline) throws IOException  {
-	
+ public static JsonNode parseGrok(String grokfile, String grokpattern, String logline) throws IOException  {
+	 File initialFile = new File(grokfile);
+	 InputStream grokfilestream = new FileInputStream(initialFile);
 	    GrokCompiler grokCompiler = GrokCompiler.newInstance();
 	    grokCompiler.register(grokfilestream);
 		 final Grok grok = grokCompiler.compile(grokpattern);
