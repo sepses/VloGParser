@@ -2,7 +2,6 @@ package sepses.ondemand_extractor;
 
 import sepses.parser.GrokHelper;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.util.UUID;
 import java.io.File;
@@ -26,6 +25,9 @@ import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 
 import com.jayway.jsonpath.JsonPath;
+import com.jsoniter.JsonIterator;
+import com.jsoniter.any.Any;
+
 import sepses.parser.JSONRDFParser;
 import sepses.parser.Util;
 
@@ -289,8 +291,9 @@ public class StartService
 
 	}
 	public boolean checkFilterJsonWithVariableRegex(String jsondata, String variable, String regex) throws org.json.simple.parser.ParseException {
-		JSONParser parser = new JSONParser(); 
-		JSONObject json = (JSONObject) parser.parse(jsondata);
+//		JSONParser parser = new JSONParser(); 
+//		JSONObject json = (JSONObject) parser.parse(jsondata);
+		Any json=JsonIterator.deserialize(jsondata);
 		if(json.get(variable)==null){
 			return true;
 		}else{

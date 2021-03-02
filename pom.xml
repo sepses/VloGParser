@@ -74,6 +74,12 @@
 		</dependency>
 	
 		<!-- https://mvnrepository.com/artifact/eu.wdaqua/hdt-java-core -->
+		   <dependency>
+			<groupId>com.jsoniter</groupId>
+			<artifactId>jsoniter</artifactId>
+			<version>0.9.23</version>
+		</dependency>
+       
 	<dependency>
 	    <groupId>eu.wdaqua</groupId>
 	    <artifactId>hdt-java-core</artifactId>
