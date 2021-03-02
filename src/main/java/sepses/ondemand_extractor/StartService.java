@@ -181,7 +181,10 @@ public class StartService
     	Model model = ModelFactory.createDefaultModel();
     	try {
   		
-    		GrokHelper gh = new GrokHelper(grokfile, grokpattern);
+    		 File initialFile = new File(grokfile);
+    		InputStream grokfilestream = new FileInputStream(initialFile);
+    		
+    		GrokHelper gh = new GrokHelper(grokpattern);
     		
 
 			 JsonNode jsondata=null;
@@ -232,7 +235,7 @@ public class StartService
 				
     			 if(dt1.after(startt) && dt1.before(endt)) {
 					
-    				 jsondataTemp = gh.parseGrok(line);
+    				 jsondataTemp = gh.parseGrok(grokfilestream,line);
     				 
 //    				 ObjectMapper mapper = new ObjectMapper();
 //    				 JsonNode json = mapper.readTree(jsondataTemp);

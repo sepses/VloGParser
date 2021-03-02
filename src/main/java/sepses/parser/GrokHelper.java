@@ -27,7 +27,7 @@ import io.krakens.grok.api.exception.GrokException;
 
 
 public class GrokHelper {
-	private String grokfile;
+
 	private String grokpattern;
 
  public static void main(String[] args) throws GrokException, Exception, ParseException {
@@ -36,10 +36,10 @@ public class GrokHelper {
 	 String grokpattern="%{SYSLOGBASE} %{GREEDYDATA:message}";
 	 String jsonParam = "{\"logsource\":\"KABULHOST\",\"program\":\"ssh\"}";
 
-	 GrokHelper gh = new GrokHelper(grokfile, grokpattern);
-	 JsonNode rs = gh.parseGrok(logline);
-//	 
-	 System.out.println(rs);
+//	 GrokHelper gh = new GrokHelper(grokfile, grokpattern);
+//	 JsonNode rs = gh.parseGrok(logline);
+////	 
+//	 System.out.println(rs);
 //	 if(checkIfKeyValueExist(rs, "logsource", "KABULHOST")) {
 //		 System.out.print("True");
 //	 }else {
@@ -49,14 +49,12 @@ public class GrokHelper {
 
 }
  
- public GrokHelper(String grokfile,String grokpattern) throws FileNotFoundException {
+ public GrokHelper(String grokpattern) throws FileNotFoundException {
 	 this.grokpattern=grokpattern;
-	 this.grokfile = grokfile;
  }
  
- public JsonNode parseGrok(String logline) throws GrokException, IOException {
-	 File initialFile = new File(grokfile);
-	InputStream grokfilestream = new FileInputStream(initialFile);
+ public JsonNode parseGrok(InputStream grokfilestream, String logline) throws GrokException, IOException {
+	
 	    GrokCompiler grokCompiler = GrokCompiler.newInstance();
 	    grokCompiler.register(grokfilestream);
 		 final Grok grok = grokCompiler.compile(this.grokpattern);
