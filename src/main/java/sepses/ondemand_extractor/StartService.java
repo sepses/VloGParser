@@ -36,6 +36,7 @@ import com.jsoniter.any.Any;
 
 import sepses.parser.JSONRDFParser;
 import sepses.parser.Util;
+import sepses.parser.GrokHelper;
 
 /**
  * Hello world!
@@ -182,9 +183,9 @@ public class StartService
     	try {
   		
     		 File initialFile = new File(grokfile);
-    		InputStream grokfilestream = new FileInputStream(initialFile);
+    		 InputStream grokfilestream = new FileInputStream(initialFile);
     		
-    		GrokHelper gh = new GrokHelper(grokpattern);
+
     		
 
 			 JsonNode jsondata=null;
@@ -235,7 +236,7 @@ public class StartService
 				
     			 if(dt1.after(startt) && dt1.before(endt)) {
 					
-    				 jsondataTemp = gh.parseGrok(grokfilestream,line);
+    				 jsondataTemp = GrokHelper.parseGrok(grokfilestream, grokpattern, line);
     				 
 //    				 ObjectMapper mapper = new ObjectMapper();
 //    				 JsonNode json = mapper.readTree(jsondataTemp);
@@ -441,9 +442,9 @@ public class StartService
 	}
 	public static void main( String[] args ) throws Exception
   {
-		String parsedQueryFile = "experiment0/input/query.json";
+		String parsedQueryFile = "experiment/input/query.json";
 		String parsedQuery = new String(Files.readAllBytes(Paths.get(parsedQueryFile))); 
-		String queryStringFile = "experiment0/input/query2.sparql";
+		String queryStringFile = "experiment/input/query2.sparql";
 		String queryString = new String(Files.readAllBytes(Paths.get(queryStringFile))); 
 		String startTime = "May 30 19:09:00";
     	String endDate = "May 30 19:10:00";

@@ -3,7 +3,6 @@ package sepses.parser;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
@@ -28,36 +27,13 @@ import io.krakens.grok.api.exception.GrokException;
 
 public class GrokHelper {
 
-	private String grokpattern;
 
- public static void main(String[] args) throws GrokException, Exception, ParseException {
-	 String logline ="Dec 31 20:40:19 KABULHOST sshd[7855]: Invalid user mike from 87.106.50.214";
-	 String grokfile ="experiment/pattern/pattern.grok";
-	 String grokpattern="%{SYSLOGBASE} %{GREEDYDATA:message}";
-	 String jsonParam = "{\"logsource\":\"KABULHOST\",\"program\":\"ssh\"}";
-
-//	 GrokHelper gh = new GrokHelper(grokfile, grokpattern);
-//	 JsonNode rs = gh.parseGrok(logline);
-////	 
-//	 System.out.println(rs);
-//	 if(checkIfKeyValueExist(rs, "logsource", "KABULHOST")) {
-//		 System.out.print("True");
-//	 }else {
-//		 System.out.print("False");
-//		 }
-	 
-
-}
  
- public GrokHelper(String grokpattern) throws FileNotFoundException {
-	 this.grokpattern=grokpattern;
- }
- 
- public JsonNode parseGrok(InputStream grokfilestream, String logline) throws GrokException, IOException {
+ public static JsonNode parseGrok(InputStream grokfilestream, String grokpattern, String logline) throws IOException  {
 	
 	    GrokCompiler grokCompiler = GrokCompiler.newInstance();
 	    grokCompiler.register(grokfilestream);
-		 final Grok grok = grokCompiler.compile(this.grokpattern);
+		 final Grok grok = grokCompiler.compile(grokpattern);
 		 Match gm = grok.match(logline);
 		 final Map<String, Object> capture = gm.capture();
 		 ObjectMapper mapper = new ObjectMapper();
