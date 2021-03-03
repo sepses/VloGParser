@@ -178,6 +178,12 @@ public class StartService
     	
     	//find respected splitted file based on start and end date input
     	
+    	//findRespectedLogFile(startt,endDate);
+    	ArrayList<String> files = 	new ArrayList<String>();
+    	files.add("apache50mb.log_6");
+    	files.add("apache50mb.log_7");
+    	
+    	
     	
     	Integer logdata = 0;
     	JSONRDFParser jp = new JSONRDFParser(RMLFile);
@@ -197,13 +203,9 @@ public class StartService
 			
 			long timereading=0;
 			
-			File folder = new File(logfolder);
 			
-			ArrayList<String> listFiles = Util.listFilesForFolder(folder);
-			Collections.sort(listFiles);
-			
-			 if (listFiles.size()==0) { System.out.print("folder is empty!"); System.exit(0);}
-		     for (String file : listFiles) {
+		     for (String file : files) {
+		    	   
 		    	 	System.out.println("processing file: "+file);
 		    	 	String logfile = logfolder+file;
 			
