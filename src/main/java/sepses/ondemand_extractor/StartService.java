@@ -204,7 +204,7 @@ public class StartService
 			
 			 if (listFiles.size()==0) { System.out.print("folder is empty!"); System.exit(0);}
 		     for (String file : listFiles) {
-		    	 	//System.out.println("processing file: "+file);
+		    	 	System.out.println("processing file: "+file);
 		    	 	String logfile = logfolder+file;
 			
 		//optionI	
