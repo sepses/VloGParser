@@ -2,6 +2,7 @@ package sepses.parser;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -105,4 +106,19 @@ public class Util {
 			writer.flush();
 			writer.close();
 		}
+		
+	    public static ArrayList<String> listFilesForFolder(final File folder) {
+	    	ArrayList<String> rulefiles = new ArrayList<String>();
+	    	
+	        for (final File fileEntry : folder.listFiles()) {
+	            if (fileEntry.isDirectory()) {
+	                listFilesForFolder(fileEntry);
+	            } else {
+	            	rulefiles.add(fileEntry.getName());
+	                // System.out.println(fileEntry.getName());
+	            }
+	        }
+	        
+	        return rulefiles;
+	    }
 }

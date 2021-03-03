@@ -8,7 +8,8 @@
      {
 	      "title": "authlog",
 	      "type": "File",
-	      "logLocation": "experiment/logfile/auth.log",
+	      "logLocation": "experiment/logfile/auth/",
+	      "logMeta": "experiment/logmeta/auth_meta.ttl",
 	      "mapping": "experiment/rml/authlog.rml",
 	      "grokFile": "experiment/pattern/pattern.grok",
 	      "grokPattern": "%{SYSLOGBASE} %{GREEDYDATA:message}",
@@ -25,7 +26,8 @@
       {
 	      "title": "apachelog",
 	      "type": "File",
-	      "logLocation": "experiment/logfile/apache.log",
+	      "logLocation": "experiment/logfile/apache/used/",
+	      "logMeta": "experiment/logmeta/apache_meta.ttl",
 	      "mapping": "experiment/rml/apachelog.rml",
 	      "grokFile": "experiment/pattern/pattern.grok",
 	      "grokPattern": "%{COMMONAPACHELOG}",
@@ -40,7 +42,8 @@
      },{
 	      "title": "snortAlertlog",
 	      "type": "File",
-	      "logLocation": "experiment/logfile/snort-alert-fast-big.log",
+	      "logLocation": "experiment/logfile/snort/",
+	      "logMeta": "experiment/logmeta/snort_meta.ttl",
 	      "mapping": "experiment/rml/snortAlertlog.rml",
 	      "grokFile": "experiment/pattern/pattern.grok",
 	      "grokPattern": "%{SNORT}",

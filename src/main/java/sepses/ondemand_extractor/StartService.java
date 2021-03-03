@@ -14,6 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -31,7 +32,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.jayway.jsonpath.JsonPath;
-
 
 import sepses.parser.JSONRDFParser;
 import sepses.parser.Util;
@@ -83,6 +83,7 @@ public class StartService
         List<String> ltitle = JsonPath.read(jcobject,"$.logSources[*].title");
         List<String> ltype = JsonPath.read(jcobject,"$.logSources[*].type");
         List<String> llogLocation = JsonPath.read(jcobject,"$.logSources[*].logLocation");
+        List<String> llogMeta = JsonPath.read(jcobject,"$.logSources[*].logMeta");
         List<String> lmapping = JsonPath.read(jcobject,"$.logSources[*].mapping");
         List<String> lgrokFile = JsonPath.read(jcobject,"$.logSources[*].grokFile");
         List<String> lgrokPattern = JsonPath.read(jcobject,"$.logSources[*].grokPattern");
@@ -114,7 +115,7 @@ public class StartService
 			//check prefix
 			if(prefixes.contains(lvocabulary.get(i))){
 				log.info("parsing start");
-						res = parse(rdf4JM, llogLocation.get(i), lgrokFile.get(i), lgrokPattern.get(i),
+						res = parse(rdf4JM, llogLocation.get(i), llogMeta.get(i),lgrokFile.get(i), lgrokPattern.get(i),
 								lmapping.get(i),pq, loutputModel.get(i), hdtOutput,hdtrepo,
 								lregexMeta.get(i), lregexOntology.get(i),
 								sparqlEndpoint, user, pass, lnamegraph.get(i), st, et, ltimeRegex.get(i),
@@ -147,7 +148,7 @@ public class StartService
 		
     }
  
-	public String parse(org.eclipse.rdf4j.model.Model JModel, String logfile, String grokfile, String grokpattern, 
+	public String parse(org.eclipse.rdf4j.model.Model JModel, String logfolder, String logmeta, String grokfile, String grokpattern, 
 			String RMLFile, String parsedQuery, String outputModel, String hdtOutput, String hdtrepo,String regexMeta, 
 			String regexOntology,String sparqlEndpoint, String user, String pass, 
 			String namegraph,String startTime, String endDate, String dateTimeRegex,
@@ -175,6 +176,8 @@ public class StartService
     	Date startt = sdf.parse(startTime);
     	Date endt = sdf.parse(endDate);
     	
+    	//find respected splitted file based on start and end date input
+    	
     	
     	Integer logdata = 0;
     	JSONRDFParser jp = new JSONRDFParser(RMLFile);
@@ -192,7 +195,18 @@ public class StartService
 			}
 			int climit=0;
 			
-
+			long timereading=0;
+			
+			File folder = new File(logfolder);
+			
+			ArrayList<String> listFiles = Util.listFilesForFolder(folder);
+			Collections.sort(listFiles);
+			
+			 if (listFiles.size()==0) { System.out.print("folder is empty!"); System.exit(0);}
+		     for (String file : listFiles) {
+		    	 	//System.out.println("processing file: "+file);
+		    	 	String logfile = logfolder+file;
+			
 		//optionI	
 		BufferedReader in = new BufferedReader(new FileReader(logfile));
 		//option II
@@ -201,7 +215,7 @@ public class StartService
 
 		//option III
 	//	BufferedReader in = Files.newBufferedReader(Paths.get(logfile), StandardCharsets.UTF_8);
-		long timereading=0;
+		
 	
     	        while (in.ready()) {
                 String line = in.readLine();
@@ -210,12 +224,12 @@ public class StartService
     			 Date dt1 = sdfl.parse(dt0);
 				
 				 // break when limit is reached
-				 if(limit!=null){
+				/* if(limit!=null){
 					 if(climit>=maxLimit){
 						 
 						 break;
 					 }
-				 }
+				 }*/
 
 				 //break after reaching the end of true line
 				if(!dt1.before(endt)){
@@ -257,8 +271,11 @@ public class StartService
 					alljson.add(jd);
 				}
 				co++;
-			}
+			 
 			
+		      }
+    	        in.close();
+		     }    
 			JSONObject alljsObj = new JSONObject();
 			alljsObj.put("logEntry",alljson);
 			long timeextracting = System.nanoTime() - this.startTime;
@@ -290,7 +307,7 @@ public class StartService
 			
 			//System.out.println("Storing to TripleStore time :"+(storingtime-savingtime)/1000000+" ms");
 			
-			in.close();
+			
 			
     	 }
                catch (Exception closeException) {
