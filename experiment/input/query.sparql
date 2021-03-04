@@ -1,10 +1,6 @@
 PREFIX cl: <https://w3id.org/sepses/vocab/log/coreLog#>
-PREFIX auth: <https://w3id.org/sepses/vocab/log/authLog#>
-
-SELECT ?s ?timestamp ?message  WHERE {
- ?s   cl:message   ?message.
+PREFIX apache: <https://w3id.org/sepses/vocab/log/apacheLog#>
+SELECT ?s ?timestamp WHERE {
  ?s   cl:timestamp   ?timestamp.
- 
-}
-
-LIMIT 10
+	}			
+	LIMIT 5000

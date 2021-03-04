@@ -12,6 +12,7 @@ import java.io.InputStream;
 import java.net.InetAddress;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,8 +22,16 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryExecution;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QueryFactory;
+import org.apache.jena.query.QuerySolution;
+import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.riot.RDFDataMgr;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;
@@ -32,6 +41,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.jayway.jsonpath.JsonPath;
+import com.jsoniter.any.Any;
 
 import sepses.parser.JSONRDFParser;
 import sepses.parser.Util;
@@ -153,12 +163,6 @@ public class StartService
 			String regexOntology,String sparqlEndpoint, String user, String pass, 
 			String namegraph,String startTime, String endDate, String dateTimeRegex,
 			String dateFormat, String limit) throws Exception {
-//		System.out.print(endDate);
-//		System.exit(0);
-		//=======translate the query ===========
-    	//delete existing output file
-    	//deleteFile(outputResult);
-		
 	   
 		
 		String response="";
@@ -170,18 +174,21 @@ public class StartService
 	     // System.exit(0);
 	      List<FilterRegex> filterRegex= qt.filterregex;
 		  List<RegexPattern> regexPattern= qt.regexpattern;
+		  
+		 
+		  //System.exit(0);
+		  
+		  //13/Jan/2011:00:58:20
+		
 		 
     	SimpleDateFormat sdfl = new SimpleDateFormat(dateFormat);
-    	SimpleDateFormat sdf = new SimpleDateFormat("MMM d HH:mm:ss");
+    	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
     	Date startt = sdf.parse(startTime);
     	Date endt = sdf.parse(endDate);
+
     	
-    	//find respected splitted file based on start and end date input
     	
-    	//findRespectedLogFile(startt,endDate);
-    	ArrayList<String> files = 	new ArrayList<String>();
-    	files.add("apache50mb.log_6");
-    	files.add("apache50mb.log_7");
+    	ArrayList<String> files = findRespectedLogFile(startTime,endDate,logmeta);
     	
     	
     	
@@ -206,7 +213,7 @@ public class StartService
 			
 		     for (String file : files) {
 		    	   
-		    	 	System.out.println("processing file: "+file);
+		    	 	System.out.println("processing file: "+logfolder+file);
 		    	 	String logfile = logfolder+file;
 			
 		//optionI	
@@ -224,7 +231,11 @@ public class StartService
     			
     			String dt0 = parseRegex(line,dateTimeRegex);
     			 Date dt1 = sdfl.parse(dt0);
-				
+//    			 System.out.println(dt1);
+//    			 System.out.println(startt);   		    	
+//    			 System.out.println(endt);
+//    			 System.exit(0);
+//				
 				 // break when limit is reached
 				/* if(limit!=null){
 					 if(climit>=maxLimit){
@@ -248,10 +259,7 @@ public class StartService
 					
     				 jsondataTemp = GrokHelper.parseGrok(grokfile, grokpattern, line);
     				 
-//    				 ObjectMapper mapper = new ObjectMapper();
-//    				 JsonNode json = mapper.readTree(jsondataTemp);
-    				 
-    				 //Any json=JsonIterator.deserialize(jsondataTemp);
+
     				 
     				 if(filterRegex.size()!=0) {
     					 
@@ -319,6 +327,87 @@ public class StartService
     	
 
 	}
+	private ArrayList<String> findRespectedLogFile(String startt, String endt, String logmeta) {
+		
+		//query log meta based on start and end date
+		//create log meta as a model
+		
+		Model metaModel = RDFDataMgr.loadModel(logmeta) ;
+		//metaModel.write(System.out,"TURTLE");
+		//create sparql query to select data based on date
+        String query = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
+        		"select ?fid  where {\r\n" + 
+        		"    ?s  <http://w3id.org/sepses/asset#startDate> ?sd.\r\n" + 
+        		"    ?s <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
+        		"    FILTER(?sd <= \""+startt+"\")\r\n" + 
+        		"} \r\n" + 
+        		"ORDER BY DESC(?fid)\r\n" + 
+        		"LIMIT 1";
+       
+
+        QueryExecution qe = QueryExecutionFactory.create(query, metaModel);
+        ResultSet rs = qe.execSelect();
+        Integer c = null;
+        while (rs.hasNext()) {
+            QuerySolution qs = rs.nextSolution();
+            RDFNode co = qs.get("?fid");
+            c = co.asLiteral().getInt();
+        }       
+       
+        
+        
+        String query2 = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
+        		"select ?fid  where {\r\n" + 
+        		"    ?s  <http://w3id.org/sepses/asset#endDate> ?ed.\r\n" + 
+        		"    ?s <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
+        		"    FILTER(?ed >= \""+endt+"\")\r\n" + 
+        		"} \r\n" + 
+        		"ORDER BY ASC(?fid)\r\n" + 
+        		"LIMIT 1";
+
+       
+        QueryExecution qe2 = QueryExecutionFactory.create(query2,metaModel);
+        ResultSet rs2 = qe2.execSelect();
+        Integer c2 = null;
+        while (rs2.hasNext()) {
+            QuerySolution qs2 = rs2.nextSolution();
+            RDFNode co2 = qs2.get("?fid");
+            c2 = co2.asLiteral().getInt();
+        }
+        
+        ArrayList<String> c3 = new ArrayList<String>();
+  	  
+        if(c2!=null && c!=null) {
+	        String query3 = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
+	        		"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n" + 
+	        		"select ?l  where {\r\n" + 
+	        		"    ?s rdfs:label ?l.\r\n" + 
+	        		"    ?s  <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
+	        		"    \r\n" + 
+	        		"    FILTER(  ?fid <="+c2+" && ?fid >="+c+" )\r\n" + 
+	        		"} \r\n" + 
+	        		"";
+	       
+	        QueryExecution qe3 = QueryExecutionFactory.create(query3,metaModel);
+	        ResultSet rs3 = qe3.execSelect();
+	        while (rs3.hasNext()) {
+	            QuerySolution qs3 = rs3.nextSolution();
+	            RDFNode co3 = qs3.get("?l");
+	            c3.add(co3.toString());
+	        }
+	       
+        	
+        }else {
+        	
+        	System.out.println("Date is out of range");
+        	System.exit(0);
+        }
+       
+        
+
+		return c3;
+	}
+
 	public boolean checkFilterJsonWithVariableRegex(JsonNode json, String variable, String regex) throws org.json.simple.parser.ParseException {
 		if(json.get(variable)==null){
 			return true;
@@ -457,10 +546,10 @@ public class StartService
   {
 		String parsedQueryFile = "experiment/input/query.json";
 		String parsedQuery = new String(Files.readAllBytes(Paths.get(parsedQueryFile))); 
-		String queryStringFile = "experiment/input/query2.sparql";
+		String queryStringFile = "experiment/input/query.sparql";
 		String queryString = new String(Files.readAllBytes(Paths.get(queryStringFile))); 
-		String startTime = "May 30 19:09:00";
-    	String endDate = "May 30 19:10:00";
+		String startTime = "2011-06-15T09:47:42";
+    	String endDate = "2011-06-16T09:50:23";
     	
 			StartService ss = new StartService(queryString,parsedQuery, startTime, endDate);
 		
@@ -477,5 +566,4 @@ public class StartService
 		
 	}
 
-	
 }
