@@ -353,7 +353,8 @@ public class StartService
             RDFNode co = qs.get("?fid");
             c = co.asLiteral().getInt();
         }       
-       
+//        System.out.println(query);
+//    	System.exit(0);
         
         
         String query2 = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
@@ -374,7 +375,7 @@ public class StartService
             RDFNode co2 = qs2.get("?fid");
             c2 = co2.asLiteral().getInt();
         }
-        
+    	
         ArrayList<String> c3 = new ArrayList<String>();
   	  
         if(c2!=null && c!=null) {
@@ -403,8 +404,9 @@ public class StartService
         	System.exit(0);
         }
        
-        
 
+    
+        
 		return c3;
 	}
 
