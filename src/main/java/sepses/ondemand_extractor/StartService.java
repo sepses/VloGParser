@@ -386,7 +386,7 @@ public class StartService
 	        		"    ?s  <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
 	        		"    \r\n" + 
 	        		"    FILTER(  ?fid <="+c2+" && ?fid >="+c+" )\r\n" + 
-	        		"} \r\n" + 
+	        		"} ORDER BY ASC(?fid)\r\n" + 
 	        		"";
 	       
 	        QueryExecution qe3 = QueryExecutionFactory.create(query3,metaModel);
