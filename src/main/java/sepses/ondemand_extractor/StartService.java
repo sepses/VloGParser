@@ -6,26 +6,20 @@ import sepses.parser.GrokHelper;
 import java.io.BufferedReader;
 import java.util.UUID;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
-import java.io.InputStream;
 import java.net.InetAddress;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
-import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Model;
@@ -41,7 +35,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.jayway.jsonpath.JsonPath;
-import com.jsoniter.any.Any;
 
 import sepses.parser.JSONRDFParser;
 import sepses.parser.Util;
@@ -64,13 +57,7 @@ public class StartService
 
 
 	public StartService(String qs, String pq, String st, String et) throws Exception {
-//    	System.out.println(qs);
-//    	System.out.println(pq);
-//		System.out.println(st);
-//    	System.out.println(et);
 
-    	//System.exit(0);
-		//read json config
 		String JsonConfig = new String(Files.readAllBytes(Paths.get("config.json"))); 
 		JSONParser jcparser = new JSONParser(); 
 		JSONObject jcobject = (JSONObject) jcparser.parse(JsonConfig);
@@ -86,7 +73,7 @@ public class StartService
         String outputDir = JsonPath.read(jcobject,"$.outputDir");
         String hdtrepo = JsonPath.read(jcobject,"$.hdt-repo");
     	String hostname = InetAddress.getLocalHost().getHostName();
-		//String hostname="localhost";
+
 		String outputModel = outputDir+hostname+".ttl";
 		String hdtOutput = outputDir+hostname+".hdt";
         
@@ -98,7 +85,6 @@ public class StartService
         List<String> lgrokFile = JsonPath.read(jcobject,"$.logSources[*].grokFile");
         List<String> lgrokPattern = JsonPath.read(jcobject,"$.logSources[*].grokPattern");
         List<String> loutputModel = JsonPath.read(jcobject,"$.logSources[*].outputModel");
-        //List<String> lhdtOutput = JsonPath.read(jcobject,"$.logSources[*].hdtOutput");
         List<String> lnamegraph = JsonPath.read(jcobject,"$.logSources[*].namegraph");
         List<String> lregexMeta = JsonPath.read(jcobject,"$.logSources[*].regexMeta");
         List<String> lregexOntology = JsonPath.read(jcobject,"$.logSources[*].regexOntology");
@@ -106,49 +92,31 @@ public class StartService
         List<String> ltimeRegex = JsonPath.read(jcobject,"$.logSources[*].logTimeRegex");
         List<String> ldateFormat = JsonPath.read(jcobject,"$.logSources[*].logDateFormat");
         
-	
-	    
-       // System.out.print(logSources.size());
-        //System.exit(0);
+
 		String res="";
-		//this.startTime = System.nanoTime();
+
 		QueryTranslator qt = new QueryTranslator(pq);
 		ArrayList prefixes= qt.prefixes;
-		String limit = qt.limit;
-		//System.out.println(prefixes.get(0));
-		
+	
 		org.eclipse.rdf4j.model.Model rdf4JM = new LinkedHashModel();
 		
 		for(int i=0;i<logSources.size();i++) {
 
 
-			//check prefix
 			if(prefixes.contains(lvocabulary.get(i))){
 				log.info("parsing start");
 						res = parse(rdf4JM, llogLocation.get(i), llogMeta.get(i),lgrokFile.get(i), lgrokPattern.get(i),
 								lmapping.get(i),pq, loutputModel.get(i), hdtOutput,hdtrepo,
 								lregexMeta.get(i), lregexOntology.get(i),
 								sparqlEndpoint, user, pass, lnamegraph.get(i), st, et, ltimeRegex.get(i),
-								ldateFormat.get(i),limit);	
-					//System.exit(0);
+								ldateFormat.get(i));	
+
 					this.content=res;
 					
 			}
 		}
 		
-	//	Util ut = new Util();
-	//	String hostname = InetAddress.getLocalHost().getHostName();
-		//String hostname="localhost";
-	//	String outputModel = outputDir+hostname+".ttl";
-	//	String hdtOutput = outputDir+hostname+".hdt";
-	
-	//	ut.saveRDF4JModel(rdf4JM, outputModel);
-	//	System.out.println("generate HDT file..");
-	//	ut.generateHDTFile("http://w3id.org/sepses/graph/"+hostname.toString(), outputModel, "TURTLE", hdtOutput);
-		//ut.storeHDTFile(hdtOutput, "http://10.5.0.2:3000/upload");
-		
-		
-		// ut.storeHDTFile(hdtOutput, hdtrepo);
+
 		
 		
 		long elapsedTime = System.nanoTime() - this.startTime;
@@ -162,7 +130,7 @@ public class StartService
 			String RMLFile, String parsedQuery, String outputModel, String hdtOutput, String hdtrepo,String regexMeta, 
 			String regexOntology,String sparqlEndpoint, String user, String pass, 
 			String namegraph,String startTime, String endDate, String dateTimeRegex,
-			String dateFormat, String limit) throws Exception {
+			String dateFormat) throws Exception {
 	   
 		
 		String response="";
@@ -171,15 +139,10 @@ public class StartService
 
          Model m = qt.loadRegexModel(regexMeta, regexOntology);
           qt.parseJSONQuery(m);
-	     // System.exit(0);
+
 	      List<FilterRegex> filterRegex= qt.filterregex;
 		  List<RegexPattern> regexPattern= qt.regexpattern;
 		  
-		 
-		  //System.exit(0);
-		  
-		  //13/Jan/2011:00:58:20
-		
 		 
     	SimpleDateFormat sdfl = new SimpleDateFormat(dateFormat);
     	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
@@ -188,7 +151,7 @@ public class StartService
 
     	
     	
-    	ArrayList<String> files = findRespectedLogFile(startTime,endDate,logmeta);
+    	
     	
     	
     	
@@ -202,14 +165,12 @@ public class StartService
 			 
 			int co=0;
 			JSONArray alljson = new JSONArray();
-			int maxLimit=0;
-			if(limit!=null){
-				maxLimit = Integer.parseInt(limit);
-			}
-			int climit=0;
+
 			
 			long timereading=0;
 			
+			ArrayList<String> files = findRespectedLogFile(startTime,endDate,logmeta);
+	    	if(files.size()!=0) {
 			
 		     for (String file : files) {
 		    	   
@@ -231,18 +192,9 @@ public class StartService
     			
     			String dt0 = parseRegex(line,dateTimeRegex);
     			 Date dt1 = sdfl.parse(dt0);
-//    			 System.out.println(dt1);
-//    			 System.out.println(startt);   		    	
-//    			 System.out.println(endt);
-//    			 System.exit(0);
-//				
+		
 				 // break when limit is reached
-				/* if(limit!=null){
-					 if(climit>=maxLimit){
-						 
-						 break;
-					 }
-				 }*/
+
 
 				 //break after reaching the end of true line
 				if(!dt1.before(endt)){
@@ -266,12 +218,12 @@ public class StartService
 						boolean c = checkAllFilter(filterRegex, jsondataTemp);
 						 if(c) {
 							 jsondata=jsondataTemp;
-							 climit++;
+							 
  							
  						 }
     				 }else {
 						 jsondata=jsondataTemp;
-						 climit++;
+						
     				 }
     			  } 
      		
@@ -289,16 +241,15 @@ public class StartService
 			JSONObject alljsObj = new JSONObject();
 			alljsObj.put("logEntry",alljson);
 			long timeextracting = System.nanoTime() - this.startTime;
-			//System.out.println(alljsObj.toString());
+
 			log.info("filtering finished");
 			org.eclipse.rdf4j.model.Model rdf4jmodel  = jp.Parse(alljsObj.toString());
-			//Util ut = new Util();
+	
 			long parsingtime = System.nanoTime()-this.startTime;
 			log.info("parsing finished");
 			JModel.addAll(rdf4jmodel);
 			Util.saveRDF4JModel(rdf4jmodel, outputModel);
-			//long savingtime = System.nanoTime()-this.startTime;
-			//ut.storeFileInRepo(outputModel, sparqlEndpoint, namegraph, user, pass);
+
 			Util.generateHDTFile(namegraph, outputModel, "TURTLE", hdtOutput);
 			long compressingtime = System.nanoTime()-this.startTime;
 			log.info("compression (hdt) finished..");
@@ -313,13 +264,12 @@ public class StartService
 			System.out.println("parsing time :"+(parsingtime-timeextracting)/1000000+" ms");
 			System.out.println("Compressing time :"+(compressingtime-parsingtime)/1000000+" ms");
 			System.out.println("Uploading time :"+(uploadingtime-compressingtime)/1000000+" ms");
-			
-			
-			//System.out.println("Storing to TripleStore time :"+(storingtime-savingtime)/1000000+" ms");
+
 			
 			
 			
-    	 }
+    	    	 }
+    			}
                catch (Exception closeException) {
           	}
 		
@@ -401,7 +351,7 @@ public class StartService
         }else {
         	
         	System.out.println("Date is out of range");
-        	System.exit(0);
+        	
         }
        
 
