@@ -1,10 +1,6 @@
 /target
 /bin
-/experiment/logfile
-/experiment/output
-/experiment/input
-/experiment/logmeta
-/experiment/model
+/experiment
 /experiment1
 /experiment2
 /experiment3
