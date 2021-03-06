@@ -1,0 +1,29 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#>.
+@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix carml: <http://carml.taxonic.com/carml/> .
+@prefix ue: <http://w3id.org/sepses/vocab/unix-event#>.
+@prefix auth: <https://w3id.org/sepses/vocab/log/authLog#>.
+@prefix cl: <https://w3id.org/sepses/vocab/log/coreLog#>.
+@prefix : <http://epfl.ch/mapping/>.
+
+<#SubjectMapping> a rr:TriplesMap ;
+  rml:logicalSource [
+    rml:source [
+      a carml:Stream ;
+    ] ;
+    rml:referenceFormulation ql:JSONPath ;
+    rml:iterator "$.logEntry.[*]" ;
+  ] ;
+
+ rr:subjectMap [ rr:template "http://w3id.org/sepses/resource/authlog#LogEntry-{id}"];
+ rr:predicateObjectMap [ rr:predicate rdf:type; rr:objectMap [ rr:template "https://w3id.org/sepses/vocab/log/authLog#AuthLogEntry"]];
+ rr:predicateObjectMap [ rr:predicate cl:hasLogFamily; rr:objectMap [ rr:template "http://dbpedia.org/resource/Syslog"]];
+ rr:predicateObjectMap [ rr:predicate cl:timestamp;  rr:objectMap [ rr:template "{timestamp}";  rr:datatype xsd:dateTime;]];
+ rr:predicateObjectMap [ rr:predicate auth:pid; rr:objectMap [ rr:template "{pid}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate auth:hasProgram; rr:objectMap [rr:template "http://w3id.org/sepses/resource/system#prog-{program}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate auth:hasTargetHost; rr:objectMap [rr:template "http://w3id.org/sepses/resource/system#{logsource}"]];
+ rr:predicateObjectMap [ rr:predicate auth:hasUser; rr:objectMap [rr:template "{user}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate auth:hasSourceIp; rr:objectMap [rr:template "{clientIPAddress}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate auth:hasSourcePort; rr:objectMap [rr:template "{clientPort}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate auth:hasAuthEvent; rr:objectMap [rr:template "http://w3id.org/sepses/knowledge/eventKnowledge#{authEvent}-{authEvent2}"]].

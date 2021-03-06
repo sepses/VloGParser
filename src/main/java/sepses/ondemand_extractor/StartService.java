@@ -52,10 +52,6 @@ public class StartService
 	private static final Logger log = LoggerFactory.getLogger(StartService.class);
 	private long startTime = System.nanoTime();
 
-  
-   
-
-
 	public StartService(String qs, String pq, String st, String et) throws Exception {
 
 		String JsonConfig = new String(Files.readAllBytes(Paths.get("config.json"))); 
@@ -193,10 +189,7 @@ public class StartService
     			String dt0 = parseRegex(line,dateTimeRegex);
     			 Date dt1 = sdfl.parse(dt0);
 		
-				 // break when limit is reached
-
-
-				 //break after reaching the end of true line
+					 //break after reaching the end of true line
 				if(!dt1.before(endt)){
 					log.info("break, true line is reached!, total read: "+co);
 					break;
@@ -280,10 +273,8 @@ public class StartService
 	private ArrayList<String> findRespectedLogFile(String startt, String endt, String logmeta) {
 		
 		//query log meta based on start and end date
-		//create log meta as a model
 		
 		Model metaModel = RDFDataMgr.loadModel(logmeta) ;
-		//metaModel.write(System.out,"TURTLE");
 		//create sparql query to select data based on date
         String query = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
         		"select ?fid  where {\r\n" + 
@@ -303,8 +294,6 @@ public class StartService
             RDFNode co = qs.get("?fid");
             c = co.asLiteral().getInt();
         }       
-//        System.out.println(query);
-//    	System.exit(0);
         
         
         String query2 = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
@@ -392,18 +381,13 @@ public class StartService
 		ArrayList resFilter = new ArrayList<Boolean>();
 		
 		 for (int k=0;k<filterRegex.size();k++){
-			// System.out.print(filterRegex.get(k).variable+"|"+filterRegex.get(k).regex);
-    					 	  Boolean  cf = checkFilterJsonWithVariableRegex(jsondataTemp,filterRegex.get(k).variable,filterRegex.get(k).regex);
+						 	  Boolean  cf = checkFilterJsonWithVariableRegex(jsondataTemp,filterRegex.get(k).variable,filterRegex.get(k).regex);
 							resFilter.add(cf);
 							
 						}
-		//System.out.println(jsondataTemp);
 		for (int k=0;k<resFilter.size();k++){
-					//		   System.out.print(resFilter.get(k)+"|");
-							   
 							
 						}
-		//System.out.println("");			
 		if(resFilter.contains(false)){
 			return false;
 		}else{
@@ -468,7 +452,6 @@ public class StartService
 		while (!file.exists()) {
 			Thread.sleep(10);
 		}
-		//System.out.println("getContent: "+outputResult);
 		  BufferedReader br = new BufferedReader(new FileReader(file)); 
 		  String st; 
 		  while ((st = br.readLine()) != null) {
@@ -477,7 +460,6 @@ public class StartService
 			  }else {
 				  r=r+"\r\n"+st;
 			  }
-		    //System.out.println(st); 
 		  }
 		  br.close();
 		  file.delete();
@@ -494,6 +476,7 @@ public class StartService
         String randomUUIDString = uuid.toString();
         return randomUUIDString;
 	}
+	
 	public static void main( String[] args ) throws Exception
   {
 		String parsedQueryFile = "experiment/input/query.json";
@@ -511,8 +494,6 @@ public class StartService
 	 JsonNode addUUID(JsonNode json) throws org.json.simple.parser.ParseException{
 		UUID ui = UUID.randomUUID();
 		((ObjectNode) json).put("id", ui.toString());
-		//json.put("id", ui);
-		//System.out.print(json.toString());
 		return json;
 			
 		
