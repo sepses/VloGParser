@@ -139,8 +139,8 @@ public class StartService
 	      List<FilterRegex> filterRegex= qt.filterregex;
 		  List<RegexPattern> regexPattern= qt.regexpattern;
 		  
-		 
-    	SimpleDateFormat sdfl = new SimpleDateFormat(dateFormat);
+    	
+    	
     	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
     	Date startt = sdf.parse(startTime);
     	Date endt = sdf.parse(endDate);
@@ -185,10 +185,17 @@ public class StartService
 	
     	        while (in.ready()) {
                 String line = in.readLine();
-    			
+                
     			String dt0 = parseRegex(line,dateTimeRegex);
-    			 Date dt1 = sdfl.parse(dt0);
-		
+    			Date dt1 = null;
+    			if(!dateFormat.contains("epoch")) {
+    				SimpleDateFormat sdfl = new SimpleDateFormat(dateFormat);
+    				 dt1 = sdfl.parse(dt0);
+    				}else {
+    				 dt1 = new Date(Long.parseLong(dt0)*1000);
+    				}
+    			
+    			 
 					 //break after reaching the end of true line
 				if(!dt1.before(endt)){
 					log.info("break, true line is reached!, total read: "+co);
@@ -479,12 +486,12 @@ public class StartService
 	
 	public static void main( String[] args ) throws Exception
   {
-		String parsedQueryFile = "experiment/input/query.json";
+		String parsedQueryFile = "experiment/input/query-audit.json";
 		String parsedQuery = new String(Files.readAllBytes(Paths.get(parsedQueryFile))); 
-		String queryStringFile = "experiment/input/query.sparql";
+		String queryStringFile = "experiment/input/query-audit.sparql";
 		String queryString = new String(Files.readAllBytes(Paths.get(queryStringFile))); 
-		String startTime = "2011-06-15T09:47:42";
-    	String endDate = "2011-06-16T09:50:23";
+		String startTime = "2020-02-29T01:00:02";
+    	String endDate = "2020-02-29T01:00:09";
     	
 			StartService ss = new StartService(queryString,parsedQuery, startTime, endDate);
 		

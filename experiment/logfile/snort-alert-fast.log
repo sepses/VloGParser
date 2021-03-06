@@ -1,6 +1,0 @@
-03/16-13:12:27.720000  [**] [1:1048:9] WEB-MISC Netscape Enterprise directory listing attempt [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 192.168.202.79:46625 -> 192.168.229.101:80
-03/16-13:12:28.550000  [**] [1:402:7] ICMP Destination Unreachable Port Unreachable [**] [Classification: Misc activity] [Priority: 3] {ICMP} 192.168.202.1 -> 192.168.202.110
-03/16-13:13:37.030000  [**] [1:1807:10] WEB-MISC Chunked-Encoding transfer attempt [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 192.168.202.102:2603 -> 192.168.21.103:80
-03/16-13:15:49.100000  [**] [1:1070:9] WEB-MISC WebDAV search access [**] [Classification: Access to a Potentially Vulnerable Web Application] [Priority: 2] {TCP} 192.168.202.118:43665 -> 192.168.21.103:80
-03/16-13:17:27.290000  [**] [1:2056:4] WEB-MISC TRACE attempt [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 192.168.202.110:37645 -> 192.168.28.101:80
-03/16-13:23:03.330000  [**] [1:1248:13] WEB-FRONTPAGE rad fp30reg.dll access [**] [Classification: Access to a Potentially Vulnerable Web Application] [Priority: 2] {TCP} 192.168.202.118:45482 -> 192.168.23.103:80
