@@ -460,9 +460,9 @@ public class StartService
 	
 	public static void main( String[] args ) throws Exception
   {
-		String parsedQueryFile = "experiment/input/query-audit2.json";
+		String parsedQueryFile = "experiment/input/query-audit.json";
 		String parsedQuery = new String(Files.readAllBytes(Paths.get(parsedQueryFile))); 
-		String queryStringFile = "experiment/input/query-audit2.sparql";
+		String queryStringFile = "experiment/input/query-audit.sparql";
 		String queryString = new String(Files.readAllBytes(Paths.get(queryStringFile))); 
 		String startTime = "2020-02-29T01:00:05";
     	String endDate = "2020-02-29T01:00:13";

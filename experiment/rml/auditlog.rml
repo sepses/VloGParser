@@ -3,8 +3,8 @@
 @prefix ql: <http://semweb.mmlab.be/ns/ql#> .
 @prefix carml: <http://carml.taxonic.com/carml/> .
 @prefix ue: <http://w3id.org/sepses/vocab/unix-event#>.
-@prefix audit: <https://w3id.org/sepses/vocab/log/auditLog#>.
-@prefix cl: <https://w3id.org/sepses/vocab/log/coreLog#>.
+@prefix audit: <https://w3id.org/sepses/vocab/log/audit#>.
+@prefix cl: <https://w3id.org/sepses/vocab/log/core#>.
 @prefix : <http://epfl.ch/mapping/>.
 
 <#SubjectMapping> a rr:TriplesMap ;
@@ -16,8 +16,8 @@
     rml:iterator "$.logEntry.[*]" ;
   ] ;
 
- rr:subjectMap [ rr:template "http://w3id.org/sepses/resource/apachelog#LogEntry-{id}"];
- rr:predicateObjectMap [ rr:predicate rdf:type; rr:objectMap [ rr:template "https://w3id.org/sepses/vocab/log/apacheLog#AuditLogEntry"]];
+ rr:subjectMap [ rr:template "http://w3id.org/sepses/resource/auditlog#LogEntry-{id}"];
+ rr:predicateObjectMap [ rr:predicate rdf:type; rr:objectMap [ rr:template "https://w3id.org/sepses/vocab/log/audit#AuditLogEntry"]];
  rr:predicateObjectMap [ rr:predicate cl:hasLogFamily; rr:objectMap [ rr:template "http://dbpedia.org/page/Audit_trail"]];
  rr:predicateObjectMap [ rr:predicate cl:timestamp;  rr:objectMap [ rr:template "{audit_epoch}";  rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate audit:type; rr:objectMap [ rr:template "{audit_type}"; rr:datatype xsd:string;]];
