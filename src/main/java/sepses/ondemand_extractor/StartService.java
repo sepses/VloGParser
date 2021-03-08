@@ -251,7 +251,8 @@ public class StartService
 			response = "{\"content\":\"success\",\"endopoint\":\""+sparqlEndpoint+"\"}";
 			System.out.println("===========SUMMARY============");
 			System.out.println("read line :"+co);
-			System.out.println("parsed line :"+logdata);
+			System.out.println("extracted line :"+logdata);
+			System.out.println("===========RUN-TIME============");
 			System.out.println("reading time :"+timereading/1000000+" ms");
 			System.out.println("extraction time :"+(timeextracting-timereading)/1000000+" ms");
 			System.out.println("parsing time :"+(parsingtime-timeextracting)/1000000+" ms");
