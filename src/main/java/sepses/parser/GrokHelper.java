@@ -65,7 +65,7 @@ public class GrokHelper {
 			 final Map<String, Object> capture = gm.capture();
 			 captures.putAll(capture);
 		}
-	    	    
+	    
 	    ObjectMapper mapper = new ObjectMapper();
 		 JsonNode jsonNode = mapper.valueToTree(captures);
 	 return jsonNode;
