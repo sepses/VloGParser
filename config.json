@@ -15,10 +15,9 @@
 	      "grokPattern": "%{SYSLOGBASE} %{GREEDYDATA:message}",
 		  "outputModel": "experiment/output/authlog_model.ttl",
 		  "hdtOutput": "experiment/output/authlog.hdt",
-	      "namegraph": "http://w3id.org/sepses/graph/log/authlog",
-	      "regexMeta": "experiment/model/regexMeta.ttl",
-	      "regexOntology": "experiment/model/regexOntology.ttl",
-	      "vocabulary":"https://w3id.org/sepses/vocab/log/authLog#",
+	      "namegraph": "http://w3id.org/sepses/graph/log/auth",
+	      "vocabulary":"https://w3id.org/sepses/vocab/log/auth#",
+	       "regexPattern": "experiment/model/regexPattern.ttl",
 	      "logDateFormat":"MMM d HH:mm:ss",
 	      "logTimeRegex":"\\w+\\s+\\d+\\s\\d{2}:\\d{2}:\\d{2}"      
 		},
@@ -33,10 +32,9 @@
 	      "grokPattern": "%{COMMONAPACHELOG}",
 		  "outputModel": "experiment/output/apache_model.ttl",
 		  "hdtOutput": "experiment/output/apache.hdt",
-	      "namegraph": "http://w3id.org/sepses/graph/log/apachelog",
-	      "regexMeta": "experiment/model/regexMeta.ttl",
-	      "regexOntology": "experiment/model/regexOntology.ttl",
-	      "vocabulary":"https://w3id.org/sepses/vocab/log/apacheLog#",
+	      "namegraph": "http://w3id.org/sepses/graph/log/apache",
+	      "vocabulary":"https://w3id.org/sepses/vocab/log/apache#",
+	       "regexPattern": "experiment/model/regexPattern.ttl",
 	      "logDateFormat":"dd/MMM/yyyy:HH:mm:ss",
 	      "logTimeRegex":"\\d{2}/\\w+/\\d{4}:\\d{2}:\\d{2}:\\d{2}"      
      }, {
@@ -49,10 +47,9 @@
 	      "grokPattern": "%{AUDIT}",
 		  "outputModel": "experiment/output/audit_model.ttl",
 		  "hdtOutput": "experiment/output/audit.hdt",
-	      "namegraph": "http://w3id.org/sepses/graph/log/auditlog",
-	      "regexMeta": "experiment/model/regexMeta.ttl",
-	      "regexOntology": "experiment/model/regexOntology.ttl",
-	      "vocabulary":"https://w3id.org/sepses/vocab/log/auditLog#",
+	      "namegraph": "http://w3id.org/sepses/graph/log/audit",
+	      "regexPattern": "experiment/model/regexPattern.ttl",
+	      "vocabulary":"https://w3id.org/sepses/vocab/log/audit#",
 	      "logDateFormat":"epoch",
 	      "logTimeRegex":"(\\d+)"     
      },{
@@ -65,10 +62,9 @@
 	      "grokPattern": "%{SNORT}",
 		  "outputModel": "experiment/output/snort_alert_model.ttl",
 		  "hdtOutput": "experiment/output/snort_alert.hdt",
-	      "namegraph": "http://w3id.org/sepses/graph/log/snortAlertlog",
-	      "regexMeta": "experiment/model/regexMeta.ttl",
-	      "regexOntology": "experiment/model/regexOntology.ttl",
+	      "namegraph": "http://w3id.org/sepses/graph/log/snort",
 	      "vocabulary":"https://w3id.org/sepses/vocab/log/snort-alert#",
+	       "regexPattern": "experiment/model/regexPattern.ttl",
 	      "logDateFormat":"MM/dd-HH:mm:ss",
 	      "logTimeRegex":"\\d{2}\/\\d{2}-\\d{2}:\\d{2}:\\d+"      
      }

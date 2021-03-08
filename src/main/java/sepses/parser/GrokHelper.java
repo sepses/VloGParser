@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.json.simple.JSONObject;
@@ -51,16 +53,21 @@ public class GrokHelper {
 }
  
 
- public static JsonNode parseGrok(String grokfile, String grokpattern, String logline) throws IOException  {
+ public static JsonNode parseGrok(String grokfile, ArrayList<String> regexPatterns, String logline) throws IOException  {
 	 File initialFile = new File(grokfile);
 	 InputStream grokfilestream = new FileInputStream(initialFile);
 	    GrokCompiler grokCompiler = GrokCompiler.newInstance();
 	    grokCompiler.register(grokfilestream);
-		 final Grok grok = grokCompiler.compile(grokpattern);
-		 Match gm = grok.match(logline);
-		 final Map<String, Object> capture = gm.capture();
-		 ObjectMapper mapper = new ObjectMapper();
-		 JsonNode jsonNode = mapper.valueToTree(capture);
+	    Map<String, Object> captures = new HashMap<String, Object>();
+	    for (int i = 0; i < regexPatterns.size(); i++) {
+	    	 final Grok grok = grokCompiler.compile(regexPatterns.get(i));
+			 Match gm = grok.match(logline);
+			 final Map<String, Object> capture = gm.capture();
+			 captures.putAll(capture);
+		}
+	    	    
+	    ObjectMapper mapper = new ObjectMapper();
+		 JsonNode jsonNode = mapper.valueToTree(captures);
 	 return jsonNode;
 	
   }

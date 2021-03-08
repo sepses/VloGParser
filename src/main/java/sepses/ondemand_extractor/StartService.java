@@ -23,7 +23,6 @@ import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.riot.RDFDataMgr;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
@@ -70,11 +69,7 @@ public class StartService
         String hdtrepo = JsonPath.read(jcobject,"$.hdt-repo");
     	String hostname = InetAddress.getLocalHost().getHostName();
 
-		String outputModel = outputDir+hostname+".ttl";
 		String hdtOutput = outputDir+hostname+".hdt";
-        
-        List<String> ltitle = JsonPath.read(jcobject,"$.logSources[*].title");
-        List<String> ltype = JsonPath.read(jcobject,"$.logSources[*].type");
         List<String> llogLocation = JsonPath.read(jcobject,"$.logSources[*].logLocation");
         List<String> llogMeta = JsonPath.read(jcobject,"$.logSources[*].logMeta");
         List<String> lmapping = JsonPath.read(jcobject,"$.logSources[*].mapping");
@@ -82,8 +77,7 @@ public class StartService
         List<String> lgrokPattern = JsonPath.read(jcobject,"$.logSources[*].grokPattern");
         List<String> loutputModel = JsonPath.read(jcobject,"$.logSources[*].outputModel");
         List<String> lnamegraph = JsonPath.read(jcobject,"$.logSources[*].namegraph");
-        List<String> lregexMeta = JsonPath.read(jcobject,"$.logSources[*].regexMeta");
-        List<String> lregexOntology = JsonPath.read(jcobject,"$.logSources[*].regexOntology");
+        List<String> lregexPattern = JsonPath.read(jcobject,"$.logSources[*].regexPattern");
         List<String> lvocabulary = JsonPath.read(jcobject,"$.logSources[*].vocabulary");
         List<String> ltimeRegex = JsonPath.read(jcobject,"$.logSources[*].logTimeRegex");
         List<String> ldateFormat = JsonPath.read(jcobject,"$.logSources[*].logDateFormat");
@@ -91,19 +85,20 @@ public class StartService
 
 		String res="";
 
-		QueryTranslator qt = new QueryTranslator(pq);
-		ArrayList prefixes= qt.prefixes;
-	
+		 ArrayList<String> prefixes = QueryTranslator2.parsePrefixes(pq);
+
+		
 		org.eclipse.rdf4j.model.Model rdf4JM = new LinkedHashModel();
 		
 		for(int i=0;i<logSources.size();i++) {
+				
+		
+			if(prefixes.contains(lvocabulary.get(i).toString())){
 
-
-			if(prefixes.contains(lvocabulary.get(i))){
 				log.info("parsing start");
+				
 						res = parse(rdf4JM, llogLocation.get(i), llogMeta.get(i),lgrokFile.get(i), lgrokPattern.get(i),
-								lmapping.get(i),pq, loutputModel.get(i), hdtOutput,hdtrepo,
-								lregexMeta.get(i), lregexOntology.get(i),
+								lmapping.get(i),pq, loutputModel.get(i), hdtOutput,hdtrepo,lregexPattern.get(i),
 								sparqlEndpoint, user, pass, lnamegraph.get(i), st, et, ltimeRegex.get(i),
 								ldateFormat.get(i));	
 
@@ -123,22 +118,19 @@ public class StartService
     }
  
 	public String parse(org.eclipse.rdf4j.model.Model JModel, String logfolder, String logmeta, String grokfile, String grokpattern, 
-			String RMLFile, String parsedQuery, String outputModel, String hdtOutput, String hdtrepo,String regexMeta, 
-			String regexOntology,String sparqlEndpoint, String user, String pass, 
+			String RMLFile, String parsedQuery, String outputModel, String hdtOutput, String hdtrepo,String regexPattern, String sparqlEndpoint, String user, String pass, 
 			String namegraph,String startTime, String endDate, String dateTimeRegex,
 			String dateFormat) throws Exception {
 	   
-		
+
 		String response="";
     	deleteFile(outputModel);
-        QueryTranslator qt = new QueryTranslator(parsedQuery);
+    	
+		  ArrayList<String> regexPatterns= QueryTranslator2.parseRegexPattern(parsedQuery,regexPattern);
 
-         Model m = qt.loadRegexModel(regexMeta, regexOntology);
-          qt.parseJSONQuery(m);
 
-	      List<FilterRegex> filterRegex= qt.filterregex;
-		  List<RegexPattern> regexPattern= qt.regexpattern;
-		  
+		  ArrayList<String> filterRegex = QueryTranslator2.parseFilter(parsedQuery);
+
     	
     	
     	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
@@ -153,7 +145,7 @@ public class StartService
     	
     	Integer logdata = 0;
     	JSONRDFParser jp = new JSONRDFParser(RMLFile);
-    	Model model = ModelFactory.createDefaultModel();
+    	
     	try {
   		
     		JsonNode jsondata=null;
@@ -209,7 +201,8 @@ public class StartService
 				
     			 if(dt1.after(startt) && dt1.before(endt)) {
 					
-    				 jsondataTemp = GrokHelper.parseGrok(grokfile, grokpattern, line);
+    				 jsondataTemp = GrokHelper.parseGrok(grokfile, regexPatterns, line);
+    				 
     				 
 
     				 
@@ -384,11 +377,12 @@ public class StartService
 		}
 	}
 
-	private boolean checkAllFilter(List<FilterRegex> filterRegex, JsonNode jsondataTemp ) throws org.json.simple.parser.ParseException{
-		ArrayList resFilter = new ArrayList<Boolean>();
+	private boolean checkAllFilter(List<String> filterRegex, JsonNode jsondataTemp ) throws org.json.simple.parser.ParseException{
+		ArrayList<Boolean> resFilter = new ArrayList<Boolean>();
 		
 		 for (int k=0;k<filterRegex.size();k++){
-						 	  Boolean  cf = checkFilterJsonWithVariableRegex(jsondataTemp,filterRegex.get(k).variable,filterRegex.get(k).regex);
+			 String[] fr = filterRegex.get(k).split("=");
+						 	  Boolean  cf = checkFilterJsonWithVariableRegex(jsondataTemp,fr[0],fr[1]);
 							resFilter.add(cf);
 							
 						}
@@ -402,27 +396,7 @@ public class StartService
 		}
 	}
     
-    private boolean checkRegexVariableExist(String Line,String variable,String regex) {
-		String uri = parseRegex(Line,regex);
-		if(uri!=null) {
-			return true;
-		}else {
-			return false;
-		}
-	}
-	
-	private boolean checkRegexExistForObject(String Line,String regex, String Object) {
-		String uri = parseRegex(Line,regex);
-		if(uri!=null) {
-			if(uri.contains(Object)) {
-				return true;
-			}else {
-			    return false;
-			}
-		}else {
-			return false;
-		}
-	}
+
 
 
 	public static String parseRegex(String logline,String regex) {
@@ -486,14 +460,14 @@ public class StartService
 	
 	public static void main( String[] args ) throws Exception
   {
-		String parsedQueryFile = "experiment/input/query-audit.json";
+		String parsedQueryFile = "experiment/input/query-audit2.json";
 		String parsedQuery = new String(Files.readAllBytes(Paths.get(parsedQueryFile))); 
-		String queryStringFile = "experiment/input/query-audit.sparql";
+		String queryStringFile = "experiment/input/query-audit2.sparql";
 		String queryString = new String(Files.readAllBytes(Paths.get(queryStringFile))); 
-		String startTime = "2020-02-29T01:00:02";
-    	String endDate = "2020-02-29T01:00:09";
+		String startTime = "2020-02-29T01:00:05";
+    	String endDate = "2020-02-29T01:00:13";
     	
-			StartService ss = new StartService(queryString,parsedQuery, startTime, endDate);
+			new StartService(queryString,parsedQuery, startTime, endDate);
 		
 		
  	}

@@ -23,7 +23,7 @@ import com.jayway.jsonpath.JsonPath;
 
 public class QueryTranslator {
 	private String queryString;
-    private List<Triples> triples = new ArrayList<>();
+    protected List<Triples> triples = new ArrayList<>();
     protected List<RegexPattern> regexpattern = new ArrayList<>();
     protected List<FilterRegex> filterregex = new ArrayList<>();
 	protected ArrayList prefixes = new ArrayList<String>();
@@ -51,19 +51,19 @@ public class QueryTranslator {
 	}
 	
 	public void parseTriple(Object json){
+		
 		List<String> subject = JsonPath.read(json, "$.where[*].triples[*].subject.value");
 		List<String> predicate = JsonPath.read(json, "$.where[*].triples[*].predicate.value");
 		List<String> object = JsonPath.read(json, "$.where[*].triples[*].object.value");
 		List<String> objectType = JsonPath.read(json, "$.where[*].triples[*].object.termType");
+		
 		for(int i=0;i<subject.size();i++){
+			
 			if(checkIsURI(predicate.get(i))) {
-				//check if object is variable or string
-				if(!objectType.get(i).contains("Variable")) {
+					
 					triples.add(new Triples(subject.get(i),"<"+predicate.get(i)+">", object.get(i)));
+				
 				}
-				//else
-				//note yet
-			}
 		}
 	}
 	
