@@ -252,6 +252,7 @@ public class StartService
 			System.out.println("===========SUMMARY============");
 			System.out.println("read line :"+co);
 			System.out.println("extracted line :"+logdata);
+			System.out.println("parsed line :"+alljson.size());
 			System.out.println("===========RUN-TIME============");
 			System.out.println("reading time :"+timereading/1000000+" ms");
 			System.out.println("extraction time :"+(timeextracting-timereading)/1000000+" ms");
