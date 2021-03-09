@@ -231,11 +231,13 @@ public class StartService
 		      }
     	        in.close();
 		     }    
+		 	log.info("filtering finished");
+		 	
 			JSONObject alljsObj = new JSONObject();
+		if(alljson.size()>0) {
 			alljsObj.put("logEntry",alljson);
 			long timeextracting = System.nanoTime() - this.startTime;
 
-			log.info("filtering finished");
 			org.eclipse.rdf4j.model.Model rdf4jmodel  = jp.Parse(alljsObj.toString());
 	
 			long parsingtime = System.nanoTime()-this.startTime;
@@ -261,9 +263,10 @@ public class StartService
 			System.out.println("Uploading time :"+(uploadingtime-compressingtime)/1000000+" ms");
 
 			
-			
-			
-    	    	 }
+    	    }else {
+    		    		log.info("filtered log line is empty!");
+    		    	}
+	    		}
     			}
                catch (Exception closeException) {
           	}
