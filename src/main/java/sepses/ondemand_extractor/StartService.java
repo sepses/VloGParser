@@ -244,7 +244,8 @@ public class StartService
 			log.info("parsing finished");
 			JModel.addAll(rdf4jmodel);
 			Util.saveRDF4JModel(rdf4jmodel, outputModel);
-
+			log.info("delete previously indexed hdt file..");
+			Util.deleteFile(hdtOutput+".index.v1-1");
 			Util.generateHDTFile(namegraph, outputModel, "TURTLE", hdtOutput);
 			long compressingtime = System.nanoTime()-this.startTime;
 			log.info("compression (hdt) finished..");

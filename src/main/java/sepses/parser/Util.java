@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.sparql.function.library.leviathan.log;
@@ -121,4 +122,12 @@ public class Util {
 	        
 	        return rulefiles;
 	    }
+	    public static void deleteFileInDirectory(String directory) throws Exception {
+			File f = new File(directory);
+			FileUtils.cleanDirectory(f); 
+		}
+	    public static void deleteFile(String filename) { 
+	        File f = new File(filename); 
+	        f.delete();
+	      } 
 }
