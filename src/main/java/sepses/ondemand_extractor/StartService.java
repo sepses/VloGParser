@@ -247,7 +247,7 @@ public class StartService
 			log.info("delete previously indexed hdt file..");
 			Util.deleteFile(hdtOutput+".index.v1-1");
 			Util.generateHDTFile(namegraph, outputModel, "TURTLE", hdtOutput);
-			Util.MapHDTFile(hdtOutput);
+			//Util.MapHDTFile(hdtOutput);
 			long compressingtime = System.nanoTime()-this.startTime;
 			log.info("compression (hdt) finished..");
 			Util.storeHDTFile(hdtOutput, hdtrepo);
