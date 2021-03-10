@@ -129,5 +129,10 @@ public class Util {
 	    public static void deleteFile(String filename) { 
 	        File f = new File(filename); 
 	        f.delete();
-	      } 
+	      }
+	    
+	    public static void MapHDTFile(String HDTFile) throws IOException{
+			// Load HDT file using the hdt-java library
+			HDTManager.mapIndexedHDT(HDTFile, null);
+	    }
 }
