@@ -90,6 +90,10 @@
 
 <https://w3id.org/sepses/vocab/log/apache#> reg:generalGrokPattern "%{COMBINEDAPACHELOG}".
 
+#==============authlog============================
+
+<https://w3id.org/sepses/vocab/log/auth#> reg:generalGrokPattern "%{AUTHLOG}".
+
 
 
 
