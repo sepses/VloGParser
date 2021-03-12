@@ -116,10 +116,10 @@
          reg:grokPattern "%{EXIM_INTERFACE:exim_interface}".
 
 <https://w3id.org/sepses/vocab/log/exim#protocol> rdf:type owl:DatatypeProperty ;
-         reg:grokPattern "%{EXIM_PROTOCOL:exim_protocol}".
+         reg:grokPattern "P=%{NOTSPACE:exim_protocol}".
 
 <https://w3id.org/sepses/vocab/log/exim#headerId> rdf:type owl:DatatypeProperty ;
-         reg:grokPattern "%{EXIM_HEADER_ID:exim_header_id}".
+         reg:grokPattern "id=%{NOTSPACE:exim_header_id}".
 
 <https://w3id.org/sepses/vocab/log/exim#subject> rdf:type owl:DatatypeProperty ;
-         reg:grokPattern "%{EXIM_SUBJECT:exim_subject}".
+         reg:grokPattern "T=%{QS:exim_subject}".

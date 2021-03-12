@@ -26,5 +26,5 @@
  rr:predicateObjectMap [ rr:predicate exim:remoteHost; rr:objectMap [rr:template "{exim_remote_host}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate exim:interface; rr:objectMap [rr:template "{exim_interface}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate exim:protocol; rr:objectMap [rr:template "{exim_protocol}"; rr:datatype xsd:string;]];
- rr:predicateObjectMap [ rr:predicate exim:headerId; rr:objectMap [rr:template "{exim_header_id}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate exim:headerId; rr:objectMap [carml:multiTemplate "{exim_header_id}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate exim:subject; rr:objectMap [rr:template "{exim_subject}"; rr:datatype xsd:string;]].

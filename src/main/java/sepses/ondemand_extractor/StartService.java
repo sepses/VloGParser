@@ -133,8 +133,7 @@ public class StartService
 		ArrayList<String> regexPatterns = new ArrayList<String>();
     	if(generalGrokPattern==null) {
 			  regexPatterns= QueryTranslator2.parseRegexPattern(parsedQuery,regexPattern);  
-//			  System.out.print(parsedQuery);
-//				 System.exit(0);
+			
 			  
 		  }
 
@@ -223,7 +222,8 @@ public class StartService
 				
 					}else {
     				 jsondataTemp = GrokHelper.parseGrok(grokfile, regexPatterns, line);
-    				
+//    				  System.out.print(jsondataTemp);
+//    					 System.exit(0);
     				 
 					}
     				 
