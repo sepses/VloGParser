@@ -21,7 +21,7 @@
           },
           "predicate": {
             "termType": "NamedNode",
-            "value": "https://w3id.org/sepses/vocab/log/coreLog#timestamp"
+            "value": "https://w3id.org/sepses/vocab/log/core#timestamp"
           },
           "object": {
             "termType": "Variable",
@@ -34,7 +34,7 @@
   "limit": 5000,
   "type": "query",
   "prefixes": {
-    "cl": "https://w3id.org/sepses/vocab/log/coreLog#",
-    "apache": "https://w3id.org/sepses/vocab/log/apacheLog#"
+    "cl": "https://w3id.org/sepses/vocab/log/core#",
+    "apache": "https://w3id.org/sepses/vocab/log/apache#"
   }
 }

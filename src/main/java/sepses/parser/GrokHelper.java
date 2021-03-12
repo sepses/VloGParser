@@ -53,6 +53,21 @@ public class GrokHelper {
 }
  
 
+ public static JsonNode parseGeneralGrok(String grokfile, String grokPattern, String logline) throws IOException  {
+
+	 File initialFile = new File(grokfile);
+	 InputStream grokfilestream = new FileInputStream(initialFile);
+	    GrokCompiler grokCompiler = GrokCompiler.newInstance();
+	    grokCompiler.register(grokfilestream);
+	    	 final Grok grok = grokCompiler.compile(grokPattern);
+			 Match gm = grok.match(logline);
+			 final Map<String, Object> capture = gm.capture();
+	    ObjectMapper mapper = new ObjectMapper();
+		 JsonNode jsonNode = mapper.valueToTree(capture);
+	 return jsonNode;
+	
+  }
+ 
  public static JsonNode parseGrok(String grokfile, ArrayList<String> regexPatterns, String logline) throws IOException  {
 	 File initialFile = new File(grokfile);
 	 InputStream grokfilestream = new FileInputStream(initialFile);

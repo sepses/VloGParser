@@ -1,5 +1,5 @@
-PREFIX cl: <https://w3id.org/sepses/vocab/log/coreLog#>
-PREFIX apache: <https://w3id.org/sepses/vocab/log/apacheLog#>
+PREFIX cl: <https://w3id.org/sepses/vocab/log/core#>
+PREFIX apache: <https://w3id.org/sepses/vocab/log/apache#>
 SELECT ?s ?timestamp WHERE {
  ?s   cl:timestamp   ?timestamp.
 	}			

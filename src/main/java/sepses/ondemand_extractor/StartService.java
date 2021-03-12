@@ -100,7 +100,7 @@ public class StartService
 						res = parse(rdf4JM, llogLocation.get(i), llogMeta.get(i),lgrokFile.get(i), lgrokPattern.get(i),
 								lmapping.get(i),pq, loutputModel.get(i), hdtOutput,hdtrepo,lregexPattern.get(i),
 								sparqlEndpoint, user, pass, lnamegraph.get(i), st, et, ltimeRegex.get(i),
-								ldateFormat.get(i));	
+								ldateFormat.get(i),lvocabulary.get(i));	
 
 					this.content=res;
 					
@@ -120,14 +120,19 @@ public class StartService
 	public String parse(org.eclipse.rdf4j.model.Model JModel, String logfolder, String logmeta, String grokfile, String grokpattern, 
 			String RMLFile, String parsedQuery, String outputModel, String hdtOutput, String hdtrepo,String regexPattern, String sparqlEndpoint, String user, String pass, 
 			String namegraph,String startTime, String endDate, String dateTimeRegex,
-			String dateFormat) throws Exception {
+			String dateFormat, String vocab) throws Exception {
 	   
 
 		String response="";
     	deleteFile(outputModel);
     	
-		  ArrayList<String> regexPatterns= QueryTranslator2.parseRegexPattern(parsedQuery,regexPattern);
-
+    	String generalGrokPattern = QueryTranslator2.parseGeneralRegexPattern(regexPattern,vocab);
+    	
+    	
+		ArrayList<String> regexPatterns = new ArrayList<String>();
+    	if(generalGrokPattern==null) {
+			  regexPatterns= QueryTranslator2.parseRegexPattern(parsedQuery,regexPattern);  
+		  }
 
 		  ArrayList<String> filterRegex = QueryTranslator2.parseFilter(parsedQuery);
 
@@ -200,11 +205,12 @@ public class StartService
 				}
 				
     			 if(dt1.after(startt) && dt1.before(endt)) {
-					
+    				 
+					if(generalGrokPattern!=null) {
+					 jsondataTemp = GrokHelper.parseGeneralGrok(grokfile,generalGrokPattern,line);	
+					}else {
     				 jsondataTemp = GrokHelper.parseGrok(grokfile, regexPatterns, line);
-    				 
-    				 
-
+					}
     				 
     				 if(filterRegex.size()!=0) {
     					 
@@ -466,15 +472,21 @@ public class StartService
 	}
 	
 	public static void main( String[] args ) throws Exception
-  {
-		String parsedQueryFile = "experiment/input/query-audit2.json";
+  {    
+		// =======================audit=============================
+		//		String parsedQueryFile = "experiment/input/query-audit2.json";
+		//		String queryStringFile = "experiment/input/query-audit2.sparql";
+		//		String startTime = "2020-02-29T01:00:05";
+		//    	String endDate = "2020-02-29T01:00:13";
+		// =======================apache=============================
+		String parsedQueryFile = "experiment/input/query-apache.json";
+		String queryStringFile = "experiment/input/query-apache.sparql";
+		String startTime = "2020-03-02T08:49:36";
+		String endDate = "2020-03-02T11:40:14";
+		
 		String parsedQuery = new String(Files.readAllBytes(Paths.get(parsedQueryFile))); 
-		String queryStringFile = "experiment/input/query-audit2.sparql";
 		String queryString = new String(Files.readAllBytes(Paths.get(queryStringFile))); 
-		String startTime = "2020-02-29T01:00:05";
-    	String endDate = "2020-02-29T01:00:13";
-    	
-			new StartService(queryString,parsedQuery, startTime, endDate);
+	    new StartService(queryString,parsedQuery, startTime, endDate);
 		
 		
  	}

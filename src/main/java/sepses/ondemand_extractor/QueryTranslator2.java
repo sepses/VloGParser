@@ -29,7 +29,30 @@ public class QueryTranslator2 {
 	protected ArrayList<String> prefixes = new ArrayList<String>();
 
     	
+	public static String parseGeneralRegexPattern(String regexPattern, String vocab) {
+		//this function check general grok pattern (single grok pattern for the whole log line)
+		   String grokPattern = null;
+		   Model regexPatternModel = RDFDataMgr.loadModel(regexPattern) ;
+		
+		   String query = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n"
+	        		+ "PREFIX reg:   <http://w3id.org/sepses/vocab/ref/regex#>\r\n" + 
+	        		"select ?gp  where {\r\n" + 
+	        		"    <"+vocab+">  reg:generalGrokPattern ?gp.\r\n" + 
+	        		"} \r\n";
+		   
 	
+		   QueryExecution qe = QueryExecutionFactory.create(query, regexPatternModel);
+	        ResultSet rs = qe.execSelect();
+	        while (rs.hasNext()) {
+	            QuerySolution qs = rs.nextSolution();
+	            RDFNode co = qs.get("?gp");
+	            grokPattern = co.asLiteral().toString();
+	        }       
+	        
+
+		return grokPattern;
+		
+	}
 
 	
 	public static ArrayList<String> parseRegexPattern(String queryString, String regexPattern) throws ParseException, Exception {
