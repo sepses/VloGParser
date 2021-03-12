@@ -133,7 +133,8 @@ public class StartService
 		ArrayList<String> regexPatterns = new ArrayList<String>();
     	if(generalGrokPattern==null) {
 			  regexPatterns= QueryTranslator2.parseRegexPattern(parsedQuery,regexPattern);  
-			  
+//			  System.out.print(parsedQuery);
+//				 System.exit(0);
 			  
 		  }
 
@@ -219,11 +220,10 @@ public class StartService
     				 
 					if(generalGrokPattern!=null) {
 					 jsondataTemp = GrokHelper.parseGeneralGrok(grokfile,generalGrokPattern,line);
-//					  System.out.print(jsondataTemp);
-//						 System.exit(0);
+				
 					}else {
     				 jsondataTemp = GrokHelper.parseGrok(grokfile, regexPatterns, line);
-    			
+    				
     				 
 					}
     				 
@@ -499,10 +499,10 @@ public class StartService
 //		String startTime = "2020-03-02T08:49:36";
 //		String endDate = "2020-03-02T11:40:14";
 		// ========================auth===============================
-		String parsedQueryFile = "experiment/input/query-auth.json";
-		String queryStringFile = "experiment/input/query-auth.sparql";
-		String startTime = "2020-02-29T00:09:01";
-    	String endDate = "2020-03-06T04:39:01";
+		String parsedQueryFile = "experiment/input/query-exim.json";
+		String queryStringFile = "experiment/input/query-exim.sparql";
+		String startTime = "2020-02-29T00:03:40";
+    	String endDate = "2020-03-04T09:24:30";
 
 		String parsedQuery = new String(Files.readAllBytes(Paths.get(parsedQueryFile))); 
 		String queryString = new String(Files.readAllBytes(Paths.get(queryStringFile))); 

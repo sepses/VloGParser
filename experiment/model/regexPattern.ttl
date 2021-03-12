@@ -94,8 +94,32 @@
 
 <https://w3id.org/sepses/vocab/log/auth#> reg:generalGrokPattern "%{SYSLOGBASE}".
 
+#==============exim============================
 
 
+<https://w3id.org/sepses/vocab/log/exim#flags> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "%{EXIM_FLAGS:exim_flags}".
 
+<https://w3id.org/sepses/vocab/log/exim#timestamp> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "%{EXIM_DATE:exim_date}".
 
+<https://w3id.org/sepses/vocab/log/exim#pid> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "%{EXIM_PID:exim_pid}".
 
+<https://w3id.org/sepses/vocab/log/exim#qt> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "%{EXIM_QT:exim_qt}".
+
+<https://w3id.org/sepses/vocab/log/exim#remoteHost> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "%{EXIM_REMOTE_HOST:exim_remote_host}".
+
+<https://w3id.org/sepses/vocab/log/exim#interface> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "%{EXIM_INTERFACE:exim_interface}".
+
+<https://w3id.org/sepses/vocab/log/exim#protocol> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "%{EXIM_PROTOCOL:exim_protocol}".
+
+<https://w3id.org/sepses/vocab/log/exim#headerId> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "%{EXIM_HEADER_ID:exim_header_id}".
+
+<https://w3id.org/sepses/vocab/log/exim#subject> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "%{EXIM_SUBJECT:exim_subject}".
