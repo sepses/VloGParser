@@ -92,7 +92,7 @@
 
 #==============authlog============================
 
-<https://w3id.org/sepses/vocab/log/auth#> reg:generalGrokPattern "%{AUTHLOG}".
+<https://w3id.org/sepses/vocab/log/auth#> reg:generalGrokPattern "%{SYSLOGBASE}".
 
 
 

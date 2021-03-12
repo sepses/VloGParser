@@ -1,5 +1,5 @@
-PREFIX cl: <https://w3id.org/sepses/vocab/log/coreLog#>
-PREFIX auth: <https://w3id.org/sepses/vocab/log/authLog#>
+PREFIX cl: <https://w3id.org/sepses/vocab/log/core#>
+PREFIX auth: <https://w3id.org/sepses/vocab/log/auth#>
 
 SELECT ?s ?timestamp ?message  WHERE {
  ?s   cl:message   ?message.

@@ -127,22 +127,25 @@ public class StartService
     	deleteFile(outputModel);
     	
     	String generalGrokPattern = QueryTranslator2.parseGeneralRegexPattern(regexPattern,vocab);
-    	
+    	 
+    	 
     	
 		ArrayList<String> regexPatterns = new ArrayList<String>();
     	if(generalGrokPattern==null) {
 			  regexPatterns= QueryTranslator2.parseRegexPattern(parsedQuery,regexPattern);  
+			  
+			  
 		  }
 
 		  ArrayList<String> filterRegex = QueryTranslator2.parseFilter(parsedQuery);
 
-    	
+		
     	
     	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
     	Date startt = sdf.parse(startTime);
     	Date endt = sdf.parse(endDate);
 
-    	
+    	 
     	
     	
     	
@@ -163,12 +166,15 @@ public class StartService
 			long timereading=0;
 			
 			ArrayList<String> files = findRespectedLogFile(startTime,endDate,logmeta);
+			
+			
 	    	if(files.size()!=0) {
 			
 		     for (String file : files) {
 		    	   
 		    	 	System.out.println("processing file: "+logfolder+file);
 		    	 	String logfile = logfolder+file;
+		    
 			
 		//optionI	
 		BufferedReader in = new BufferedReader(new FileReader(logfile));
@@ -182,14 +188,19 @@ public class StartService
 	
     	        while (in.ready()) {
                 String line = in.readLine();
-                
+             	
     			String dt0 = parseRegex(line,dateTimeRegex);
+    			
+    			
     			Date dt1 = null;
     			if(!dateFormat.contains("epoch")) {
     				SimpleDateFormat sdfl = new SimpleDateFormat(dateFormat);
+    				
     				 dt1 = sdfl.parse(dt0);
+    			
     				}else {
     				 dt1 = new Date(Long.parseLong(dt0)*1000);
+    				
     				}
     			
     			 
@@ -207,9 +218,13 @@ public class StartService
     			 if(dt1.after(startt) && dt1.before(endt)) {
     				 
 					if(generalGrokPattern!=null) {
-					 jsondataTemp = GrokHelper.parseGeneralGrok(grokfile,generalGrokPattern,line);	
+					 jsondataTemp = GrokHelper.parseGeneralGrok(grokfile,generalGrokPattern,line);
+//					  System.out.print(jsondataTemp);
+//						 System.exit(0);
 					}else {
     				 jsondataTemp = GrokHelper.parseGrok(grokfile, regexPatterns, line);
+    			
+    				 
 					}
     				 
     				 if(filterRegex.size()!=0) {
@@ -474,16 +489,21 @@ public class StartService
 	public static void main( String[] args ) throws Exception
   {    
 		// =======================audit=============================
-				String parsedQueryFile = "experiment/input/query-audit2.json";
-				String queryStringFile = "experiment/input/query-audit2.sparql";
-				String startTime = "2020-02-29T01:00:05";
-		    	String endDate = "2020-02-29T01:00:13";
+//				String parsedQueryFile = "experiment/input/query-audit2.json";
+//				String queryStringFile = "experiment/input/query-audit2.sparql";
+//				String startTime = "2020-02-29T01:00:05";
+//		    	String endDate = "2020-02-29T01:00:13";
 		// =======================apache=============================
 //		String parsedQueryFile = "experiment/input/query-apache.json";
 //		String queryStringFile = "experiment/input/query-apache.sparql";
 //		String startTime = "2020-03-02T08:49:36";
 //		String endDate = "2020-03-02T11:40:14";
-		
+		// ========================auth===============================
+		String parsedQueryFile = "experiment/input/query-auth.json";
+		String queryStringFile = "experiment/input/query-auth.sparql";
+		String startTime = "2020-02-29T00:09:01";
+    	String endDate = "2020-03-06T04:39:01";
+
 		String parsedQuery = new String(Files.readAllBytes(Paths.get(parsedQueryFile))); 
 		String queryString = new String(Files.readAllBytes(Paths.get(queryStringFile))); 
 	    new StartService(queryString,parsedQuery, startTime, endDate);

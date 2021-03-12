@@ -9,7 +9,7 @@
 	      "title": "authlog",
 	      "type": "File",
 	      "logLocation": "experiment/logfile/auth/",
-	      "logMeta": "experiment/logmeta/apache_meta.ttl",
+	      "logMeta": "experiment/logmeta/auth_meta.ttl",
 	      "mapping": "experiment/rml/authlog.rml",
 	      "grokFile": "experiment/pattern/pattern.grok",
 	      "grokPattern": "%{SYSLOGBASE} %{GREEDYDATA:message}",
@@ -18,8 +18,8 @@
 	      "namegraph": "http://w3id.org/sepses/graph/log/auth",
 	      "vocabulary":"https://w3id.org/sepses/vocab/log/auth#",
 	       "regexPattern": "experiment/model/regexPattern.ttl",
-	      "logDateFormat":"MMM d HH:mm:ss",
-	      "logTimeRegex":"\\w+\\s+\\d+\\s\\d{2}:\\d{2}:\\d{2}"      
+	      "logDateFormat":"yyyy MMM d HH:mm:ss",
+	      "logTimeRegex":"\\d+\\s+\\w+\\s+\\d+\\s\\d{2}:\\d{2}:\\d{2}"      
 		},
 
       {
