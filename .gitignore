@@ -1,6 +1,10 @@
 /target
 /bin
-/experiment
+/experiment/input
+/experiment/output
+/experiment/logfile
+/experiment/logmeta
+/experiment/results
 /experiment1
 /experiment2
 /experiment3

@@ -1,0 +1,97 @@
+@prefix cl: <https://w3id.org/sepses/vocab/log/core#> .
+@prefix reg: <http://w3id.org/sepses/vocab/ref/regex#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+<https://w3id.org/sepses/vocab/log/audit#type> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "type=%{WORD:audit_type}".
+
+<https://w3id.org/sepses/vocab/log/audit#timestamp> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "msg=audit\\(%{NUMBER:audit_epoch}".
+
+<https://w3id.org/sepses/vocab/log/core#timestamp> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "msg=audit\\(%{NUMBER:audit_epoch}".
+
+<https://w3id.org/sepses/vocab/log/audit#exe> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "exe=%{GREEDYDATA:audit_exe} ".
+
+
+<https://w3id.org/sepses/vocab/log/audit#pid> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "pid=%{NUMBER:audit_pid}".
+
+<https://w3id.org/sepses/vocab/log/audit#ppid> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "ppid=%{NUMBER:audit_ppid}".
+
+<https://w3id.org/sepses/vocab/log/audit#arch> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "arch=%{WORD:audit_arch} ".
+
+<https://w3id.org/sepses/vocab/log/audit#syscall> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "syscall=%{NUMBER:audit_syscall}".
+
+<https://w3id.org/sepses/vocab/log/audit#success> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "success=%{WORD:audit_success} ".
+
+<https://w3id.org/sepses/vocab/log/audit#exit> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "exit=%{NUMBER:audit_exit}".
+
+<https://w3id.org/sepses/vocab/log/audit#a0> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "a0=%{WORD:audit_a0} ".
+
+<https://w3id.org/sepses/vocab/log/audit#a1> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "a1=%{WORD:audit_a1} ".
+
+<https://w3id.org/sepses/vocab/log/audit#a2> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "a2=%{WORD:audit_a2} ".
+
+<https://w3id.org/sepses/vocab/log/audit#a3> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "a3=%{WORD:audit_a3} ".
+
+<https://w3id.org/sepses/vocab/log/audit#items> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "items=%{NUMBER:audit_items}".
+
+<https://w3id.org/sepses/vocab/log/audit#auid> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "auid=%{NUMBER:audit_auid}".
+
+<https://w3id.org/sepses/vocab/log/audit#gid> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "gid=%{NUMBER:audit_gid}".
+
+<https://w3id.org/sepses/vocab/log/audit#euid> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "euid=%{NUMBER:audit_euid}".
+
+<https://w3id.org/sepses/vocab/log/audit#suid> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "suid=%{NUMBER:audit_suid}".
+
+<https://w3id.org/sepses/vocab/log/audit#fsuid> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "fsuid=%{NUMBER:audit_fsuid}".
+
+<https://w3id.org/sepses/vocab/log/audit#egid> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "egid=%{NUMBER:audit_egid}".
+
+<https://w3id.org/sepses/vocab/log/audit#sgid> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "sgid=%{NUMBER:audit_sgid}".
+
+<https://w3id.org/sepses/vocab/log/audit#fsgid> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "fsgid=%{NUMBER:audit_fsgid}".
+
+<https://w3id.org/sepses/vocab/log/audit#tty> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "tty=%{GREEDYDATA:audit_tty} ".
+
+<https://w3id.org/sepses/vocab/log/audit#ses> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "ses=%{NUMBER:audit_ses}".
+
+<https://w3id.org/sepses/vocab/log/audit#comm> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "comm=%{GREEDYDATA:audit_comm} ".
+
+#==============apache access============================
+
+<https://w3id.org/sepses/vocab/log/apache#> reg:generalGrokPattern "%{COMBINEDAPACHELOG}".
+
+
+
+
+
+
