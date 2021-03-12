@@ -3,8 +3,8 @@
 @prefix ql: <http://semweb.mmlab.be/ns/ql#> .
 @prefix carml: <http://carml.taxonic.com/carml/> .
 @prefix ue: <http://w3id.org/sepses/vocab/unix-event#>.
-@prefix auth: <https://w3id.org/sepses/vocab/log/authLog#>.
-@prefix cl: <https://w3id.org/sepses/vocab/log/coreLog#>.
+@prefix auth: <https://w3id.org/sepses/vocab/log/auth#>.
+@prefix cl: <https://w3id.org/sepses/vocab/log/core#>.
 @prefix : <http://epfl.ch/mapping/>.
 
 <#SubjectMapping> a rr:TriplesMap ;
