@@ -1,0 +1,57 @@
+{
+  "queryType": "SELECT",
+  "variables": [
+    {
+      "termType": "Variable",
+      "value": "s"
+    },
+    {
+      "termType": "Variable",
+      "value": "exim_protocol"
+    },
+    {
+      "termType": "Variable",
+      "value": "exim_header_id"
+    }
+  ],
+  "where": [
+    {
+      "type": "bgp",
+      "triples": [
+        {
+          "subject": {
+            "termType": "Variable",
+            "value": "s"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "https://w3id.org/sepses/vocab/log/exim#protocol"
+          },
+          "object": {
+            "termType": "Variable",
+            "value": "exim_protocol"
+          }
+        },{
+          "subject": {
+            "termType": "Variable",
+            "value": "s"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "https://w3id.org/sepses/vocab/log/exim#headerId"
+          },
+          "object": {
+            "termType": "Variable",
+            "value": "exim_header_id"
+          }
+        }
+      ]
+    }
+  ],
+  "limit": 5000,
+  "type": "query",
+  "prefixes": {
+    "cl": "https://w3id.org/sepses/vocab/log/core#",
+    "exim": "https://w3id.org/sepses/vocab/log/exim#"
+  }
+}

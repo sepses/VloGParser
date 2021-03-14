@@ -1,0 +1,11 @@
+<http://w3id.org/sepses/meta/auth.log>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "auth.log" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-06T04:39:01" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "0"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "auth" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-02-29T00:09:01" .

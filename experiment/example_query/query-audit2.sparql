@@ -1,0 +1,11 @@
+PREFIX cl: <https://w3id.org/sepses/vocab/log/core#>
+PREFIX audit: <https://w3id.org/sepses/vocab/log/audit#>
+SELECT ?s ?type ?timestamp 
+WHERE {
+ ?s   cl:timestamp   ?timestamp.
+ ?s   audit:type   ?audit_type.
+ ?s   audit:exe   ?audit_exe.
+FILTER regex(str(?audit_type),"PROCTITLE")
+	}			
+	LIMIT 5000
+

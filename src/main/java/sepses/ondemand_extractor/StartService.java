@@ -502,8 +502,8 @@ public class StartService
 //		String startTime = "2020-03-02T08:49:36";
 //		String endDate = "2020-03-02T11:40:14";
 		// ========================auth===============================
-		String parsedQueryFile = "experiment/input/query-apache-error.json";
-		String queryStringFile = "experiment/input/query-apache-error.sparql";
+		String parsedQueryFile = "experiment/example_query/query-apache-error.json";
+		String queryStringFile = "experiment/example_query/query-apache-error.sparql";
 		String startTime = "2020-03-01T06:28:15";
     	String endDate = "2020-03-05T06:55:10";
 

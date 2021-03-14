@@ -17,7 +17,7 @@
 		  "hdtOutput": "experiment/output/authlog.hdt",
 	      "namegraph": "http://w3id.org/sepses/graph/log/auth",
 	      "vocabulary":"https://w3id.org/sepses/vocab/log/auth#",
-	       "regexPattern": "experiment/model/regexPattern.ttl",
+	       "regexPattern": "experiment/pattern/regexPattern.ttl",
 	      "logDateFormat":"yyyy MMM d HH:mm:ss",
 	      "logTimeRegex":"\\d+\\s+\\w+\\s+\\d+\\s\\d{2}:\\d{2}:\\d{2}"      
 		},
@@ -34,7 +34,7 @@
 		  "hdtOutput": "experiment/output/apache.hdt",
 	      "namegraph": "http://w3id.org/sepses/graph/log/apache",
 	      "vocabulary":"https://w3id.org/sepses/vocab/log/apache#",
-	       "regexPattern": "experiment/model/regexPattern.ttl",
+	       "regexPattern": "experiment/pattern/regexPattern.ttl",
 	      "logDateFormat":"dd/MMM/yyyy:HH:mm:ss",
 	      "logTimeRegex":"\\d{2}/\\w+/\\d{4}:\\d{2}:\\d{2}:\\d{2}"      
      },{
@@ -49,7 +49,7 @@
 		  "hdtOutput": "experiment/output/apache_error.hdt",
 	      "namegraph": "http://w3id.org/sepses/graph/log/apacheError",
 	      "vocabulary":"https://w3id.org/sepses/vocab/log/apacheError#",
-	       "regexPattern": "experiment/model/regexPattern.ttl",
+	       "regexPattern": "experiment/pattern/regexPattern.ttl",
 	      "logDateFormat":"MMM dd HH:mm:ss.SSSSSS yyyy",
 	      "logTimeRegex":"\\w{3}\\s+\\d{2}\\s+\\d{2}:\\d{2}:\\d{2}.\\d{6}\\s+\\d{4}"      
      }, {
@@ -63,7 +63,7 @@
 		  "outputModel": "experiment/output/audit_model.ttl",
 		  "hdtOutput": "experiment/output/audit.hdt",
 	      "namegraph": "http://w3id.org/sepses/graph/log/audit",
-	      "regexPattern": "experiment/model/regexPattern.ttl",
+	      "regexPattern": "experiment/pattern/regexPattern.ttl",
 	      "vocabulary":"https://w3id.org/sepses/vocab/log/audit#",
 	      "logDateFormat":"epoch",
 	      "logTimeRegex":"(\\d+)"     
@@ -78,7 +78,7 @@
 		  "outputModel": "experiment/output/exim_model.ttl",
 		  "hdtOutput": "experiment/output/exim.hdt",
 	      "namegraph": "http://w3id.org/sepses/graph/log/exim",
-	      "regexPattern": "experiment/model/regexPattern.ttl",
+	      "regexPattern": "experiment/pattern/regexPattern.ttl",
 	      "vocabulary":"https://w3id.org/sepses/vocab/log/exim#",
 	      "logDateFormat":"yyyy-MM-dd HH:mm:ss",
 	      "logTimeRegex":"\\d{4}-\\d{2}-\\d{2}\\s\\d{2}:\\d{2}:\\d{2}"     
@@ -94,7 +94,7 @@
 		  "hdtOutput": "experiment/output/snort_alert.hdt",
 	      "namegraph": "http://w3id.org/sepses/graph/log/snort",
 	      "vocabulary":"https://w3id.org/sepses/vocab/log/snort-alert#",
-	       "regexPattern": "experiment/model/regexPattern.ttl",
+	       "regexPattern": "experiment/pattern/regexPattern.ttl",
 	      "logDateFormat":"MM/dd-HH:mm:ss",
 	      "logTimeRegex":"\\d{2}\/\\d{2}-\\d{2}:\\d{2}:\\d+"      
      }

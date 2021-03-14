@@ -1,0 +1,6 @@
+PREFIX cl: <https://w3id.org/sepses/vocab/log/core#>
+PREFIX audit: <https://w3id.org/sepses/vocab/log/audit#>
+SELECT ?s ?timestamp WHERE {
+ ?s   cl:timestamp   ?timestamp.
+	}			
+	LIMIT 5000

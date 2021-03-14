@@ -1,0 +1,99 @@
+{
+  "queryType": "SELECT",
+  "variables": [
+    {
+      "termType": "Variable",
+      "value": "s"
+    },
+    {
+      "termType": "Variable",
+      "value": "type"
+    },
+    {
+      "termType": "Variable",
+      "value": "timestamp"
+    }
+  ],
+  "where": [
+    {
+      "type": "bgp",
+      "triples": [
+        {
+          "subject": {
+            "termType": "Variable",
+            "value": "s"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "https://w3id.org/sepses/vocab/log/core#timestamp"
+          },
+          "object": {
+            "termType": "Variable",
+            "value": "timestamp"
+          }
+        },
+        {
+          "subject": {
+            "termType": "Variable",
+            "value": "s"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "https://w3id.org/sepses/vocab/log/audit#type"
+          },
+          "object": {
+            "termType": "Variable",
+            "value": "audit_type"
+          }
+        },        {
+          "subject": {
+            "termType": "Variable",
+            "value": "s"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "https://w3id.org/sepses/vocab/log/audit#exe"
+          },
+          "object": {
+            "termType": "Variable",
+            "value": "audit_exe"
+          }
+        }
+      ]
+    },
+    {
+      "type": "filter",
+      "expression": {
+        "type": "operation",
+        "operator": "regex",
+        "args": [
+          {
+            "type": "operation",
+            "operator": "str",
+            "args": [
+              {
+                "termType": "Variable",
+                "value": "audit_type"
+              }
+            ]
+          },
+          {
+            "termType": "Literal",
+            "value": "PROCTITLE",
+            "language": "",
+            "datatype": {
+              "termType": "NamedNode",
+              "value": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "limit": 5000,
+  "type": "query",
+  "prefixes": {
+    "cl": "https://w3id.org/sepses/vocab/log/core#",
+    "audit": "https://w3id.org/sepses/vocab/log/audit#"
+  }
+}

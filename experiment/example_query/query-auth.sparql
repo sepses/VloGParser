@@ -1,0 +1,13 @@
+PREFIX cl: <https://w3id.org/sepses/vocab/log/core#>
+PREFIX auth: <https://w3id.org/sepses/vocab/log/auth#>
+
+SELECT ?s ?timestamp ?message  WHERE {
+ ?s   cl:message   ?message.
+ ?s   cl:timestamp   ?timestamp.
+ 
+FILTER regex(?message,"Invalid user")
+
+
+}
+
+LIMIT 50

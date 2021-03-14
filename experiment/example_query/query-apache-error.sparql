@@ -1,0 +1,5 @@
+PREFIX cl: <https://w3id.org/sepses/vocab/log/core#>
+PREFIX ape: <https://w3id.org/sepses/vocab/log/apacheError#>
+SELECT ?s ?client_ip  WHERE {
+ ?s   ape:clientIp   ?client_ip.
+	}			

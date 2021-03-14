@@ -1,0 +1,11 @@
+<http://w3id.org/sepses/meta/audit.log_475>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "audit.log_475" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-02T13:59:51" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "475"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "audit" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-03-02T13:55:32" .

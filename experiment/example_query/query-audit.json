@@ -1,0 +1,40 @@
+{
+  "queryType": "SELECT",
+  "variables": [
+    {
+      "termType": "Variable",
+      "value": "s"
+    },
+    {
+      "termType": "Variable",
+      "value": "timestamp"
+    }
+  ],
+  "where": [
+    {
+      "type": "bgp",
+      "triples": [
+        {
+          "subject": {
+            "termType": "Variable",
+            "value": "s"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "https://w3id.org/sepses/vocab/log/core#timestamp"
+          },
+          "object": {
+            "termType": "Variable",
+            "value": "timestamp"
+          }
+        }
+      ]
+    }
+  ],
+  "limit": 5000,
+  "type": "query",
+  "prefixes": {
+    "cl": "https://w3id.org/sepses/vocab/log/core#",
+    "audit": "https://w3id.org/sepses/vocab/log/audit#"
+  }
+}
