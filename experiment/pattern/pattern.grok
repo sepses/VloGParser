@@ -95,8 +95,9 @@ SYSLOGBASE %{SYSLOGTIMESTAMP:timestamp} (?:%{SYSLOGFACILITY} )?%{SYSLOGHOST:logs
 COMMONAPACHELOG %{IPORHOST:clientip} %{HTTPDUSER:ident} %{USER:auth} \[%{HTTPDATE:timestamp}\] "(?:%{WORD:verb} %{NOTSPACE:request}(?: HTTP/%{NUMBER:httpversion})?|%{DATA:rawrequest})" %{NUMBER:response} (?:%{NUMBER:bytes}|-)
 COMBINEDAPACHELOG %{COMMONAPACHELOG} %{QS:referrer} %{QS:agent}
 HTTPD20_ERRORLOG \[%{HTTPDERROR_DATE:timestamp}\] \[%{LOGLEVEL:loglevel}\] (?:\[client %{IPORHOST:clientip}\] ){0,1}%{GREEDYDATA:errormsg}
-HTTPD24_ERRORLOG \[%{HTTPDERROR_DATE:timestamp}\] \[%{WORD:module}:%{LOGLEVEL:loglevel}\] \[pid %{POSINT:pid}:tid %{NUMBER:tid}\]( \(%{POSINT:proxy_errorcode}\)%{DATA:proxy_errormessage}:)?( \[client %{IPORHOST:client}:%{POSINT:clientport}\])? %{DATA:errorcode}: %{GREEDYDATA:message}
+HTTPD24_ERRORLOG \[%{HTTPDERROR_DATE:timestamp}\] \[(%{WORD:module})?:%{LOGLEVEL:loglevel}\] \[pid %{POSINT:pid}(:tid %{NUMBER:tid})?\]( \(%{POSINT:proxy_errorcode}\)%{DATA:proxy_errormessage}:)?( \[client %{IPORHOST:client}:%{POSINT:clientport}\])?( %{DATA:errorcode}:)? %{GREEDYDATA:message}
 HTTPD_ERRORLOG %{HTTPD20_ERRORLOG}|%{HTTPD24_ERRORLOG}
+
 
 #snort
 SNORT %{MONTHNUM:month}/%{MONTHDAY:day}-%{TIME:time}%{SPACE}\[\*\*\]%{SPACE}\[%{INT:generatorId}:%{INT:signatureId}:%{INT:signatureRevision}\]%{SPACE}%{DATA:message}%{SPACE}\[Classification:%{SPACE}%{DATA:classification}\]%{SPACE}\[Priority:%{SPACE}%{DATA:priority}\]%{SPACE}\{%{DATA:protocol}\}%{SPACE}(%{IP:sourceIp}:%{NUMBER:sourcePort}|%{IP:sourceIp})%{SPACE}->%{SPACE}(%{IP:destinationIp}:%{NUMBER:destinationPort}|%{IP:destinationIp})

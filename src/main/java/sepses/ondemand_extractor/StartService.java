@@ -191,13 +191,15 @@ public class StartService
              	
     			String dt0 = parseRegex(line,dateTimeRegex);
     			
+    		
     			
     			Date dt1 = null;
     			if(!dateFormat.contains("epoch")) {
     				SimpleDateFormat sdfl = new SimpleDateFormat(dateFormat);
     				
     				 dt1 = sdfl.parse(dt0);
-    			
+    					
+    				 
     				}else {
     				 dt1 = new Date(Long.parseLong(dt0)*1000);
     				
@@ -219,7 +221,8 @@ public class StartService
     				 
 					if(generalGrokPattern!=null) {
 					 jsondataTemp = GrokHelper.parseGeneralGrok(grokfile,generalGrokPattern,line);
-				
+//					 System.out.println(jsondataTemp);
+//					 System.exit(0);
 					}else {
     				 jsondataTemp = GrokHelper.parseGrok(grokfile, regexPatterns, line);
 //    				  System.out.print(jsondataTemp);
@@ -499,10 +502,10 @@ public class StartService
 //		String startTime = "2020-03-02T08:49:36";
 //		String endDate = "2020-03-02T11:40:14";
 		// ========================auth===============================
-		String parsedQueryFile = "experiment/input/query-exim.json";
-		String queryStringFile = "experiment/input/query-exim.sparql";
-		String startTime = "2020-02-29T00:03:40";
-    	String endDate = "2020-03-04T09:24:30";
+		String parsedQueryFile = "experiment/input/query-apache-error.json";
+		String queryStringFile = "experiment/input/query-apache-error.sparql";
+		String startTime = "2020-03-01T06:28:15";
+    	String endDate = "2020-03-05T06:55:10";
 
 		String parsedQuery = new String(Files.readAllBytes(Paths.get(parsedQueryFile))); 
 		String queryString = new String(Files.readAllBytes(Paths.get(queryStringFile))); 

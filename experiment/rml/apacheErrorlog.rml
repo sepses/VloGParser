@@ -31,6 +31,5 @@
  rr:predicateObjectMap [ rr:predicate ape:logLevel; rr:objectMap [ rr:template "{loglevel}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate ape:clientIp; rr:objectMap [ rr:template "{client}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate ape:clientPort; rr:objectMap [ rr:template "{clientport}"; rr:datatype xsd:string;]];
-\ rr:predicateObjectMap [ rr:predicate ape:errorCode; rr:objectMap [ rr:template "{errorCode}"; rr:datatype xsd:string;]];
-\ rr:predicateObjectMap [ rr:predicate ape:message; rr:objectMap [ rr:template "{message}"; rr:datatype xsd:string;]];
-.
+ rr:predicateObjectMap [ rr:predicate ape:errorCode; rr:objectMap [ rr:template "{errorCode}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate ape:message; rr:objectMap [ rr:template "{message}"; rr:datatype xsd:string;]].

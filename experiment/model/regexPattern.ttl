@@ -92,7 +92,7 @@
 
 #==============apache error============================
 
-<https://w3id.org/sepses/vocab/log/apacheError#> reg:generalGrokPattern "%{HTTPD_ERRORLOG}".
+<https://w3id.org/sepses/vocab/log/apacheError#> reg:generalGrokPattern "%{HTTPD24_ERRORLOG}".
 
 #==============authlog============================
 
