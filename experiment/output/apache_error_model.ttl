@@ -1,0 +1,740 @@
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-3b34dff0-9bca-424b-8907-110a6ec03ee1>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_pgp::init($gpg, $temp_dir = NULL, $rows = NULL, $cols = NULL) should be compatible with Horde_Form_Type_longtext::init($rows = 8, $cols = 80, $helper = Array) in /usr/share/php/Horde/Form/Type.php on line 878, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:15.983231 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-8beadf91-34df-4516-b989-3a1d00fa12d7>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_image::onSubmit(&$var, &$vars) should be compatible with Horde_Form_Type::onSubmit() in /usr/share/php/Horde/Form/Type.php on line 1361, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:15.984200 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-a8ea05e5-afbf-4b99-b333-b59126b5061b>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_link::init($values) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 1438, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:15.984863 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-af9cf6a2-e4aa-4e58-a477-da8d582cbcc7>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_matrix::init($cols, $rows = Array, $matrix = Array, $new_input = false) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2165, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:15.985763 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-4aa3a65c-72f9-45a4-aed0-5d1b8d6d6524>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_enum::init($values, $prompt = NULL) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2335, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:15.986326 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-d64c5b36-012a-47e3-b201-81e6b5463744>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_mlenum::init(&$values, $prompts = NULL) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2411, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:15.986902 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-0781990f-e6fc-468a-a33e-25b6a615c769>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_mlenum::onSubmit(&$var, &$vars) should be compatible with Horde_Form_Type::onSubmit() in /usr/share/php/Horde/Form/Type.php on line 2411, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:15.987382 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-6dd3bf0f-dc76-40a9-a4d5-c2f5cfe8357c>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_set::init($values, $checkAll = false) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2569, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:15.987932 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-9a7722ee-94e4-40b8-9e4d-9c6dbabe1595>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_sorter::init($values, $size = 8, $header = '') should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3400, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:15.988968 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-952be7f0-d836-4836-b66e-2cb5797f1bd6>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_selectfiles::init($selectid, $link_text = NULL, $link_style = '', $icon = false) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3470, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:15.989448 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-0dad8c08-29dc-4e90-9f8f-753625fc629e>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_assign::init($leftValues, $rightValues, $leftHeader = '', $rightHeader = '', $size = 8, $width = '200px') should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3600, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:15.989962 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-2750abe6-e9ec-467f-9f4f-f61b866d62e2>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_assign::getValues($side) should be compatible with Horde_Form_Type::getValues() in /usr/share/php/Horde/Form/Type.php on line 3600, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:15.990339 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-f928b25a-a6c8-4e7b-8b1d-e11326cfdbc9>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_dblookup::init($db, $sql, $prompt = NULL) should be compatible with Horde_Form_Type_enum::init($values, $prompt = NULL) in /usr/share/php/Horde/Form/Type.php on line 3751, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:15.990987 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-f44ca561-65c0-4d36-80b9-d8145c8433dc>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_figlet::init($text, $font) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3804, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:15.991515 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-cc310470-fcf7-4b3a-ac48-e138efc2283d>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_invalid::init($message) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3873, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:15.992031 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-c20a50ad-a2ab-411d-9bb4-d7da391337f0>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Methods with the same name as their class will not be constructors in a future version of PHP; Horde_Form_Variable has a deprecated constructor in /usr/share/php/Horde/Form/Variable.php on line 24, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:16.017402 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-87d31665-731e-4365-a35c-979a3ffa99e7>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Methods with the same name as their class will not be constructors in a future version of PHP; Horde_Form_Action has a deprecated constructor in /usr/share/php/Horde/Form/Action.php on line 24, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:16.036458 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-f2286396-6baa-4f19-bff6-91aba108f1f8>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.4";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "55308";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Methods with the same name as their class will not be constructors in a future version of PHP; Horde_Form_Renderer has a deprecated constructor in /usr/share/php/Horde/Form/Renderer.php on line 24, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "32548";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Sun Mar 01 06:28:16.053040 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-a9ba4301-3c3b-4d48-91f0-5aff041ecc7d>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_pgp::init($gpg, $temp_dir = NULL, $rows = NULL, $cols = NULL) should be compatible with Horde_Form_Type_longtext::init($rows = 8, $cols = 80, $helper = Array) in /usr/share/php/Horde/Form/Type.php on line 878, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.182466 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-fa781296-3077-4aaa-854d-2825f77d88a6>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_image::onSubmit(&$var, &$vars) should be compatible with Horde_Form_Type::onSubmit() in /usr/share/php/Horde/Form/Type.php on line 1361, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.183408 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-2dd45f01-6c38-4c25-bea1-77955e940574>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_link::init($values) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 1438, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.183503 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-dde17931-6d1b-4e25-8011-b4dbc0ad74cc>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_matrix::init($cols, $rows = Array, $matrix = Array, $new_input = false) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2165, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.183761 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-873d4b1f-cfde-45be-aa50-d158ef7d3f4b>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_enum::init($values, $prompt = NULL) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2335, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.184484 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-f6b2f013-dc98-4795-a7a1-6d5ba0c0ecb6>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_mlenum::init(&$values, $prompts = NULL) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2411, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.184607 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-c282e21a-d387-43de-8319-5e5cb27334a2>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_mlenum::onSubmit(&$var, &$vars) should be compatible with Horde_Form_Type::onSubmit() in /usr/share/php/Horde/Form/Type.php on line 2411, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.184652 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-8a6900b1-1595-4787-b7a6-fe24867a57e7>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_set::init($values, $checkAll = false) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2569, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.184733 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-32443244-01e1-4359-9aca-851d85100a35>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_sorter::init($values, $size = 8, $header = '') should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3400, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.185105 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-8062b068-f7e3-4050-8cf2-3cfd8b51e9ff>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_selectfiles::init($selectid, $link_text = NULL, $link_style = '', $icon = false) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3470, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.187088 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-f98cbb43-119a-43ea-907a-cca8676d23c5>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_assign::init($leftValues, $rightValues, $leftHeader = '', $rightHeader = '', $size = 8, $width = '200px') should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3600, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.187222 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-53d49843-72da-4377-a9f8-249383228719>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_assign::getValues($side) should be compatible with Horde_Form_Type::getValues() in /usr/share/php/Horde/Form/Type.php on line 3600, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.187289 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-8704063a-7ce2-4e37-a9f2-b8f9fd872046>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_dblookup::init($db, $sql, $prompt = NULL) should be compatible with Horde_Form_Type_enum::init($values, $prompt = NULL) in /usr/share/php/Horde/Form/Type.php on line 3751, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.187386 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-beb95fdf-91d8-4b29-94d3-2c2b032abf59>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_figlet::init($text, $font) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3804, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.187468 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-6439124d-4c2d-4632-8baa-cd233aace0e8>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_invalid::init($message) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3873, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.187552 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-0f80195f-9fd3-4257-9e70-a5bccb9ef05b>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Methods with the same name as their class will not be constructors in a future version of PHP; Horde_Form_Variable has a deprecated constructor in /usr/share/php/Horde/Form/Variable.php on line 24, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.236280 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-0b350541-02a5-4454-acf2-c8cb56e86181>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Methods with the same name as their class will not be constructors in a future version of PHP; Horde_Form_Action has a deprecated constructor in /usr/share/php/Horde/Form/Action.php on line 24, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.249726 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-49da72cd-5214-4c3e-a901-524d8bde58be>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "50208";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Methods with the same name as their class will not be constructors in a future version of PHP; Horde_Form_Renderer has a deprecated constructor in /usr/share/php/Horde/Form/Renderer.php on line 24, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "26396";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Mon Mar 02 06:27:07.259639 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-229cdf0b-139a-4e2c-b071-235c2a6d9607>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_pgp::init($gpg, $temp_dir = NULL, $rows = NULL, $cols = NULL) should be compatible with Horde_Form_Type_longtext::init($rows = 8, $cols = 80, $helper = Array) in /usr/share/php/Horde/Form/Type.php on line 878, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.553976 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-78c4feb2-908b-4613-a7a7-d400b4ceed02>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_image::onSubmit(&$var, &$vars) should be compatible with Horde_Form_Type::onSubmit() in /usr/share/php/Horde/Form/Type.php on line 1361, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.554285 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-9168cfe5-d2dc-470c-8ab0-13546ba4e20d>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_link::init($values) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 1438, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.554374 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-5ec881ad-8058-4c0b-aea4-7d2623bbf875>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_matrix::init($cols, $rows = Array, $matrix = Array, $new_input = false) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2165, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.554680 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-d869bfc1-138d-4cef-8fda-0cd33ca4574e>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_enum::init($values, $prompt = NULL) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2335, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.554771 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-87256160-7bed-4ba4-bada-1e54e24b8c3f>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_mlenum::init(&$values, $prompts = NULL) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2411, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.554829 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-9d1a4b48-a368-4d18-9ae5-6a158dcd64ee>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_mlenum::onSubmit(&$var, &$vars) should be compatible with Horde_Form_Type::onSubmit() in /usr/share/php/Horde/Form/Type.php on line 2411, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.554854 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-ccbd78db-9350-429c-9b9e-d019437d3050>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_set::init($values, $checkAll = false) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2569, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.554922 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-c27c7a30-76dd-4f6a-9c9f-b7f6c396b90d>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_sorter::init($values, $size = 8, $header = '') should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3400, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.555318 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-87754bfb-90a6-40b6-b7a5-b6bac7b7e31e>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_selectfiles::init($selectid, $link_text = NULL, $link_style = '', $icon = false) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3470, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.555383 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-4d329e9a-ae02-4734-8f69-a7ff23fd9f45>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_assign::init($leftValues, $rightValues, $leftHeader = '', $rightHeader = '', $size = 8, $width = '200px') should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3600, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.555455 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-6d9ba239-7cee-4878-8dc4-e71e9d9f76c6>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_assign::getValues($side) should be compatible with Horde_Form_Type::getValues() in /usr/share/php/Horde/Form/Type.php on line 3600, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.555482 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-1856f3ee-20da-4b6b-bc29-6778b3a8891f>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_dblookup::init($db, $sql, $prompt = NULL) should be compatible with Horde_Form_Type_enum::init($values, $prompt = NULL) in /usr/share/php/Horde/Form/Type.php on line 3751, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.555552 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-f89198fe-ca15-4aed-8345-092c915ea513>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_figlet::init($text, $font) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3804, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.555614 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-696ac053-61c0-4bdc-9d26-2cab05ab4e91>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_invalid::init($message) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3873, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.555675 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-e442197b-ae3b-4168-8e59-044896374d58>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Methods with the same name as their class will not be constructors in a future version of PHP; Horde_Form_Variable has a deprecated constructor in /usr/share/php/Horde/Form/Variable.php on line 24, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.568613 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-b17e1381-a377-46ed-b818-34b2f6815020>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Methods with the same name as their class will not be constructors in a future version of PHP; Horde_Form_Action has a deprecated constructor in /usr/share/php/Horde/Form/Action.php on line 24, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.763637 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-09a05cd0-6350-4d4e-9bf8-1470975b98ac>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "41242";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Methods with the same name as their class will not be constructors in a future version of PHP; Horde_Form_Renderer has a deprecated constructor in /usr/share/php/Horde/Form/Renderer.php on line 24, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "25371";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Tue Mar 03 06:26:28.794622 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-e8e2163c-23d7-45a1-aeb9-98c1c880b576>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_pgp::init($gpg, $temp_dir = NULL, $rows = NULL, $cols = NULL) should be compatible with Horde_Form_Type_longtext::init($rows = 8, $cols = 80, $helper = Array) in /usr/share/php/Horde/Form/Type.php on line 878, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.695207 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-9c423bdf-d546-4c66-a734-4bdfd3da6aa7>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_image::onSubmit(&$var, &$vars) should be compatible with Horde_Form_Type::onSubmit() in /usr/share/php/Horde/Form/Type.php on line 1361, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.696932 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-bd4b190b-b68f-4958-8254-b50c2194478f>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_link::init($values) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 1438, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.697493 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-aa7b410e-adff-4684-8d84-f14c35bb69b1>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_matrix::init($cols, $rows = Array, $matrix = Array, $new_input = false) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2165, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.700720 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-0daa2038-ddf6-4d06-b45e-dbeb0e2cf7d2>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_enum::init($values, $prompt = NULL) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2335, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.701780 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-258da2a1-1824-4708-a5f7-b2c0d025de22>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_mlenum::init(&$values, $prompts = NULL) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2411, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.702307 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-bb8d7b75-69e7-4dc6-ab60-0fc01cf26e89>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_mlenum::onSubmit(&$var, &$vars) should be compatible with Horde_Form_Type::onSubmit() in /usr/share/php/Horde/Form/Type.php on line 2411, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.702763 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-3582efb3-76d4-4d3b-9dc1-4443b2e75562>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_set::init($values, $checkAll = false) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 2569, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.703813 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-e203389e-cdac-4447-a9eb-a18912ea4e70>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_sorter::init($values, $size = 8, $header = '') should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3400, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.706170 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-d84522aa-751f-4bd2-98a5-ac2f4a7f2b11>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_selectfiles::init($selectid, $link_text = NULL, $link_style = '', $icon = false) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3470, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.706714 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-2e05da17-c460-4010-b36d-fbccd25c4e31>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_assign::init($leftValues, $rightValues, $leftHeader = '', $rightHeader = '', $size = 8, $width = '200px') should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3600, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.707310 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-5c21c0b7-941b-41bb-aeba-8f8c0bcf31b4>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_assign::getValues($side) should be compatible with Horde_Form_Type::getValues() in /usr/share/php/Horde/Form/Type.php on line 3600, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.707761 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-e1f57914-da3f-4126-8acc-d6c9bd86d1d5>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_dblookup::init($db, $sql, $prompt = NULL) should be compatible with Horde_Form_Type_enum::init($values, $prompt = NULL) in /usr/share/php/Horde/Form/Type.php on line 3751, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.708427 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-1430479e-c46e-4be6-8e9a-3047b3ca9a9d>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_figlet::init($text, $font) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3804, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.709386 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-dcc659e0-944c-4844-9dba-2a73511a00f1>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Declaration of Horde_Form_Type_invalid::init($message) should be compatible with Horde_Form_Type::init() in /usr/share/php/Horde/Form/Type.php on line 3873, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.710665 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-55a2e784-8bdb-4931-9fbe-88ba98634143>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Methods with the same name as their class will not be constructors in a future version of PHP; Horde_Form_Variable has a deprecated constructor in /usr/share/php/Horde/Form/Variable.php on line 24, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.756548 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-ce4c6332-df5c-43e3-a92d-0fc1a4bb3181>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Methods with the same name as their class will not be constructors in a future version of PHP; Horde_Form_Action has a deprecated constructor in /usr/share/php/Horde/Form/Action.php on line 24, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.810243 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-03c51e47-8c53-4942-91ae-760ed443b6e6>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.190";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "33604";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Methods with the same name as their class will not be constructors in a future version of PHP; Horde_Form_Renderer has a deprecated constructor in /usr/share/php/Horde/Form/Renderer.php on line 24, referer: http://mail.cup.com/nag/";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "22069";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 06:26:43.835827 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-c3a298fc-d14d-4dcc-afb8-77cf39a72602>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.238";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "60488";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " Undefined index: cmd in /var/www/mail.cup.com/static/evil.php on line 1";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "8738";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 19:32:45.144442 2020" .
+
+<http://w3id.org/sepses/resource/apacheErrorLog#LogEntry-8171f445-f5ac-4f1c-bce8-9a09dbe7678d>
+  a <https://w3id.org/sepses/vocab/log/apache#ApacheErrorLogEntry>;
+  <https://w3id.org/sepses/vocab/log/apacheError#clientIp> "192.168.10.238";
+  <https://w3id.org/sepses/vocab/log/apacheError#clientPort> "60488";
+  <https://w3id.org/sepses/vocab/log/apacheError#logLevel> "error";
+  <https://w3id.org/sepses/vocab/log/apacheError#message> " system(): Cannot execute a blank command in /var/www/mail.cup.com/static/evil.php on line 1";
+  <https://w3id.org/sepses/vocab/log/apacheError#pid> "8738";
+  <https://w3id.org/sepses/vocab/log/core#hasLogFamily> <http://dbpedia.org/page/Common_Log_Format>;
+  <https://w3id.org/sepses/vocab/log/core#timestamp> "Wed Mar 04 19:32:45.152914 2020" .
