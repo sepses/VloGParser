@@ -48,8 +48,8 @@ public class Util {
 		HDT hdt = HDTManager.generateHDT(filename, baseURI, RDFNotation.parse(inputType), new HDTSpecification(), null);
 		
 		// Add additional domain-specific properties to the header:
-		Header header = hdt.getHeader();
-		header.insert("myResource1", "property" , "value");
+		//Header header = hdt.getHeader();
+		//header.insert("myResource1", "property" , "value");
 		
 		// Save generated HDT to a file
 		hdt.saveToHDT(hdtOutput, null);

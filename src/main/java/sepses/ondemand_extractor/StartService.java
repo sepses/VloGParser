@@ -27,7 +27,9 @@ import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.riot.RDFDataMgr;
-import org.eclipse.rdf4j.model.impl.LinkedHashModel;
+import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.ValueFactory;
+import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
@@ -88,9 +90,6 @@ public class StartService
 		String res="";
 
 		 ArrayList<String> prefixes = QueryTranslator2.parsePrefixes(pq);
-
-		
-		org.eclipse.rdf4j.model.Model rdf4JM = new LinkedHashModel();
 		
 		for(int i=0;i<logSources.size();i++) {
 				
@@ -99,7 +98,7 @@ public class StartService
 
 				log.info("parsing start");
 				
-						res = parse(rdf4JM, llogLocation.get(i), llogMeta.get(i),lgrokFile.get(i), lgrokPattern.get(i),
+						res = parse(llogLocation.get(i), llogMeta.get(i),lgrokFile.get(i), lgrokPattern.get(i),
 								lmapping.get(i),pq, loutputModel.get(i), hdtOutput,hdtrepo,lregexPattern.get(i),
 								sparqlEndpoint, user, pass, lnamegraph.get(i), st, et, ltimeRegex.get(i),
 								ldateFormat.get(i),lvocabulary.get(i));	
@@ -119,7 +118,7 @@ public class StartService
 		
     }
  
-	public String parse(org.eclipse.rdf4j.model.Model JModel, String logfolder, String logmeta, String grokfile, String grokpattern, 
+	public String parse(String logfolder, String logmeta, String grokfile, String grokpattern, 
 			String RMLFile, String parsedQuery, String outputModel, String hdtOutput, String hdtrepo,String regexPattern, String sparqlEndpoint, String user, String pass, 
 			String namegraph,String startTime, String endDate, String dateTimeRegex,
 			String dateFormat, String vocab) throws Exception {
@@ -270,7 +269,13 @@ public class StartService
 	
 			long parsingtime = System.nanoTime()-this.startTime;
 			log.info("parsing finished");
-			JModel.addAll(rdf4jmodel);
+			if(rdf4jmodel.size()==0) {
+				ValueFactory factory = SimpleValueFactory.getInstance();
+				IRI data = factory.createIRI("http://example.org/data");
+				IRI is = factory.createIRI("http://example.org/is");
+				IRI nul = factory.createIRI("http://example.org/null");
+				rdf4jmodel.add(data, is, nul);
+			}
 			Util.saveRDF4JModel(rdf4jmodel, outputModel);
 			log.info("delete previously indexed hdt file..");
 			Util.deleteFile(hdtOutput+".index.v1-1");
@@ -627,7 +632,7 @@ public class StartService
 		// =======================apache=============================
 		String parsedQueryFile = "experiment/example_query/query-apache.json";
 		String queryStringFile = "experiment/example_query/query-apache.sparql";
-		String startTime = "2020-02-02T08:49:36";
+		String startTime = "2020-03-01T11:40:14";
 		String endDate = "2020-03-01T11:40:14";
 		// ========================auth===============================
 //		String parsedQueryFile = "experiment/example_query/query-apache-error.json";
