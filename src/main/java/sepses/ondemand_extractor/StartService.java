@@ -312,7 +312,7 @@ public class StartService
         		"    ?s  <http://w3id.org/sepses/asset#startDate> ?sd.\r\n" + 
         		"    ?s  <http://w3id.org/sepses/asset#endDate> ?ed.\r\n" + 
         		"    ?s <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
-        		"    FILTER(\""+endt+"\" >= ?sd && \""+endt+"\" <= ?ed  )\r\n" + 
+        		"    FILTER(\""+startt+"\" >= ?sd && \""+startt+"\" <= ?ed  )\r\n" + 
         		"} \r\n" ; 
 
        
@@ -332,7 +332,7 @@ public class StartService
         		"    ?s  <http://w3id.org/sepses/asset#startDate> ?sd.\r\n" + 
         		"    ?s  <http://w3id.org/sepses/asset#endDate> ?ed.\r\n" + 
         		"    ?s <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
-        		"    FILTER(\""+startt+"\" >= ?sd && \""+startt+"\" <= ?ed  )\r\n" + 
+        		"    FILTER(\""+endt+"\" >= ?sd && \""+endt+"\" <= ?ed  )\r\n" + 
         		"} \r\n"; 
 
 
@@ -349,12 +349,16 @@ public class StartService
         ArrayList<String> c3 = new ArrayList<String>();
         
         if(c!=null && c2!=null) {
+        	System.out.println("take between "+c+" and "+c2);
           //default (c2 & c !=null): take between
           c3 = takeBetween(c, c2, metaModel);   	
         }else if(c==null && c2!=null) {
     	 //take under = c2
+        	System.out.println("take under "+c2);
     	  c3 = takeUnder(c2, metaModel);
-       }else if(c!=null && c2==null) { 
+       }else if(c!=null && c2==null) {
+    	   System.out.println("take above "+c);
+    	   
     	  c3 = takeAbove(c, metaModel);
       }else {
    
@@ -556,8 +560,8 @@ public class StartService
 		// =======================apache=============================
 		String parsedQueryFile = "experiment/example_query/query-apache.json";
 		String queryStringFile = "experiment/example_query/query-apache.sparql";
-		String startTime = "2020-03-02T08:49:36";
-		String endDate = "2020-03-02T11:40:14";
+		String startTime = "2020-02-27T08:49:36";
+		String endDate = "2020-03-03T11:40:14";
 		// ========================auth===============================
 //		String parsedQueryFile = "experiment/example_query/query-apache-error.json";
 //		String queryStringFile = "experiment/example_query/query-apache-error.sparql";
