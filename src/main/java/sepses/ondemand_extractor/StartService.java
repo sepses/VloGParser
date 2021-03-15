@@ -260,7 +260,9 @@ public class StartService
 		 	log.info("filtering finished");
 		 	
 			JSONObject alljsObj = new JSONObject();
-		if(alljson.size()>0) {
+		if(alljson.size()<0)  {
+			log.info("filtered log line is empty!");
+		}
 			alljsObj.put("logEntry",alljson);
 			long timeextracting = System.nanoTime() - this.startTime;
 
@@ -290,10 +292,6 @@ public class StartService
 			System.out.println("Compressing time :"+(compressingtime-parsingtime)/1000000+" ms");
 			System.out.println("Uploading time :"+(uploadingtime-compressingtime)/1000000+" ms");
 
-			
-    	    }else {
-    		    		log.info("filtered log line is empty!");
-    		    	}
 	    		}
     			}
                catch (Exception closeException) {
