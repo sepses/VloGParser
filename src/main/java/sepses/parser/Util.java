@@ -2,7 +2,10 @@ package sepses.parser;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -134,5 +137,13 @@ public class Util {
 	    public static void MapHDTFile(String HDTFile) throws IOException{
 			// Load HDT file using the hdt-java library
 			HDTManager.mapIndexedHDT(HDTFile, null);
+	    }
+	    
+	    public static long datetimeToLong(String time, String format) throws ParseException {
+	    	
+		    SimpleDateFormat df = new SimpleDateFormat(format);
+		    Date date = df.parse(time);
+		    long epoch = date.getTime();
+		    return epoch;
 	    }
 }

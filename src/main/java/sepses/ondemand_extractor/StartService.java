@@ -10,9 +10,11 @@ import java.io.FileReader;
 import java.net.InetAddress;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -301,7 +303,7 @@ public class StartService
     	
 
 	}
-	private ArrayList<String> findRespectedLogFile(String startt, String endt, String logmeta) {
+	private ArrayList<String> findRespectedLogFile(String startt, String endt, String logmeta) throws ParseException {
 		
 		//query log meta based on start and end date
 		
@@ -347,7 +349,7 @@ public class StartService
         }
         
         ArrayList<String> c3 = new ArrayList<String>();
-        
+
         if(c!=null && c2!=null) {
         	System.out.println("take between "+c+" and "+c2);
           //default (c2 & c !=null): take between
@@ -361,9 +363,16 @@ public class StartService
     	   
     	  c3 = takeAbove(c, metaModel);
       }else {
-   
-    	  System.out.println("Date is out of range");
-      	
+    	 
+    	   if(checkIfDateInScope(startt, endt, metaModel)) {
+    		    
+    		  //take between 0 and metamodel.size()
+    		   int countMeta =  getCountLogMeta(metaModel);
+    		
+    		  c3= takeBetween(0,countMeta-1,metaModel);
+    	  }else {
+    		  System.out.println("Date is out of range");
+    	  }
       }
        			return c3;
 	}
@@ -440,7 +449,67 @@ public class StartService
 		return res;
 		
 	}
+	private int getCountLogMeta(Model metaModel) {
+		int c = 0;
+        String query3 = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
+           		"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n" + 
+           		"select (COUNT(?s) as ?c)  where {\r\n" + 
+           		"    ?s rdfs:label ?l.\r\n" +  
+           		"}";
+   
+        QueryExecution qe3 = QueryExecutionFactory.create(query3,metaModel);
+        ResultSet rs3 = qe3.execSelect();
+        while (rs3.hasNext()) {
+            QuerySolution qs3 = rs3.nextSolution();
+            RDFNode co3 = qs3.get("?c");
+            
+            c = co3.asLiteral().getInt();
+           
+        }
+        
+        //metaModel.write(System.out,"TURTLE");
+		return c;
+		
+	}
+	private HashMap<String, String> getMinMaxLogTime(Model metaModel) {
+		HashMap<String, String> minMax = new HashMap<String, String>();
 	
+    String query3 = "select (MIN(?sd) as ?sdt) (MAX(?ed) as ?edt) where { \r\n" + 
+    		"			?s <http://w3id.org/sepses/asset#startDate> ?sd .\r\n" + 
+    		"		    ?s <http://w3id.org/sepses/asset#endDate> ?ed .\r\n" + 
+    		"		}";
+    
+    QueryExecution qe3 = QueryExecutionFactory.create(query3,metaModel);
+    ResultSet rs3 = qe3.execSelect();
+    while (rs3.hasNext()) {
+        QuerySolution qs3 = rs3.nextSolution();
+        RDFNode sdt = qs3.get("?sdt");
+        RDFNode edt = qs3.get("?edt");
+        minMax.put("sdt", sdt.toString());
+        minMax.put("edt", edt.toString());
+    }
+
+	return minMax;
+
+	}
+	
+	
+	private Boolean checkIfDateInScope(String startt,String endt, Model metaModel) throws ParseException {
+		 //System.out.println(startt+" "+endt);
+	HashMap<String, String> minMax = getMinMaxLogTime(metaModel);
+  	  String df = "yyyy-MM-dd'T'hh:mm:ss";
+  	  Long gsdt =  Util.datetimeToLong(startt, df);
+  	  Long gedt = Util.datetimeToLong(endt, df);
+  	  Long sdt =  Util.datetimeToLong(minMax.get("sdt"), df);
+  	  Long edt = Util.datetimeToLong(minMax.get("edt"), df);
+  	  if(gsdt<sdt && gedt>edt) {
+  		
+  		  return true;
+  	  }else {
+  		  return false;
+  	  }
+  	  
+	}
 	public boolean checkFilterJsonWithVariableRegex(JsonNode json, String variable, String regex) throws org.json.simple.parser.ParseException {
 		if(json.get(variable)==null){
 			return true;
@@ -560,8 +629,8 @@ public class StartService
 		// =======================apache=============================
 		String parsedQueryFile = "experiment/example_query/query-apache.json";
 		String queryStringFile = "experiment/example_query/query-apache.sparql";
-		String startTime = "2020-02-27T08:49:36";
-		String endDate = "2020-03-03T11:40:14";
+		String startTime = "2020-02-02T08:49:36";
+		String endDate = "2020-03-01T11:40:14";
 		// ========================auth===============================
 //		String parsedQueryFile = "experiment/example_query/query-apache-error.json";
 //		String queryStringFile = "experiment/example_query/query-apache-error.sparql";
