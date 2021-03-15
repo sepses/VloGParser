@@ -261,7 +261,7 @@ public class StartService
 		 	
 			JSONObject alljsObj = new JSONObject();
 		if(alljson.size()<0)  {
-			log.info("filtered log line is empty!");
+			log.info("filtered log line is empty! ");
 		}
 			alljsObj.put("logEntry",alljson);
 			long timeextracting = System.nanoTime() - this.startTime;
