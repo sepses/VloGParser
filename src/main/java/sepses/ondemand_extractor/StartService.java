@@ -312,10 +312,9 @@ public class StartService
         		"    ?s  <http://w3id.org/sepses/asset#startDate> ?sd.\r\n" + 
         		"    ?s  <http://w3id.org/sepses/asset#endDate> ?ed.\r\n" + 
         		"    ?s <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
-        		"    FILTER(\""+startt+"\" >= ?sd && \""+startt+"\" <= ?ed )\r\n" + 
-        		"} \r\n" + 
-        		"ORDER BY DESC(?fid)\r\n" + 
-        		"LIMIT 1";
+        		"    FILTER(\""+endt+"\" >= ?sd && \""+endt+"\" <= ?ed  )\r\n" + 
+        		"} \r\n" ; 
+
        
 
         QueryExecution qe = QueryExecutionFactory.create(query, metaModel);
@@ -333,10 +332,9 @@ public class StartService
         		"    ?s  <http://w3id.org/sepses/asset#startDate> ?sd.\r\n" + 
         		"    ?s  <http://w3id.org/sepses/asset#endDate> ?ed.\r\n" + 
         		"    ?s <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
-        		"    FILTER(\""+endt+"\" >=?sd && \""+endt+"\" <=?ed  )\r\n" + 
-        		"} \r\n" + 
-        		"ORDER BY ASC(?fid)\r\n" + 
-        		"LIMIT 1";
+        		"    FILTER(\""+startt+"\" >= ?sd && \""+startt+"\" <= ?ed  )\r\n" + 
+        		"} \r\n"; 
+
 
        
         QueryExecution qe2 = QueryExecutionFactory.create(query2,metaModel);
@@ -347,41 +345,98 @@ public class StartService
             RDFNode co2 = qs2.get("?fid");
             c2 = co2.asLiteral().getInt();
         }
-    	
-        ArrayList<String> c3 = new ArrayList<String>();
-  	  
-        if(c2!=null && c!=null) {
-	        String query3 = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
-	        		"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n" + 
-	        		"select ?l  where {\r\n" + 
-	        		"    ?s rdfs:label ?l.\r\n" + 
-	        		"    ?s  <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
-	        		"    \r\n" + 
-	        		"    FILTER(  ?fid <="+c2+" && ?fid >="+c+" )\r\n" + 
-	        		"} ORDER BY ASC(?fid)\r\n" + 
-	        		"";
-	       
-	        QueryExecution qe3 = QueryExecutionFactory.create(query3,metaModel);
-	        ResultSet rs3 = qe3.execSelect();
-	        while (rs3.hasNext()) {
-	            QuerySolution qs3 = rs3.nextSolution();
-	            RDFNode co3 = qs3.get("?l");
-	            c3.add(co3.toString());
-	        }
-	       
-        	
-        }else {
-        	
-        	System.out.println("Date is out of range");
-        	
-        }
-       
-
-    
         
-		return c3;
+        ArrayList<String> c3 = new ArrayList<String>();
+        
+        if(c!=null && c2!=null) {
+          //default (c2 & c !=null): take between
+          c3 = takeBetween(c, c2, metaModel);   	
+        }else if(c==null && c2!=null) {
+    	 //take under = c2
+    	  c3 = takeUnder(c2, metaModel);
+       }else if(c!=null && c2==null) { 
+    	  c3 = takeAbove(c, metaModel);
+      }else {
+   
+    	  System.out.println("Date is out of range");
+      	
+      }
+       			return c3;
 	}
 
+	
+	private ArrayList<String> takeBetween(int c, int c2, Model metaModel) {
+		ArrayList<String> res = new ArrayList<String>();
+        String query3 = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
+        		"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n" + 
+        		"select ?l  where {\r\n" + 
+        		"    ?s rdfs:label ?l.\r\n" + 
+        		"    ?s  <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
+        		"    \r\n" + 
+        		"    FILTER(  ?fid <="+c2+" && ?fid >="+c+" )\r\n" + 
+        		"} ORDER BY ASC(?fid)\r\n" + 
+        		"";
+        
+        QueryExecution qe3 = QueryExecutionFactory.create(query3,metaModel);
+        ResultSet rs3 = qe3.execSelect();
+        while (rs3.hasNext()) {
+            QuerySolution qs3 = rs3.nextSolution();
+            RDFNode co3 = qs3.get("?l");
+            res.add(co3.toString());
+        }
+        
+		return res;
+		
+	}
+	
+	private ArrayList<String> takeUnder(int c2, Model metaModel) {
+		ArrayList<String> res = new ArrayList<String>();
+        String query3 = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
+           		"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n" + 
+           		"select ?l  where {\r\n" + 
+           		"    ?s rdfs:label ?l.\r\n" + 
+           		"    ?s  <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
+           		"    \r\n" + 
+           		"    FILTER(  ?fid <="+c2+")\r\n" + 
+           		"} ORDER BY ASC(?fid)\r\n" + 
+           		"";
+        
+        QueryExecution qe3 = QueryExecutionFactory.create(query3,metaModel);
+        ResultSet rs3 = qe3.execSelect();
+        while (rs3.hasNext()) {
+            QuerySolution qs3 = rs3.nextSolution();
+            RDFNode co3 = qs3.get("?l");
+            res.add(co3.toString());
+        }
+        
+		return res;
+		
+	}
+	
+	private ArrayList<String> takeAbove(int c, Model metaModel) {
+		ArrayList<String> res = new ArrayList<String>();
+        String query3 = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
+           		"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n" + 
+           		"select ?l  where {\r\n" + 
+           		"    ?s rdfs:label ?l.\r\n" + 
+           		"    ?s  <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
+           		"    \r\n" + 
+           		"    FILTER(  ?fid >="+c+")\r\n" + 
+           		"} ORDER BY ASC(?fid)\r\n" + 
+           		"";
+        
+        QueryExecution qe3 = QueryExecutionFactory.create(query3,metaModel);
+        ResultSet rs3 = qe3.execSelect();
+        while (rs3.hasNext()) {
+            QuerySolution qs3 = rs3.nextSolution();
+            RDFNode co3 = qs3.get("?l");
+            res.add(co3.toString());
+        }
+        
+		return res;
+		
+	}
+	
 	public boolean checkFilterJsonWithVariableRegex(JsonNode json, String variable, String regex) throws org.json.simple.parser.ParseException {
 		if(json.get(variable)==null){
 			return true;
@@ -499,15 +554,15 @@ public class StartService
 //				String startTime = "2020-02-29T01:00:05";
 //		    	String endDate = "2020-02-29T01:00:13";
 		// =======================apache=============================
-//		String parsedQueryFile = "experiment/input/query-apache.json";
-//		String queryStringFile = "experiment/input/query-apache.sparql";
-//		String startTime = "2020-03-02T08:49:36";
-//		String endDate = "2020-03-02T11:40:14";
+		String parsedQueryFile = "experiment/example_query/query-apache.json";
+		String queryStringFile = "experiment/example_query/query-apache.sparql";
+		String startTime = "2020-03-02T08:49:36";
+		String endDate = "2020-03-02T11:40:14";
 		// ========================auth===============================
-		String parsedQueryFile = "experiment/example_query/query-apache-error.json";
-		String queryStringFile = "experiment/example_query/query-apache-error.sparql";
-		String startTime = "2020-03-01T06:28:15";
-    	String endDate = "2020-03-05T06:55:10";
+//		String parsedQueryFile = "experiment/example_query/query-apache-error.json";
+//		String queryStringFile = "experiment/example_query/query-apache-error.sparql";
+//		String startTime = "2020-03-01T06:28:15";
+//    	String endDate = "2020-03-05T06:55:10";
 
 		String parsedQuery = new String(Files.readAllBytes(Paths.get(parsedQueryFile))); 
 		String queryString = new String(Files.readAllBytes(Paths.get(queryStringFile))); 
