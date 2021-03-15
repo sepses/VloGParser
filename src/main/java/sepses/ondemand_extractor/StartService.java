@@ -310,10 +310,11 @@ public class StartService
         String query = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
         		"select ?fid  where {\r\n" + 
         		"    ?s  <http://w3id.org/sepses/asset#startDate> ?sd.\r\n" + 
+        		"    ?s  <http://w3id.org/sepses/asset#endDate> ?ed.\r\n" + 
         		"    ?s <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
-        		"    FILTER(?sd >= \""+startt+"\")\r\n" + 
+        		"    FILTER(\""+startt+"\" >= ?sd && \""+startt+"\" <= ?ed )\r\n" + 
         		"} \r\n" + 
-        		"ORDER BY ASC(?fid)\r\n" + 
+        		"ORDER BY DESC(?fid)\r\n" + 
         		"LIMIT 1";
        
 
@@ -329,11 +330,12 @@ public class StartService
         
         String query2 = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n" + 
         		"select ?fid  where {\r\n" + 
+        		"    ?s  <http://w3id.org/sepses/asset#startDate> ?sd.\r\n" + 
         		"    ?s  <http://w3id.org/sepses/asset#endDate> ?ed.\r\n" + 
         		"    ?s <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
-        		"    FILTER(?ed <= \""+endt+"\")\r\n" + 
+        		"    FILTER(\""+endt+"\" >=?sd && \""+endt+"\" <=?ed  )\r\n" + 
         		"} \r\n" + 
-        		"ORDER BY DESC(?fid)\r\n" + 
+        		"ORDER BY ASC(?fid)\r\n" + 
         		"LIMIT 1";
 
        
