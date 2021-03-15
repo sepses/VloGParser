@@ -311,9 +311,9 @@ public class StartService
         		"select ?fid  where {\r\n" + 
         		"    ?s  <http://w3id.org/sepses/asset#startDate> ?sd.\r\n" + 
         		"    ?s <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
-        		"    FILTER(?sd <= \""+startt+"\")\r\n" + 
+        		"    FILTER(?sd >= \""+startt+"\")\r\n" + 
         		"} \r\n" + 
-        		"ORDER BY DESC(?fid)\r\n" + 
+        		"ORDER BY ASC(?fid)\r\n" + 
         		"LIMIT 1";
        
 
@@ -331,9 +331,9 @@ public class StartService
         		"select ?fid  where {\r\n" + 
         		"    ?s  <http://w3id.org/sepses/asset#endDate> ?ed.\r\n" + 
         		"    ?s <http://w3id.org/sepses/asset#fileID> ?fid.\r\n" + 
-        		"    FILTER(?ed >= \""+endt+"\")\r\n" + 
+        		"    FILTER(?ed <= \""+endt+"\")\r\n" + 
         		"} \r\n" + 
-        		"ORDER BY ASC(?fid)\r\n" + 
+        		"ORDER BY DESC(?fid)\r\n" + 
         		"LIMIT 1";
 
        
