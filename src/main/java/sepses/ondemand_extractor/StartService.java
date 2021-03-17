@@ -625,15 +625,15 @@ public class StartService
 	public static void main( String[] args ) throws Exception
   {    
 		// =======================audit=============================
-//				String parsedQueryFile = "experiment/input/query-audit2.json";
-//				String queryStringFile = "experiment/input/query-audit2.sparql";
-//				String startTime = "2020-02-29T01:00:05";
-//		    	String endDate = "2020-02-29T01:00:13";
+				String parsedQueryFile = "experiment/example_query/query-audit.json";
+				String queryStringFile = "experiment/example_query/query-audit.sparql";
+				String startTime = "2020-03-02T13:59:49";
+		    	String endDate = "2020-03-02T13:59:51";
 		// =======================apache=============================
-		String parsedQueryFile = "experiment/example_query/query-apache.json";
-		String queryStringFile = "experiment/example_query/query-apache.sparql";
-		String startTime = "2020-03-01T11:40:14";
-		String endDate = "2020-03-01T11:40:14";
+//		String parsedQueryFile = "experiment/example_query/query-apache.json";
+//		String queryStringFile = "experiment/example_query/query-apache.sparql";
+//		String startTime = "2020-03-01T11:40:14";
+//		String endDate = "2020-03-01T11:40:14";
 		// ========================auth===============================
 //		String parsedQueryFile = "experiment/example_query/query-apache-error.json";
 //		String queryStringFile = "experiment/example_query/query-apache-error.sparql";

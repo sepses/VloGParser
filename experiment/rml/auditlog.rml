@@ -44,6 +44,18 @@
  rr:predicateObjectMap [ rr:predicate audit:fsgid; rr:objectMap [rr:template "{audit_fsgid}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate audit:tty; rr:objectMap [rr:template "{audit_tty}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate audit:ses; rr:objectMap [rr:template "{audit_ses}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate audit:proctitle; rr:objectMap [rr:template "{audit_proctitle}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate audit:item; rr:objectMap [rr:template "{audit_item}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate audit:inode; rr:objectMap [rr:template "{audit_inode}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate audit:pathName; rr:objectMap [rr:template "{audit_path_name}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate audit:dev; rr:objectMap [rr:template "{audit_dev}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate audit:mode; rr:objectMap [rr:template "{audit_mode}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate audit:ouid; rr:objectMap [rr:template "{audit_ouid}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate audit:ogid; rr:objectMap [rr:template "{audit_ogid}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate audit:rdev; rr:objectMap [rr:template "{audit_rdev}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate audit:nameType; rr:objectMap [rr:template "{audit_nametype}"; rr:datatype xsd:string;]];
+
+
 
 
 .
