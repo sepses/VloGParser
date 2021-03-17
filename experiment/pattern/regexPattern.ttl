@@ -7,6 +7,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 
+
+<https://w3id.org/sepses/vocab/log/audit#> reg:generalGrokPattern "%{AUDIT}".
+
 <https://w3id.org/sepses/vocab/log/audit#type> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "type=%{WORD:audit_type}".
 
