@@ -122,6 +122,9 @@
 <https://w3id.org/sepses/vocab/log/exim#interface> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "%{EXIM_INTERFACE:exim_interface}".
 
+<https://w3id.org/sepses/vocab/log/exim#messageSize> rdf:type owl:DatatypeProperty ;
+         reg:grokPattern "%{EXIM_MSG_SIZE:exim_msg_size}".
+
 <https://w3id.org/sepses/vocab/log/exim#protocol> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "P=%{NOTSPACE:exim_protocol}".
 
