@@ -1,2 +1,0 @@
-
-<http://example.org/data> <http://example.org/is> <http://example.org/null> .

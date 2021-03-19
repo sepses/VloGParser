@@ -1,7 +1,6 @@
 PREFIX cl: <https://w3id.org/sepses/vocab/log/core#>
 PREFIX exim: <https://w3id.org/sepses/vocab/log/exim#>
-SELECT ?s ?exim_protocol ?exim_header_id WHERE {
+SELECT ?s ?exim_protocol WHERE {
  ?s   exim:protocol   ?exim_protocol.
- ?s   exim:headerId   ?exim_header_id.
 	}			
 	LIMIT 5000

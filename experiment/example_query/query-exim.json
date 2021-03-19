@@ -8,10 +8,6 @@
     {
       "termType": "Variable",
       "value": "exim_protocol"
-    },
-    {
-      "termType": "Variable",
-      "value": "exim_header_id"
     }
   ],
   "where": [
@@ -30,19 +26,6 @@
           "object": {
             "termType": "Variable",
             "value": "exim_protocol"
-          }
-        },{
-          "subject": {
-            "termType": "Variable",
-            "value": "s"
-          },
-          "predicate": {
-            "termType": "NamedNode",
-            "value": "https://w3id.org/sepses/vocab/log/exim#headerId"
-          },
-          "object": {
-            "termType": "Variable",
-            "value": "exim_header_id"
           }
         }
       ]

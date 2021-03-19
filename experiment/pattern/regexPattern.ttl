@@ -133,13 +133,13 @@
          reg:grokPattern "%{EXIM_MSG_SIZE:exim_msg_size}".
 
 <https://w3id.org/sepses/vocab/log/exim#protocol> rdf:type owl:DatatypeProperty ;
-         reg:grokPattern "%{EXIM_PROTOCOL:exim_protocol}".
+         reg:grokPattern "%{EXIM_PROTOCOL:exim_prot}".
 
 <https://w3id.org/sepses/vocab/log/exim#headerId> rdf:type owl:DatatypeProperty ;
-         reg:grokPattern "%{EXIM_HEADER_ID:exim_header_id}".
+         reg:grokPattern "%{EXIM_HEADER_ID:exim_head}".
 
 <https://w3id.org/sepses/vocab/log/exim#subject> rdf:type owl:DatatypeProperty ;
-         reg:grokPattern "%{EXIM_SUBJECT:exim_subject}".
+         reg:grokPattern "%{EXIM_SUBJECT:exim_subj}".
 
 <https://w3id.org/sepses/vocab/log/exim#exTerms> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "%{EXIM_EXCLUDE_TERMS:exim_exclude_terms}".
