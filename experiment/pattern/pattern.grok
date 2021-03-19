@@ -135,7 +135,7 @@ EXIM_ROUTER (R=%{NOTSPACE:exim_router})
 EXIM_TRANSPORT (T=%{NOTSPACE:exim_transport})
 EXIM_SENDER (%{NOTSPACE:exim_sender})
 
-EXIM %{EXIM_DATE:exim_date}(| %{EXIM_MSGID:exim_msg_id}) (%{EXIM_EXCLUDE_TERMS:exim_exclude_terms}|%{EXIM_FLAGS:exim_flags} (%{EXIM_RCPT} %{EXIM_RCPT_OUTER} %{EXIM_ROUTER} %{EXIM_TRANSPORT}|%{EXIM_SENDER} %{EXIM_UW} %{EXIM_PROTOCOL} %{EXIM_MSG_SIZE} %{EXIM_HEADER_ID}))
+EXIM %{EXIM_DATE:exim_date}((| %{EXIM_MSGID:exim_msg_id}) (%{EXIM_EXCLUDE_TERMS:exim_exclude_terms}|%{EXIM_FLAGS:exim_flags} (%{EXIM_RCPT} %{EXIM_RCPT_OUTER} %{EXIM_ROUTER} %{EXIM_TRANSPORT}|%{EXIM_SENDER} %{EXIM_UW} %{EXIM_PROTOCOL} %{EXIM_MSG_SIZE} %{EXIM_HEADER_ID}))|)
 #(%{EXIM_EXCLUDE_TERMS:exim_exclude_terms} %{EXIM_PID:exim_pi}|%{EXIM_MSGID:exim_msg_id} %{EXIM_FLAGS:exim_flags})
 
 
