@@ -103,7 +103,7 @@
 
 #==============exim============================
 
-#<https://w3id.org/sepses/vocab/log/exim#> reg:generalGrokPattern "%{EXIM}".
+<https://w3id.org/sepses/vocab/log/exim#> reg:generalGrokPattern "%{EXIM}".
 
 <https://w3id.org/sepses/vocab/log/exim#flags> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "%{EXIM_FLAGS:exim_flags}".

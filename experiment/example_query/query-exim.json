@@ -7,6 +7,10 @@
     },
     {
       "termType": "Variable",
+      "value": "exim_date"
+    },
+    {
+      "termType": "Variable",
       "value": "exim_protocol"
     }
   ],
@@ -14,6 +18,20 @@
     {
       "type": "bgp",
       "triples": [
+        {
+          "subject": {
+            "termType": "Variable",
+            "value": "s"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "https://w3id.org/sepses/vocab/log/core#timestamp"
+          },
+          "object": {
+            "termType": "Variable",
+            "value": "exim_date"
+          }
+        },
         {
           "subject": {
             "termType": "Variable",
@@ -31,7 +49,6 @@
       ]
     }
   ],
-  "limit": 5000,
   "type": "query",
   "prefixes": {
     "cl": "https://w3id.org/sepses/vocab/log/core#",

@@ -1,6 +1,14 @@
 PREFIX cl: <https://w3id.org/sepses/vocab/log/core#>
 PREFIX exim: <https://w3id.org/sepses/vocab/log/exim#>
-SELECT ?s ?exim_protocol WHERE {
- ?s   exim:protocol   ?exim_protocol.
-	}			
-	LIMIT 5000
+SELECT 
+  ?s 
+  ?exim_date  
+  ?exim_protocol 
+#  ?exim_header 
+WHERE {
+ ?s   cl:timestamp  ?exim_date.
+ ?s   exim:protocol ?exim_protocol
+
+}
+#LIMIT 5000
+

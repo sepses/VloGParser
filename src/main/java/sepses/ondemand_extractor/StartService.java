@@ -641,7 +641,7 @@ public class StartService
 		String parsedQueryFile = "experiment/example_query/query-exim.json";
 		String queryStringFile = "experiment/example_query/query-exim.sparql";
 		String startTime = "2020-02-29T00:03:40";
-    	String endDate = "2020-03-06T04:34:26";
+    	String endDate = "2020-03-01T04:34:26";
 
 		String parsedQuery = new String(Files.readAllBytes(Paths.get(parsedQueryFile))); 
 		String queryString = new String(Files.readAllBytes(Paths.get(queryStringFile))); 

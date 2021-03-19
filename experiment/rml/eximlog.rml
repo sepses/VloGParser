@@ -26,7 +26,13 @@
  rr:predicateObjectMap [ rr:predicate exim:remoteHost; rr:objectMap [rr:template "{exim_remote_host}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate exim:interface; rr:objectMap [rr:template "{exim_interface}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate exim:messageSize; rr:objectMap [rr:template "{exim_msg_size}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate exim:messageId; rr:objectMap [rr:template "{exim_msg_id}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate exim:protocol; rr:objectMap [rr:template "{exim_protocol}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate exim:headerId; rr:objectMap [carml:multiTemplate "{exim_header_id}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate exim:subject; rr:objectMap [rr:template "{exim_subject}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate exim:recipient; rr:objectMap [rr:template "{exim_rcpt}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate exim:recipient_outer; rr:objectMap [rr:template "{exim_rcpt_outer}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate exim:router; rr:objectMap [rr:template "{exim_router}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate exim:transport; rr:objectMap [rr:template "{exim_transport}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate exim:sender; rr:objectMap [rr:template "{exim_sender}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate exim:exTerms; rr:objectMap [rr:template "{exim_exclude_terms}"; rr:datatype xsd:string;]].
