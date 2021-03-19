@@ -35,4 +35,5 @@
  rr:predicateObjectMap [ rr:predicate exim:router; rr:objectMap [rr:template "{exim_router}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate exim:transport; rr:objectMap [rr:template "{exim_transport}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate exim:sender; rr:objectMap [rr:template "{exim_sender}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate exim:exTerms; rr:objectMap [rr:template "{exim_exclude_terms_1}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate exim:exTerms; rr:objectMap [rr:template "{exim_exclude_terms}"; rr:datatype xsd:string;]].
