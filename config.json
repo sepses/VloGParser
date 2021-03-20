@@ -83,6 +83,21 @@
 	      "logDateFormat":"yyyy-MM-dd HH:mm:ss",
 	      "logTimeRegex":"\\d{4}-\\d{2}-\\d{2}\\s\\d{2}:\\d{2}:\\d{2}"     
      },{
+	      "title": "syslog",
+	      "type": "File",
+	      "logLocation": "experiment/logfile/syslog/",
+	      "logMeta": "experiment/logmeta/sys_meta.ttl",
+	      "mapping": "experiment/rml/syslog.rml",
+	      "grokFile": "experiment/pattern/pattern.grok",
+	      "grokPattern": "%{SYS}",
+		  "outputModel": "experiment/output/sys_model.ttl",
+		  "hdtOutput": "experiment/output/sys.hdt",
+	      "namegraph": "http://w3id.org/sepses/graph/log/sys",
+	      "regexPattern": "experiment/pattern/regexPattern.ttl",
+	      "vocabulary":"https://w3id.org/sepses/vocab/log/sys#",
+	      "logDateFormat":"yyyy MMM dd HH:mm:ss",
+	      "logTimeRegex":"\\d{4}\\s\\w{3}\\s+\\d+\\s\\d{2}:\\d{2}:\\d{2}"     
+     },{
 	      "title": "snortAlertlog",
 	      "type": "File",
 	      "logLocation": "experiment/logfile/snort/",

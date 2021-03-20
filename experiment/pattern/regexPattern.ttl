@@ -101,6 +101,10 @@
 
 <https://w3id.org/sepses/vocab/log/auth#> reg:generalGrokPattern "%{SYSLOGBASE}".
 
+#==============syslog============================
+
+<https://w3id.org/sepses/vocab/log/sys#> reg:generalGrokPattern "%{SYSLOGBASE}".
+
 #==============exim============================
 
 <https://w3id.org/sepses/vocab/log/exim#> reg:generalGrokPattern "%{EXIM}".

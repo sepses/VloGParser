@@ -1,0 +1,191 @@
+<http://w3id.org/sepses/meta/syslog_10>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_10" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-04T03:42:40" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "10"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-03-03T19:00:28" .
+
+<http://w3id.org/sepses/meta/syslog_15>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_15" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-06T04:59:43" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "15"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-03-05T15:51:30" .
+
+<http://w3id.org/sepses/meta/syslog_1>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_1" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-02-29T18:38:44" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-02-29T00:32:08" .
+
+<http://w3id.org/sepses/meta/syslog_6>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_6" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-02T17:20:19" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "6"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-03-02T11:28:54" .
+
+<http://w3id.org/sepses/meta/syslog_13>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_13" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-05T10:20:31" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "13"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-03-04T19:41:18" .
+
+<http://w3id.org/sepses/meta/syslog_4>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_4" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-01T22:57:00" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-03-01T14:10:13" .
+
+<http://w3id.org/sepses/meta/syslog_9>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_9" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-03T19:00:26" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "9"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-03-03T13:04:53" .
+
+<http://w3id.org/sepses/meta/syslog_11>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_11" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-04T13:10:46" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "11"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-03-04T03:42:48" .
+
+<http://w3id.org/sepses/meta/syslog_2>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_2" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-01T06:17:10" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-02-29T18:38:49" .
+
+<http://w3id.org/sepses/meta/syslog_7>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_7" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-03T00:19:32" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "7"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-03-02T17:20:20" .
+
+<http://w3id.org/sepses/meta/syslog_14>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_14" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-05T15:51:27" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "14"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-03-05T10:20:34" .
+
+<http://w3id.org/sepses/meta/syslog_0>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_0" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-02-29T00:32:08" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "0"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-02-29T00:00:12" .
+
+<http://w3id.org/sepses/meta/syslog_5>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_5" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-02T11:28:53" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "5"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-03-01T22:57:14" .
+
+<http://w3id.org/sepses/meta/syslog_12>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_12" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-04T19:41:18" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "12"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-03-04T13:10:46" .
+
+<http://w3id.org/sepses/meta/syslog_3>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_3" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-01T14:10:05" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-03-01T06:17:10" .
+
+<http://w3id.org/sepses/meta/syslog_8>
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "syslog_8" ;
+        <http://w3id.org/sepses/asset#endDate>
+                "2020-03-03T13:04:53" ;
+        <http://w3id.org/sepses/asset#fileID>
+                "8"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        <http://w3id.org/sepses/asset#fileType>
+                "sys" ;
+        <http://w3id.org/sepses/asset#startDate>
+                "2020-03-03T00:19:32" .
