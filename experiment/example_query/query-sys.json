@@ -1,0 +1,58 @@
+{
+  "queryType": "SELECT",
+  "variables": [
+    {
+      "termType": "Variable",
+      "value": "s"
+    },
+    {
+      "termType": "Variable",
+      "value": "timestamp"
+    },
+    {
+      "termType": "Variable",
+      "value": "message"
+    }
+  ],
+  "where": [
+    {
+      "type": "bgp",
+      "triples": [
+        {
+          "subject": {
+            "termType": "Variable",
+            "value": "s"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "https://w3id.org/sepses/vocab/log/core#message"
+          },
+          "object": {
+            "termType": "Variable",
+            "value": "message"
+          }
+        },
+        {
+          "subject": {
+            "termType": "Variable",
+            "value": "s"
+          },
+          "predicate": {
+            "termType": "NamedNode",
+            "value": "https://w3id.org/sepses/vocab/log/core#timestamp"
+          },
+          "object": {
+            "termType": "Variable",
+            "value": "timestamp"
+          }
+        }
+      ]
+    }
+  ],
+  "limit": 50,
+  "type": "query",
+  "prefixes": {
+    "cl": "https://w3id.org/sepses/vocab/log/core#",
+    "auth": "https://w3id.org/sepses/vocab/log/sys#"
+  }
+}

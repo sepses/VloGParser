@@ -1,0 +1,8 @@
+PREFIX cl: <https://w3id.org/sepses/vocab/log/core#>
+PREFIX auth: <https://w3id.org/sepses/vocab/log/sys#>
+
+SELECT ?s ?timestamp ?message  WHERE {
+ ?s   cl:message   ?message.
+ ?s   cl:timestamp   ?timestamp.
+ 
+}

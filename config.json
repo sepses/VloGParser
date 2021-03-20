@@ -85,7 +85,7 @@
      },{
 	      "title": "syslog",
 	      "type": "File",
-	      "logLocation": "experiment/logfile/syslog/",
+	      "logLocation": "experiment/logfile/sys/",
 	      "logMeta": "experiment/logmeta/sys_meta.ttl",
 	      "mapping": "experiment/rml/syslog.rml",
 	      "grokFile": "experiment/pattern/pattern.grok",
