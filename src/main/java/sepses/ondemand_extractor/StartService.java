@@ -623,10 +623,10 @@ public class StartService
 	public static void main( String[] args ) throws Exception
   {    
 		// =======================audit=============================
-//				String parsedQueryFile = "experiment/example_query/query-audit.json";
-//				String queryStringFile = "experiment/example_query/query-audit.sparql";
-//				String startTime = "2020-03-02T13:59:49";
-//		    	String endDate = "2020-03-02T13:59:51";
+				String parsedQueryFile = "experiment/example_query/query-audit.json";
+				String queryStringFile = "experiment/example_query/query-audit.sparql";
+				String startTime = "2020-03-02T13:59:49";
+		    	String endDate = "2020-03-02T13:59:51";
 		// =======================apache=============================
 //		String parsedQueryFile = "experiment/example_query/query-apache.json";
 //		String queryStringFile = "experiment/example_query/query-apache.sparql";
@@ -643,10 +643,10 @@ public class StartService
 //		String startTime = "2020-02-29T00:03:40";
 //    	String endDate = "2020-03-01T04:34:26";
 //		 ========================syslog===============================
-		String parsedQueryFile = "experiment/example_query/query-sys.json";
-		String queryStringFile = "experiment/example_query/query-sys.sparql";
-		String startTime = "2020-03-05T15:51:30";
-     	String endDate = "2020-03-05T20:59:43";
+//		String parsedQueryFile = "experiment/example_query/query-sys.json";
+//		String queryStringFile = "experiment/example_query/query-sys.sparql";
+//		String startTime = "2020-03-05T15:51:30";
+//     	String endDate = "2020-03-05T20:59:43";
 
 		String parsedQuery = new String(Files.readAllBytes(Paths.get(parsedQueryFile))); 
 		String queryString = new String(Files.readAllBytes(Paths.get(queryStringFile))); 
