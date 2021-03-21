@@ -8,85 +8,85 @@
 
 
 
-<https://ss.l/au#> reg:generalGrokPattern "%{AUDIT}".
+<https://w3id.org/sepses/vocab/log/audit#> reg:generalGrokPattern "%{AUDIT}".
 
-<https://ss.l/au#type> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#type> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "type=%{WORD:audit_type}".
 
-<https://ss.l/au#timestamp> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#timestamp> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "msg=audit\\(%{NUMBER:audit_epoch}".
 
 <https://w3id.org/sepses/vocab/log/core#timestamp> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "msg=audit\\(%{NUMBER:audit_epoch}".
 
-<https://ss.l/au#exe> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#exe> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "exe=%{GREEDYDATA:audit_exe} ".
 
 
-<https://ss.l/au#pid> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#pid> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "pid=%{NUMBER:audit_pid}".
 
-<https://ss.l/au#ppid> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#ppid> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "ppid=%{NUMBER:audit_ppid}".
 
-<https://ss.l/au#arch> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#arch> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "arch=%{WORD:audit_arch} ".
 
-<https://ss.l/au#syscall> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#syscall> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "syscall=%{NUMBER:audit_syscall}".
 
-<https://ss.l/au#success> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#success> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "success=%{WORD:audit_success} ".
 
-<https://ss.l/au#exit> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#exit> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "exit=%{NUMBER:audit_exit}".
 
-<https://ss.l/au#a0> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#a0> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "a0=%{WORD:audit_a0} ".
 
-<https://ss.l/au#a1> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#a1> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "a1=%{WORD:audit_a1} ".
 
-<https://ss.l/au#a2> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#a2> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "a2=%{WORD:audit_a2} ".
 
-<https://ss.l/au#a3> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#a3> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "a3=%{WORD:audit_a3} ".
 
-<https://ss.l/au#items> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#items> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "items=%{NUMBER:audit_items}".
 
-<https://ss.l/au#auid> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#auid> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "auid=%{NUMBER:audit_auid}".
 
-<https://ss.l/au#gid> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#gid> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "gid=%{NUMBER:audit_gid}".
 
-<https://ss.l/au#euid> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#euid> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "euid=%{NUMBER:audit_euid}".
 
-<https://ss.l/au#suid> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#suid> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "suid=%{NUMBER:audit_suid}".
 
-<https://ss.l/au#fsuid> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#fsuid> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "fsuid=%{NUMBER:audit_fsuid}".
 
-<https://ss.l/au#egid> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#egid> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "egid=%{NUMBER:audit_egid}".
 
-<https://ss.l/au#sgid> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#sgid> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "sgid=%{NUMBER:audit_sgid}".
 
-<https://ss.l/au#fsgid> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#fsgid> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "fsgid=%{NUMBER:audit_fsgid}".
 
-<https://ss.l/au#tty> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#tty> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "tty=%{GREEDYDATA:audit_tty} ".
 
-<https://ss.l/au#ses> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#ses> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "ses=%{NUMBER:audit_ses}".
 
-<https://ss.l/au#comm> rdf:type owl:DatatypeProperty ;
+<https://w3id.org/sepses/vocab/log/audit#comm> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "comm=%{GREEDYDATA:audit_comm} ".
 
 
