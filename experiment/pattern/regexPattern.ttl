@@ -8,7 +8,7 @@
 
 
 
-<https://ss.l/au#> reg:generalGrokPattern "%{AUDIT}".
+#<https://ss.l/au#> reg:generalGrokPattern "%{AUDIT}".
 
 <https://ss.l/au#type> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "type=%{WORD:audit_type}".
