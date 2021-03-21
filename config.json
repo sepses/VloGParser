@@ -64,7 +64,7 @@
 		  "hdtOutput": "experiment/output/audit.hdt",
 	      "namegraph": "http://w3id.org/sepses/graph/log/audit",
 	      "regexPattern": "experiment/pattern/regexPattern.ttl",
-	      "vocabulary":"https://sepses.log/audit#",
+	      "vocabulary":"https://ss.l/au#",
 	      "logDateFormat":"epoch",
 	      "logTimeRegex":"(\\d+)"     
      },{
