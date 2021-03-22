@@ -41,6 +41,7 @@
  rr:predicateObjectMap [ rr:predicate audit:euid; rr:objectMap [rr:template "{audit_euid}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate audit:suid; rr:objectMap [rr:template "{audit_suid}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate audit:fsuid; rr:objectMap [rr:template "{audit_fsuid}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate audit:sgid; rr:objectMap [rr:template "{audit_sgid}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate audit:fsgid; rr:objectMap [rr:template "{audit_fsgid}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate audit:tty; rr:objectMap [rr:template "{audit_tty}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate audit:ses; rr:objectMap [rr:template "{audit_ses}"; rr:datatype xsd:string;]];
