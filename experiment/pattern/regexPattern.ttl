@@ -65,29 +65,37 @@
 <https://w3id.org/sepses/vocab/log/audit#euid> rdf:type owl:DatatypeProperty ;
          reg:grokPattern "euid=%{NUMBER:audit_euid}".
 
+#<https://w3id.org/sepses/vocab/log/audit#suid> rdf:type owl:DatatypeProperty ;
+#         reg:grokPattern "suid=%{NUMBER:audit_suid}".
+
+
 <https://w3id.org/sepses/vocab/log/audit#suid> rdf:type owl:DatatypeProperty ;
-         reg:grokPattern "suid=%{NUMBER:audit_suid}".
+         reg:grokPattern "suid=%{NUMBER:audit_suid} fsuid=%{NUMBER:audit_fsuid} egid=%{NUMBER:audit_egid}".
 
-<https://w3id.org/sepses/vocab/log/audit#fsuid> rdf:type owl:DatatypeProperty ;
-         reg:grokPattern "fsuid=%{NUMBER:audit_fsuid}".
+#<https://w3id.org/sepses/vocab/log/audit#fsuid> rdf:type owl:DatatypeProperty ;
+#         reg:grokPattern "fsuid=%{NUMBER:audit_fsuid}".
 
-<https://w3id.org/sepses/vocab/log/audit#egid> rdf:type owl:DatatypeProperty ;
-         reg:grokPattern "egid=%{NUMBER:audit_egid}".
+#<https://w3id.org/sepses/vocab/log/audit#egid> rdf:type owl:DatatypeProperty ;
+#         reg:grokPattern "egid=%{NUMBER:audit_egid}".
 
-<https://w3id.org/sepses/vocab/log/audit#sgid> rdf:type owl:DatatypeProperty ;
-         reg:grokPattern "sgid=%{NUMBER:audit_sgid}".
+#<https://w3id.org/sepses/vocab/log/audit#sgid> rdf:type owl:DatatypeProperty ;
+#         reg:grokPattern "sgid=%{NUMBER:audit_sgid}".
 
 <https://w3id.org/sepses/vocab/log/audit#fsgid> rdf:type owl:DatatypeProperty ;
-         reg:grokPattern "fsgid=%{NUMBER:audit_fsgid}".
+         reg:grokPattern "sgid=%{NUMBER:audit_sgid} fsgid=%{NUMBER:audit_fsgid} tty=%{GREEDYDATA:audit_tty}".
 
-<https://w3id.org/sepses/vocab/log/audit#tty> rdf:type owl:DatatypeProperty ;
-         reg:grokPattern "tty=%{GREEDYDATA:audit_tty} ".
+
+#<https://w3id.org/sepses/vocab/log/audit#tty> rdf:type owl:DatatypeProperty ;
+#         reg:grokPattern "tty=%{GREEDYDATA:audit_tty} ".
 
 <https://w3id.org/sepses/vocab/log/audit#ses> rdf:type owl:DatatypeProperty ;
-         reg:grokPattern "ses=%{NUMBER:audit_ses}".
+         reg:grokPattern "ses=%{NUMBER:audit_ses} comm=%{GREEDYDATA:audit_comm} exe=\"%{GREEDYDATA:audit_exe}\"".
 
-<https://w3id.org/sepses/vocab/log/audit#comm> rdf:type owl:DatatypeProperty ;
-         reg:grokPattern "comm=%{GREEDYDATA:audit_comm} ".
+#<https://w3id.org/sepses/vocab/log/audit#ses> rdf:type owl:DatatypeProperty ;
+#         reg:grokPattern "ses=%{NUMBER:audit_ses}".
+
+#<https://w3id.org/sepses/vocab/log/audit#comm> rdf:type owl:DatatypeProperty ;
+#         reg:grokPattern "comm=%{GREEDYDATA:audit_comm} ".
 
 
 #==============apache access============================
