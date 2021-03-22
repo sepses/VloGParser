@@ -82,7 +82,7 @@
 #         reg:grokPattern "sgid=%{NUMBER:audit_sgid}".
 
 <https://w3id.org/sepses/vocab/log/audit#sgid> rdf:type owl:DatatypeProperty ;
-         reg:grokPattern "sgid=%{NUMBER:audit_sgid} fsgid=%{NUMBER:audit_fsgid} tty=%{GREEDYDATA:audit_tty}".
+         reg:grokPattern "sgid=%{NUMBER:audit_sgid} fsgid=%{NUMBER:audit_fsgid} tty=%{GREEDYDATA:audit_tty}%ses".
 
 
 #<https://w3id.org/sepses/vocab/log/audit#tty> rdf:type owl:DatatypeProperty ;
