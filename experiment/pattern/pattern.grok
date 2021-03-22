@@ -102,7 +102,8 @@ HTTPD_ERRORLOG %{HTTPD20_ERRORLOG}|%{HTTPD24_ERRORLOG}
 AUDIT_MAIN type=%{WORD:audit_type} msg=audit\(%{NUMBER:audit_epoch}:%{NUMBER:audit_counter}\):
 AUDIT_SYSCALL arch=%{WORD:audit_arch} syscall=%{NUMBER:audit_syscall} success=%{WORD:audit_success} exit=%{NUMBER:audit_exit} a0=%{WORD:audit_a0} a1=%{WORD:audit_a1} a2=%{WORD:audit_a2} a3=%{WORD:audit_a3} items=%{NUMBER:audit_items} ppid=%{NUMBER:audit_ppid} pid=%{NUMBER:audit_pid} auid=%{NUMBER:audit_auid} uid=%{NUMBER:audit_uid} gid=%{NUMBER:audit_gid} euid=%{NUMBER:audit_euid} suid=%{NUMBER:audit_suid} fsuid=%{NUMBER:audit_fsuid} egid=%{NUMBER:audit_egid} sgid=%{NUMBER:audit_sgid} fsgid=%{NUMBER:audit_fsgid} tty=%{GREEDYDATA:audit_tty} ses=%{NUMBER:audit_ses} comm=%{GREEDYDATA:audit_comm} exe=\"%{GREEDYDATA:audit_exe}\"
 AUDIT_PROCTITLE proctitle=%{WORD:audit_proctitle}
-AUDIT_PATH item=%{NUMBER:audit_item} name=%{GREEDYDATA:audit_path_name} inode=%{NUMBER:audit_inode} dev=%{GREEDYDATA:audit_dev} mode=%{NUMBER:audit_mode} ouid=%{NUMBER:audit_ouid} ogid=%{NUMBER:audit_ogid} rdev=%{GREEDYDATA:audit_rdev} nametype=%{WORD:audit_nametype}
+AUDIT_PATH item=%{NUMBER:audit_item} name=%{GREEDYDATA:audit_path_name} inode=%{NUMBER:audit_inode} dev=%{GREEDYDATA:audit_dev} mode=%{NUMBER:audit_mode} ouid=%{NUMBER:audit_ouid}
+#ogid=%{NUMBER:audit_ogid} rdev=%{GREEDYDATA:audit_rdev} nametype=%{WORD:audit_nametype}
 AUDIT %{AUDIT_MAIN} (%{AUDIT_SYSCALL}|%{AUDIT_PROCTITLE}|%{AUDIT_PATH})
 
 #snort
