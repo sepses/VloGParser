@@ -1,0 +1,42 @@
+PREFIX cl: <https://w3id.org/sepses/vocab/log/core#>
+PREFIX au: <https://w3id.org/sepses/vocab/log/audit#>
+SELECT * 
+WHERE {
+   ?s   cl:timestamp   ?t. ?s   au:type     ?ty. ?s   au:arch     ?arc.   
+   ?s   au:syscall  ?sys. ?s   au:success  ?suc.   ?s   au:exit  ?exi.
+   ?s   au:a0     ?a0.   ?s   au:a1     ?a1. ?s   au:a2  ?a2.   
+   ?s   au:a3  ?a3. ?s   au:items  ?it.   ?s   au:ppid     ?ppi.
+   ?s   au:pid     ?pi.   ?s   au:auid  ?aui. ?s au:uid ?uid.
+   ?s   au:gid  ?gi.  ?s au:egid ?egid. ?s   au:euid     ?eui.
+   ?s   au:suid     ?sui. ?s au:fsuid ?fsui.   ?s   au:sgid     ?sgi. 
+   ?s  au:fsgid ?fsgid.  ?s  au:tty ?tty. ?s   au:ses  ?se.  
+   ?s   au:exe ?xe. ?s  au:comm ?com.
+
+} LIMIT 1
+
+
+apache :
+
+step 2
+2020-03-04T19:18:34
+2020-03-04T19:18:35
+
+step 3
+exim
+2020-03-04T19:21:48
+2020-03-04T19:21:48
+
+step 4
+apache
+2020-03-04T19:25:46
+2020-03-04T19:25:46
+
+step 5
+apache
+2020-03-04T19:32:44
+2020-03-04T19:32:45
+
+step 6
+2020-03-04T19:32:50
+
+

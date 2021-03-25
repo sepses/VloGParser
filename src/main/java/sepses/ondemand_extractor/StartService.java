@@ -29,6 +29,7 @@ import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.riot.RDFDataMgr;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.ValueFactory;
+import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONArray;
@@ -74,6 +75,7 @@ public class StartService
     	String hostname = InetAddress.getLocalHost().getHostName();
 
 		String hdtOutput = outputDir+hostname+".hdt";
+		String outputModel = outputDir+hostname+".ttl";
         List<String> llogLocation = JsonPath.read(jcobject,"$.logSources[*].logLocation");
         List<String> llogMeta = JsonPath.read(jcobject,"$.logSources[*].logMeta");
         List<String> lmapping = JsonPath.read(jcobject,"$.logSources[*].mapping");
@@ -84,10 +86,11 @@ public class StartService
         List<String> lregexPattern = JsonPath.read(jcobject,"$.logSources[*].regexPattern");
         List<String> lvocabulary = JsonPath.read(jcobject,"$.logSources[*].vocabulary");
         List<String> ltimeRegex = JsonPath.read(jcobject,"$.logSources[*].logTimeRegex");
-        List<String> ldateFormat = JsonPath.read(jcobject,"$.logSources[*].logDateFormat");
+        List<String> ldateFormat = JsonPath.read(jcobject,"$.logSources[*].logDateFormat");      
         
-
 		String res="";
+		
+		org.eclipse.rdf4j.model.Model rdf4JM = new LinkedHashModel();
 
 		 ArrayList<String> prefixes = QueryTranslator2.parsePrefixes(pq);
 		
@@ -98,18 +101,19 @@ public class StartService
 
 				log.info("parsing start");
 				
-						res = parse(llogLocation.get(i), llogMeta.get(i),lgrokFile.get(i), lgrokPattern.get(i),
+				org.eclipse.rdf4j.model.Model rdf4JMindividual = parse(llogLocation.get(i), llogMeta.get(i),lgrokFile.get(i), lgrokPattern.get(i),
 								lmapping.get(i),pq, loutputModel.get(i), hdtOutput,hdtrepo,lregexPattern.get(i),
 								sparqlEndpoint, user, pass, lnamegraph.get(i), st, et, ltimeRegex.get(i),
 								ldateFormat.get(i),lvocabulary.get(i));	
 
-					this.content=res;
+				rdf4JM.addAll(rdf4JMindividual);
+					
 					
 			}
 		}
 		
-
-		
+		res=generateGraph(rdf4JM, outputModel, "http://w3id.org/sepses/graph#log", hdtOutput, hdtrepo);
+		this.content=res;
 		
 		long elapsedTime = System.nanoTime() - this.startTime;
 		System.out.println("Total time execution :"+elapsedTime/1000000+" ms");
@@ -118,12 +122,12 @@ public class StartService
 		
     }
  
-	public String parse(String logfolder, String logmeta, String grokfile, String grokpattern, 
+	public org.eclipse.rdf4j.model.Model parse(String logfolder, String logmeta, String grokfile, String grokpattern, 
 			String RMLFile, String parsedQuery, String outputModel, String hdtOutput, String hdtrepo,String regexPattern, String sparqlEndpoint, String user, String pass, 
 			String namegraph,String startTime, String endDate, String dateTimeRegex,
 			String dateFormat, String vocab) throws Exception {
 	   
-
+		org.eclipse.rdf4j.model.Model rdf4jmodel = new LinkedHashModel();
 		String response="";
     	deleteFile(outputModel);
     	
@@ -264,48 +268,55 @@ public class StartService
 		}
 			alljsObj.put("logEntry",alljson);
 			long timeextracting = System.nanoTime() - this.startTime;
-
-			org.eclipse.rdf4j.model.Model rdf4jmodel  = jp.Parse(alljsObj.toString());
-	
 			long parsingtime = System.nanoTime()-this.startTime;
-			log.info("parsing finished");
-			if(rdf4jmodel.size()==0) {
-				ValueFactory factory = SimpleValueFactory.getInstance();
-				IRI data = factory.createIRI("http://example.org/data");
-				IRI is = factory.createIRI("http://example.org/is");
-				IRI nul = factory.createIRI("http://example.org/null");
-				rdf4jmodel.add(data, is, nul);
-			}
-			Util.saveRDF4JModel(rdf4jmodel, outputModel);
-			log.info("delete previously indexed hdt file..");
-			Util.deleteFile(hdtOutput+".index.v1-1");
-			Util.generateHDTFile(namegraph, outputModel, "TURTLE", hdtOutput);
-			//Util.MapHDTFile(hdtOutput);
-			long compressingtime = System.nanoTime()-this.startTime;
-			log.info("compression (hdt) finished..");
-			Util.storeHDTFile(hdtOutput, hdtrepo);
-			long uploadingtime = System.nanoTime()-this.startTime;
-			response = "{\"content\":\"success\",\"endopoint\":\""+sparqlEndpoint+"\"}";
-			System.out.println("===========SUMMARY============");
-			System.out.println("read line :"+co);
-			System.out.println("extracted line :"+logdata);
-			System.out.println("parsed line :"+alljson.size());
-			System.out.println("===========RUN-TIME============");
-			System.out.println("reading time :"+timereading/1000000+" ms");
-			System.out.println("extraction time :"+(timeextracting-timereading)/1000000+" ms");
-			System.out.println("parsing time :"+(parsingtime-timeextracting)/1000000+" ms");
-			System.out.println("Compressing time :"+(compressingtime-parsingtime)/1000000+" ms");
-			System.out.println("Uploading time :"+(uploadingtime-compressingtime)/1000000+" ms");
-
+			 rdf4jmodel  = jp.Parse(alljsObj.toString());
+			 System.out.println("===========SUMMARY============");
+				System.out.println("read line :"+co);
+				System.out.println("extracted line :"+logdata);
+				System.out.println("parsed line :"+alljson.size());
+				System.out.println("===========RUN-TIME============");
+				System.out.println("reading time :"+timereading/1000000+" ms");
+				System.out.println("extraction time :"+(timeextracting-timereading)/1000000+" ms");
+				System.out.println("parsing time :"+(parsingtime-timeextracting)/1000000+" ms");
+			
 	    		}
     			}
                catch (Exception closeException) {
           	}
 		
-		return response;
+    	return rdf4jmodel;
     	
 
 	}
+	
+	private String generateGraph(org.eclipse.rdf4j.model.Model rdf4jmodel, String outputModel, String namegraph, String hdtOutput, String hdtrepo) throws Exception {
+		String response="";
+		
+		log.info("parsing finished");
+		if(rdf4jmodel.size()==0) {
+			ValueFactory factory = SimpleValueFactory.getInstance();
+			IRI data = factory.createIRI("http://example.org/data");
+			IRI is = factory.createIRI("http://example.org/is");
+			IRI nul = factory.createIRI("http://example.org/null");
+			rdf4jmodel.add(data, is, nul);
+		}
+		Util.saveRDF4JModel(rdf4jmodel, outputModel);
+//		log.info("delete previously indexed hdt file..");
+//		Util.deleteFile(hdtOutput+".index.v1-1");
+		Util.generateHDTFile(namegraph, outputModel, "TURTLE", hdtOutput);
+		//Util.MapHDTFile(hdtOutput);
+		long compressingtime = System.nanoTime()-this.startTime;
+		log.info("compression (hdt) finished..");
+		Util.storeHDTFile(hdtOutput, hdtrepo);
+		long uploadingtime = System.nanoTime()-this.startTime;
+		response = "{\"content\":\"success\"}";
+		
+		//System.out.println("Compressing time :"+(compressingtime-parsingtime)/1000000+" ms");
+		//System.out.println("Uploading time :"+(uploadingtime-compressingtime)/1000000+" ms");
+		return response;
+	}
+	
+	
 	private ArrayList<String> findRespectedLogFile(String startt, String endt, String logmeta) throws ParseException {
 		
 		//query log meta based on start and end date
@@ -623,10 +634,10 @@ public class StartService
 	public static void main( String[] args ) throws Exception
   {    
 		// =======================audit=============================
-				String parsedQueryFile = "experiment/example_query/query-audit.json";
-				String queryStringFile = "experiment/example_query/query-audit.sparql";
-				String startTime = "2020-03-02T13:59:49";
-		    	String endDate = "2020-03-02T13:59:51";
+//				String parsedQueryFile = "experiment/example_query/query-audit.json";
+//				String queryStringFile = "experiment/example_query/query-audit.sparql";
+//				String startTime = "2020-03-02T13:55:32";
+//		    	String endDate = "2020-03-02T13:59:51";
 		// =======================apache=============================
 //		String parsedQueryFile = "experiment/example_query/query-apache.json";
 //		String queryStringFile = "experiment/example_query/query-apache.sparql";
@@ -637,16 +648,16 @@ public class StartService
 //		String queryStringFile = "experiment/example_query/query-apache-error.sparql";
 //		String startTime = "2020-03-01T06:28:15";
 //    	String endDate = "2020-03-05T06:55:10";
-//		 ========================auth===============================
+//		 ========================exim===============================
 //		String parsedQueryFile = "experiment/example_query/query-exim.json";
 //		String queryStringFile = "experiment/example_query/query-exim.sparql";
 //		String startTime = "2020-02-29T00:03:40";
 //    	String endDate = "2020-03-01T04:34:26";
 //		 ========================syslog===============================
-//		String parsedQueryFile = "experiment/example_query/query-sys.json";
-//		String queryStringFile = "experiment/example_query/query-sys.sparql";
-//		String startTime = "2020-03-05T15:51:30";
-//     	String endDate = "2020-03-05T20:59:43";
+		String parsedQueryFile = "experiment/example_query/query-sys.json";
+		String queryStringFile = "experiment/example_query/query-sys.sparql";
+		String startTime = "2020-03-05T15:51:30";
+     	String endDate = "2020-03-05T20:59:43";
 
 		String parsedQuery = new String(Files.readAllBytes(Paths.get(parsedQueryFile))); 
 		String queryString = new String(Files.readAllBytes(Paths.get(queryStringFile))); 
