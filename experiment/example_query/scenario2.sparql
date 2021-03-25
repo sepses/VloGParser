@@ -1,0 +1,12 @@
+PREFIX cl: <https://w3id.org/sepses/vocab/log/coreLog#>
+PREFIX auth: <https://w3id.org/sepses/vocab/log/authLog#>
+PREFIX sys: <https://w3id.org/sepses/resource/system#>
+PREFIX ev: <https://w3id.org/sepses/resource/event#>
+
+SELECT ?timestamp ?user ?sourceIp ?targetHostType ?targetIp  
+WHERE {
+ ?s cl:timestamp ?timestamp. ?s auth:hasUser ?user. 
+ ?s auth:hasSourceIp ?sourceIp. ?s auth:hasTargetHost ?th.
+ ?s auth:hasAuthEvent ?ae. ?ae sys:partOfEvent ev:Login. 
+ ?th sys:hostType ?targetHostType. ?th sys:IpAddress ?targetIp.
+}  LIMIT 4
