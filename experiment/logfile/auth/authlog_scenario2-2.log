@@ -1,0 +1,3 @@
+Dec 10 14:53:06 FileServer1 sshd[24680]: Accepted password for Bob from 172.24.66.19 port 49116 ssh2
+Dec 10 14:53:06 FileServer1 sshd[24680]: pam_unix(sshd:session): session opened for user Bob by (uid=0)
+Dec 10 15:10:20 FileServer1 sshd[24224]: Received disconnect from 172.24.66.19 Bye Bye [preauth]

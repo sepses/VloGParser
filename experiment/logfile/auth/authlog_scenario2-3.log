@@ -1,0 +1,3 @@
+Dec 10 13:38:16 DatabaseServer2 sshd[24680]: Accepted password for Alice from 92.168.2.1 port 49116 ssh2
+Dec 10 13:38:16 DatabaseServer2 sshd[24680]: pam_unix(sshd:session): session opened for user Alice by (uid=0)
+Dec 10 13:40:56 DatabaseServer2 sshd[24224]: Received disconnect from 92.168.2.1 Bye Bye [preauth]
