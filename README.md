@@ -49,6 +49,7 @@ To run the compiled project:
 ```bash
 $ java -jar ./target/rest-service-0.0.1-SNAPSHOT.jar
 ```
+the parsed will be run at [http://localhost:8080](http://localhost:8080)
 
 ## Evaluation
 
