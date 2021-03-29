@@ -50,6 +50,22 @@ To run the compiled project:
 $ java -jar ./target/rest-service-0.0.1-SNAPSHOT.jar
 ```
 
+## Evaluation Dataset
+
+We evaluated the log parser against the [AIT log dataset](https://zenodo.org/record/3723083#.YDY5wehKg2x) that simulate six days user access accross multiple web servers. Specifically, we evaluated:
+
+- Audit daemon from Linux,
+- ApacheLog,
+- EximLog,
+- Syslog,
+- Authlog
+
+We performed evaluation with several parameters such as log parsing performance from a single-hosts, dynamic log graph generation (with respect to the log properties), graph compression and multiple hosts (federation). 
+
+Our evaluation results can be found at here
+
+
+
 ## License
 
 The Virtual Log Graph Parser is written by [Kabul Kurniawan](https://kabulkurniawan.github.io/) released under the [MIT license](http://opensource.org/licenses/MIT).

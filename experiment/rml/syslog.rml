@@ -3,7 +3,7 @@
 @prefix ql: <http://semweb.mmlab.be/ns/ql#> .
 @prefix carml: <http://carml.taxonic.com/carml/> .
 @prefix ue: <http://w3id.org/sepses/vocab/unix-event#>.
-@prefix auth: <https://w3id.org/sepses/vocab/log/sys#>.
+@prefix sys: <https://w3id.org/sepses/vocab/log/sys#>.
 @prefix cl: <https://w3id.org/sepses/vocab/log/core#>.
 @prefix : <http://epfl.ch/mapping/>.
 
@@ -20,7 +20,7 @@
  rr:predicateObjectMap [ rr:predicate rdf:type; rr:objectMap [ rr:template "https://w3id.org/sepses/vocab/log/sysLog#AuthLogEntry"]];
  rr:predicateObjectMap [ rr:predicate cl:hasLogFamily; rr:objectMap [ rr:template "http://dbpedia.org/resource/Syslog"]];
  rr:predicateObjectMap [ rr:predicate cl:timestamp;  rr:objectMap [ rr:template "{timestamp}";  rr:datatype xsd:string;]];
- rr:predicateObjectMap [ rr:predicate auth:pid; rr:objectMap [ rr:template "{pid}"; rr:datatype xsd:string;]];
- rr:predicateObjectMap [ rr:predicate auth:programName; rr:objectMap [rr:template "{program}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate sys:pid; rr:objectMap [ rr:template "{pid}"; rr:datatype xsd:string;]];
+ rr:predicateObjectMap [ rr:predicate sys:programName; rr:objectMap [rr:template "{program}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate cl:hostName; rr:objectMap [rr:template "{logsource}"; rr:datatype xsd:string;]];
  rr:predicateObjectMap [ rr:predicate cl:message; rr:objectMap [rr:template "{message}"; rr:datatype xsd:string;]].
