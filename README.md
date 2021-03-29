@@ -50,7 +50,7 @@ To run the compiled project:
 $ java -jar ./target/rest-service-0.0.1-SNAPSHOT.jar
 ```
 
-## Evaluation Dataset
+## Evaluation
 
 We evaluated the log parser against the [AIT log dataset](https://zenodo.org/record/3723083#.YDY5wehKg2x) that simulate six days user access accross multiple web servers. Specifically, we evaluated:
 
