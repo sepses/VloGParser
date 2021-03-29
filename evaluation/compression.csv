@@ -1,0 +1,5 @@
+Authlog,,,,
+,5k,10k,15k,20k
+raw log file,1.1,2.048,3.075,4.1
+output (full),0.4,0.85,1.29,1.77
+output (half ),0.2,0.42,0.67,0.82
