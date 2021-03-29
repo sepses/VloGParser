@@ -20,7 +20,7 @@ To configure which log sources to parse, please take a look at the configuration
      {
 	      "title": "authlog",
 	      "type": "File",
-	      "logLocation": "experiment/logfile/auth.log", #log sources location
+	      "logLocation": "experiment/logfile/auth", #log sources directory
 		  "logMeta": "experiment/logmeta/auth_meta.ttl",#log file metadata
 	      "mapping": "experiment/rml/authlog.rml", #rml mapping
 	      "outputModel": "experiment/output/authlog_model.ttl", #expected output name in rdf
