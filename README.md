@@ -60,7 +60,7 @@ We evaluated the log parser against the [AIT log dataset](https://zenodo.org/rec
 - Syslog,
 - Authlog
 
-We performed evaluation with several parameters such as log parsing performance from a single-hosts, dynamic log graph generation (with respect to the log properties), graph compression and multiple hosts evaluation (2 to 7 hosts). The evaluation results can be found [here](https://github.com/sepses/VloGParser/tree/hdt-version/evaluation)
+We performed evaluation with several parameters such as log parsing performance from a single-hosts, dynamic log graph generation (with respect to the log properties), graph compression and multiple hosts evaluation (2 to 7 hosts). The evaluation results can be found [here](https://github.com/sepses/VloGParser/tree/hdt-version/evaluation).
 
 
 
